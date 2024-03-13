@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+html, body {width:100%; height:100%;}
+
+#wrapper{
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 100px;
+}
+
+.right_quick {width:266px; position:fixed; height:100%; background:#fff; z-index:999; padding:20px; border-left:1px solid #ddd;}
+
+.top_navigation {height:45px; border-bottom:1px solid #e1e1e1; background:#FaFaFa;}
+.header {width:100%;}
+.header .top_left > ul > li  {float:left;height:45px; line-height:90px;}
+.header .top_right > ul > li  {float:left;height:45px; line-height:45px;}
+.header .top_middle > ul > li  {float:left;height:45px; line-height:100px;}
+
+.header .top_left > ul > li.first,
+.header .top_right > ul > li.first,
+.header .top_middle > ul > li.first {border-left:1px solid #FFE716;}
+
+.header .top_left {float:left; width:400px;}
+.header .top_left ul li {width:255px; text-align:center; height:100px; margin-top:-10px;}
+.header .top_right {float:right;}
+.header .top_right ul li {width:100px; text-align:center; height:100px; margin-top:-10px;}
+.header .top_middle ul li {width:255px; text-align:center; height:100px; margin-top:-10px;}
+.header nav ul li a {display:block; color:#FFE716; height:100%; font-size:24px; font-weight:bold;}
+.header nav ul li a:hover {color:#000; background:#FFE716; text-decoration:none;}
+.header nav ul li a:hover .glyphicon {color:#000;}
+.header nav ul li .logoimg:hover {background:#000;}
+
+.dropdown button {background:#000;}
+.dropdown button:hover {background:#000;}
+.dropdown button:focus {background:#000;}
+
+.open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #333;
+    background-color: #333;
+}
+
+.dropdown-menu>li>a {width: 159px; padding: 39px 33px; clear: both; line-height: 1.42857143; white-space: nowrap;}
+
+
+.btnside {
+	position:absolute;
+	top:4%;
+	left:45px;
+	height:45px;
+	width:45px;
+	text-align:center;
+	background:#000;
+	cursor:pointer;
+	transition:left 0.4s ease;
+	z-index:1;
+}
+
+.btnside.click {
+	left:260px;
+	
+}
+
+.btnside span {
+	color:#FFE716;
+	font-size:28px;
+}
+
+.btnside.click span:before {
+	content:'X';
+}
+
+.sidebar {
+	position:fixed;
+	width:250px;
+	height:100%;
+	left:-250px; /* -250px; */
+	background:#000;
+	transition:left 0.4s ease;
+	z-index:1;
+}
+
+.sidebar.show {
+	left:0px;
+}
+
+.sidebar .text {
+	color:white;
+	font-size:25px;
+	font-weight:600;
+	line-height:65px;
+	text-align:center;
+	background:#000;
+	letter-spacing:1px;
+}
+
+.sidebar ul {
+	background:#000;
+	height:100%;
+	width:100%;
+	list-style:none;	
+}
+
+.sidebar ul li {
+	line-height:60px;
+	border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar ul li:last-child {
+	border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar ul li a {
+	position:relative;
+	color:#FFE716;
+	text-decoration:none;
+	font-size:18px;
+	padding-left:40px;
+	font-weight:500;
+	display:block;
+	width:100%;
+	border-left:3px solid transparent;
+}
+
+.sidebar ul li.active a {
+	color:#FFE716;
+	background:#000;
+	border-left-color:#FFE716;
+}
+
+.sidebar ul ul {
+	position:static;
+	display:none;
+}
+
+.sidebar ul .chart-show.show {
+	display:block;
+}
+
+.sidebar ul ul li {
+	line-height:42px;
+	border-bottom:none;
+}
+
+.sidebar ul ul li a {
+	font-size:17px;
+	color:#FFE716;
+	padding-left:80px;
+}
+
+.sidebar ul li.active ul li a {
+	color:#FFE716;
+	background:#000;
+	border-left-color:transparent;
+}
+
+.sidebar ul li.active ul li a:hover {
+	color:#000;
+	background:#FFE716;
+	border-left-color:transparent;
+}
+
+.sidebar ul ul li a:hover {
+	color:#000!important;
+	background:#FFE716;
+}
+
+.sidebar ul li a span {
+	position:absolute;
+	top:50%;
+	right:20px;
+	font-size:100px;
+	transform:translateY(-50%);
+	font-size:22px;
+	transition:transform 0.4s;
+	padding-top:90px;
+}
+
+.sidebar ul li a span.rotate {
+	transform:translateY(-50%) rotate(-180deg);
+}
+
+/* footer css */
+
+.footer {clear:both; background:#42464d; padding-top:80px; padding-bottom:65px; margin-top:60px;}
+.footer .address {font-style:normal; color:#ababb1; margin-bottom:20px;}
+.footer .address .title {font-size:12px; margin-bottom:8px; color:#fff;}
+.footer .copyright {color:#fff; text-align:center; font-size:20px;}
