@@ -30,6 +30,11 @@
 </head>
 
 <body style="background:#000;">
+	<div class="container-fluid search-bar">
+		<input type="text" class="text-area" placeholder="검색어를 입력해 주세요">
+		<button class="btn-search" type="submit">검색</button>
+		<button class="searchmark" id="close" type="submit">X</button>
+	</div>
 
 	<div class="container-fluid" style="height: 100px; background: #000; padding-right:0px; padding-left:0px;">
 		<header class="header">
@@ -86,8 +91,13 @@
 			<div class="col-lg-2">
 				<nav class="top_right">
 					<ul style="list-style:none; padding-top:10px;">
-						<li><a href=""><span class="glyphicon glyphicon-search"
-								aria-hidden="true" style="padding-top:40px;"></span></a></li>
+						<li>
+							<button class="btn btn-default searchmark" type="button"
+									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="true" style="width: 100%; height:100%; padding-top:17px; background:#000;">
+									<span class="glyphicon glyphicon-search" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
+							</button>
+						</li>
 						<li><div class="dropdown">
 								<button class="btn btn-default dropdown-toggle" type="button"
 									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
@@ -126,6 +136,12 @@ $('.btnside').click(function() {
 	$('nav ul li').click(function() {
 		$(this).addClass("active").siblings().removeClass("active");
 	});
+
+$('.searchmark').click(function() {
+	$('.search-bar').toggleClass("click");
+	$('.text-area').toggleClass("show");
+	$('.btn-search').toggleClass("show");
+})
 </script>
 </body>
 </html>

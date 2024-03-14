@@ -77,7 +77,7 @@
 						  </div>
 						  <div class="media-body">
 						    <h4 class="media-heading" style="padding-top:5px;"><a href="#"><Strong>루시(LUCY)</Strong></a></h4>
-						    <a href="#"><span>넌 혹시, 난 괜히</span>></a>
+						    <a href="#"><span>넌 혹시, 난 괜히</span></a>
 						  </div>
 						</div>
 						<div class="media">
@@ -88,7 +88,7 @@
 						  </div>
 						  <div class="media-body">
 						    <h4 class="media-heading" style="padding-top:5px;"><a href="#"><Strong>한지상</Strong></a></h4>
-						    <a href="#"><span>Heaven on Their minds</span>></a>
+						    <a href="#"><span>Heaven on Their minds</span></a>
 						  </div>
 						</div>
 					</div>
@@ -102,7 +102,7 @@
 						  </div>
 						  <div class="media-body">
 						    <h4 class="media-heading" style="padding-top:5px;"><a href="#"><Strong>SPYAIR</Strong></a></h4>
-						    <a href="#"><span>Some Like it Hot(Samurai Heart)</span>></a>
+						    <a href="#"><span>Some Like it Hot(Samurai Heart)</span></a>
 						  </div>
 						</div>
 						<div class="media">
