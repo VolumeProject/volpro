@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.media-heading a, .media-body span {
+	color:#FFF;
+}
+
+.row-text {
+	color: #FFF;
+    font-weight: bold;
+    margin: -25px 15px;
+}
