@@ -180,9 +180,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -193,9 +193,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -206,9 +206,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -219,9 +219,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -240,9 +240,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -253,9 +253,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -266,9 +266,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
@@ -279,9 +279,9 @@
 				    </a>
 				  <br/>
 				  <div class="row-text">
-				  	<h4>플레이리스트 이름</h4>
+				  	<h4><a href="">플레이리스트 이름</a></h4>
 				  	<br/>
-				  	<span>작성자 이름</span>
+				  	<a href=""><span>작성자 이름</span></a>
 				  </div>
 			  </div>
 			</div>
