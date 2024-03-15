@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.media-heading a, .media-body span {
+	color:#FFF;
+}
+
+.media-heading a:hover, .media-body span:hover {
+	color:#FFF;
+	border-bottom:1px solid #fff;
+}
+
+.row-text a, .row-text span {
+	color: #FFF;
+    font-weight: bold;
+    margin: -25px 0px;
+}

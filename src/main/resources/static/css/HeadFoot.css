@@ -20,7 +20,7 @@ html, body {width:100%; height:100%;}
 .header .top_right > ul > li.first,
 .header .top_middle > ul > li.first {border-left:1px solid #FFE716;}
 
-.header .top_left {float:left; width:400px;}
+/* .header .top_left {float:left; width:400px;} */
 .header .top_left ul li {width:255px; text-align:center; height:100px; margin-top:-10px;}
 .header .top_right {float:right;}
 .header .top_right ul li {width:100px; text-align:center; height:100px; margin-top:-10px;}
@@ -34,6 +34,11 @@ html, body {width:100%; height:100%;}
 .dropdown button:hover {background:#000;}
 .dropdown button:focus {background:#000;}
 
+.top_right button {border-color:#000;}
+.top_right button:focus {outline:none; box-shadow: none;}
+.top_right button:hover {border-color:#000;}
+.top_right button:active {border-color:#000;}
+
 .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
     color: #333;
     background-color: #333;
@@ -44,8 +49,8 @@ html, body {width:100%; height:100%;}
 
 .btnside {
 	position:absolute;
-	top:4%;
-	left:45px;
+	top:30px;
+	left:65px;
 	height:45px;
 	width:45px;
 	text-align:center;
@@ -57,7 +62,6 @@ html, body {width:100%; height:100%;}
 
 .btnside.click {
 	left:260px;
-	
 }
 
 .btnside span {
@@ -177,6 +181,60 @@ html, body {width:100%; height:100%;}
 
 .sidebar ul li a span.rotate {
 	transform:translateY(-50%) rotate(-180deg);
+}
+
+/* 검색바 */
+.text-area {
+	position: fixed;
+    top: -200px;
+    left: 15%;
+    width: 1200px;
+    height: 50px;
+    z-index: 1;
+}
+
+.btn-search {
+	position: fixed;
+    z-index: 1;
+    top: -200px;
+    left: 79%;
+    width: 115px;
+    height: 50px;
+    background: #FFE716;
+    font-weight: bold;
+}
+
+.text-area.show {
+	top:200px;
+}
+
+.search-bar {
+	position:absolute;
+	top:-500px;
+    width:100%;
+    height:500px;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+#close {
+	position: absolute;
+    top: 10px;
+    right: 35px;
+    width: 40px;
+    height: 40px;
+    background: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.search-bar.click {
+	position:fixed;
+	top:0px;
+	z-index:9000;
+}
+
+.btn-search.show {
+	top:200px;
 }
 
 /* footer css */
