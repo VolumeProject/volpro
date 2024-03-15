@@ -16,7 +16,7 @@
 	integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
 	crossorigin="anonymous"></script>
 
-<link href="/resources/css/volume.css" rel='stylesheet'>
+<link href="/resources/css/HeadFoot.css" rel='stylesheet'>
 <link href="/resources/css/common.css" rel="stylesheet">
 <link href="/resources/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet"

@@ -17,19 +17,19 @@
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner" role="listbox">
 		    <div class="item active">
-		      <img src="/resources/images/logohigh1.jpg" alt="..." style="width:100%; height:800px; object-fit:cover;">
+		      <img src="/resources/images/logohigh1.jpg" alt="..." style="width:100%; height:800px; overflow:hidden;">
 		      <div class="carousel-caption">
 		        ...
 		      </div>
 		    </div>
 		    <div class="item">
-		      <img src="/resources/images/back2.jpg" alt="..." style="width:100%; height:800px; object-fit:cover;">
+		      <img src="/resources/images/back2.jpg" alt="..." style="width:100%; height:800px; overflow:hidden;">
 		      <div class="carousel-caption">
 		        ...
 		      </div>
 		    </div>
 		    <div class="item">
-		      <img src="/resources/images/back3.jpg" alt="..." style="width:100%; height:800px; object-fit:cover;">
+		      <img src="/resources/images/back3.jpg" alt="..." style="width:100%; height:800px; overflow:hidden;">
 		      <div class="carousel-caption">
 		        ...
 		      </div>
