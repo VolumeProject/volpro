@@ -38,4 +38,9 @@ public class MainController {
 		return "/upper/upperRegist";
 	}
 
+	@GetMapping("/login")
+	public String login() {
+		return "/member/login";
+	}
+	
 }
