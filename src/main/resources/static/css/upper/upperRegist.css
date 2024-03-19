@@ -5,8 +5,15 @@
 	vertical-align:top;
 }
 
-th,td {
-	color:#fff;
+th {
+	color: #fff;
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+}
+
+td {
+	
 }
 
 .uppermaking-preview img {
