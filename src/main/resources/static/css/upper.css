@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.page-title h1 {
+	position: absolute;
+    top: 115px;
+    left: 60px;
+    font-size: 170px;
+    font-weight: bold;
+    float: left;
+    color: rgba(255, 255, 255, 0.3);
+    z-index:9000;
+}
+
+.search-img img {
+	width:100%;
+	height:700px;
+	object-fit:cover;
+}
+
+.upper-one img {
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	border:1px solid #ccc;
+}
+
+.upper-title h3 {
+	font-weight:bold;
+	line-height: 1;
+}
+
+.upper-title a {
+	color:#fff;
+}
+
+.upper-title a:hover {
+	color:#FFE716;
+}
+
+.upper-comment {
+	margin-top:20px;
+}
+
+.upper-comment p {
+	color:#fff;
+	vertical-align:sub;
+}
+
+.upper-list h2 {
+	color: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:32px;
+}
+
+.catal-group * {
+	display:inline-block;
+}
+
+.catal-group img {
+	width:90px;
+	height:90px;
+}
+
+.catal-group h4 {
+	color: #FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin:32px 0px;
+}
+
+.user-upper {
+	width: 50%;
+    vertical-align: bottom;
+    margin-left: 30px;
+}
+
+.user-upper a {
+	color:#fff;
+}
+
+.user-upper a:hover, .user-upper span:hover {
+	color:#FFE716;
+}
+
+.upper-catalogue {
+	border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.upperregist {
+	color: #fff;
+    border: 1px solid #ccc;
+    float: right;
+    width: 100px;
+    height: 50px;
+    border-radius: 40px;
+    font-weight: bold;
+    margin: 0 30px;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+.upperregist:hover {
+	color:#000;
+	background:#ffe716;
+	text-decoration:none;
+}

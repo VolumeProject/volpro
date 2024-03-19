@@ -32,8 +32,10 @@
 
 <body style="background:#000;">
 	<div class="container-fluid search-bar">
-		<input type="text" class="text-area" placeholder="검색어를 입력해 주세요">
-		<button class="btn-search" type="submit">검색</button>
+		<form name="seacher" method="get" class="seacher" action="/volume/search">
+			<input type="text" class="text-area" placeholder="검색어를 입력해 주세요">
+			<button class="btn-search" type="submit">검색</button>
+		</form>
 		<button class="searchmark" id="close" type="submit">X</button>
 	</div>
 
@@ -61,7 +63,7 @@
 								<li><a href="#">Year</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Upper</a></li>
+						<li><a href="/volume/upper">Upper</a></li>
 						<li><a href="#">Amateurs</a></li>
 						<li><a href="#">My Page</a></li>
 					</ul>
@@ -83,7 +85,7 @@
 					<ul style="list-style: none; padding-left: 0px;">
 						<li><a href="">PlayList</a></li>
 						<li><a href="">Chart</a></li>
-						<li><a href="">Upper</a></li>
+						<li><a href="/volume/upper">Upper</a></li>
 						<li><a href="">Amateurs</a></li>
 					</ul>
 				</nav>
@@ -93,6 +95,7 @@
 				<nav class="top_right">
 					<ul style="list-style:none; padding-top:10px;">
 						<li>
+							<!-- <a href="#"></a> -->
 							<button class="btn btn-default searchmark" type="button"
 									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="true" style="width: 100%; height:100%; padding-top:17px; background:#000;">
