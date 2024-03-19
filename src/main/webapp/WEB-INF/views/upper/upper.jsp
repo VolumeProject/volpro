@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
-<link href="/resources/css/upper.css" rel='stylesheet'>
+<link href="/resources/css/upper/upper.css" rel='stylesheet'>
 
 <div class="container-fluid">
 	<div class="page-title">
@@ -150,7 +150,7 @@
 				</div>
 			</div>
 			<div class="upper-regist">
-				<a href="#" class="upperregist">어퍼 등록</a>
+				<a href="/volume/upperregist" class="upperregist">어퍼 등록</a>
 			</div>
 		</div>
 		<div class="col-lg-4">
@@ -259,4 +259,4 @@
 </div>
 
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
