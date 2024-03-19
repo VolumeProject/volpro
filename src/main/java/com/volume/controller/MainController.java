@@ -15,22 +15,27 @@ public class MainController {
 	
 	@GetMapping("/search")
 	public String search() {
-		return "/search";
+		return "/search/search";
 	}
 	
 	@GetMapping("/upper")
 	public String upper() {
-		return "/upper";
+		return "/upper/upper";
 	}
 	
 	@GetMapping("/upperdetail")
 	public String upperdetail() {
-		return "/upperDetail";
+		return "/upper/upperDetail";
 	}
 	
 	@GetMapping("/playlistdetail")
 	public String playlistdetail() {
-		return "/playlistDetail";
+		return "/playlist/playlistDetail";
+	}
+	
+	@GetMapping("/upperregist")
+	public String upperregist() {
+		return "/upper/upperRegist";
 	}
 
 }
