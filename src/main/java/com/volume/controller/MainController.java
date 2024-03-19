@@ -17,5 +17,20 @@ public class MainController {
 	public String search() {
 		return "/search";
 	}
+	
+	@GetMapping("/upper")
+	public String upper() {
+		return "/upper";
+	}
+	
+	@GetMapping("/upperdetail")
+	public String upperdetail() {
+		return "/upperDetail";
+	}
+	
+	@GetMapping("/playlistdetail")
+	public String playlistdetail() {
+		return "/playlistDetail";
+	}
 
 }

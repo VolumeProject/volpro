@@ -17,7 +17,7 @@
 	object-fit:cover;
 }
 
-.sear-singer h3 {
+.sear-singer h2 {
 	color: #FFE716;
     font-size: 30px;
     font-weight: bold;
@@ -54,6 +54,7 @@
 	width:100%;
 	height:150px;
 	padding:10px 15px;
+	border:1px solid #ccc;
 }
 
 .song-box * {
@@ -87,4 +88,118 @@
     font-size: 15px;
     margin: 0px;
     padding:0 18px;
+}
+
+.box-menu {
+	width: 453px;
+    height: 100%;
+    vertical-align: bottom;
+    padding: 25px 0;
+    float:right;
+}
+
+.box-menu button {
+	width: 72px;
+    border-radius: 72px;
+    height: 72px;
+    vertical-align: bottom;
+}
+
+.box-menu button:hover {
+	background:#FFE716;
+}
+
+.sear-song h2 {
+	color: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:32px;
+}
+
+.sear-album h2 {
+	color: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:32px;
+}
+
+.sear-playlist img {
+	width:150px;
+	height:150px;
+	overflow:hidden;
+	border:1px solid #ccc;
+}
+
+.playlist-imgs img {
+	width: 85px;
+    height: 85px;
+    margin: 5px auto;
+}
+
+.sear-playlist h2 {
+	color: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:32px;
+}
+
+.sear-upper h2 {
+	color: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:32px;
+}
+
+.sear-upper img {
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	border:1px solid #ccc;
+}
+
+.artist-album a {
+	color:#fff;
+}
+
+.artist-album a:hover, .artist-album span:hover {
+	color:#FFE716;
+}
+
+.upper-title h3 {
+	font-weight:bold;
+	line-height: 1;
+}
+
+.upper-title a {
+	color:#fff;
+}
+
+.upper-title a:hover {
+	color:#FFE716;
+}
+
+.upper-tag a {
+	color:#fff;
+	vertical-align:sub;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.upper-tag p:hover {
+	background:#ffe716;
+}
+
+.upper-tag p:hover a {
+	color:#000;
+}
+
+.upper-tag p {
+	display: inline-block;
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 5px 0;
+    margin: 15px 0px;
 }
