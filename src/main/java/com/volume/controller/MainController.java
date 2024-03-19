@@ -33,4 +33,9 @@ public class MainController {
 		return "/playlistDetail";
 	}
 
+	@GetMapping("/login")
+	public String login() {
+		return "/member/login";
+	}
+	
 }
