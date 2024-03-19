@@ -1,12 +1,55 @@
 @charset "UTF-8";
 
+.container h1 {
+	display:inline-block;
+    font-size: 50px;
+    color: #ffe716;
+    margin: 60px 0;
+    font-weight: bold;
+}
+
 .upper-info, .uppermaking-preview {
 	display:inline-block;
 	vertical-align:top;
 }
 
-th,td {
-	color:#fff;
+th {
+	color: #fff;
+    width: 150px;
+    height: 100px;
+    font-size: 20px;
+}
+
+td {
+	color: #fff;
+    display: inline-block;
+    width: 400px;
+}
+
+.uppermaking-title {
+	width: 400px;
+    height: 30px;
+    margin: 38px 0;
+}
+
+.uppermaking-comment {
+	width: 400px;
+    height: 30px;
+    margin: 38px 0;
+}
+
+.uppermaking-tags {
+	width: 20px;
+    height: 20px;
+    margin: 38px 0;
+}
+
+.upmaking-choice span {
+	font-size:20px;
+}
+
+.uppermaking-firstimg {
+	margin:38px 0;
 }
 
 .uppermaking-preview img {
@@ -17,4 +60,227 @@ th,td {
 
 .uppermaking-preview {
 	float:right;
+}
+
+/* 곡 리스트 */
+.container-fluid h2 {
+	color: #FFE716;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom:32px;
+}
+
+/* 노래박스 */
+.song-box {
+	width:100%;
+	height:150px;
+	padding:10px 15px;
+	border:1px solid #ccc;
+}
+
+.song-box * {
+	display:inline-block;
+}
+
+.album-img {
+	vertical-align: bottom;
+}
+
+.album-img img {
+	width:140px;
+	height:130px;
+}
+
+.artist-album {
+	width: 238px;
+    vertical-align: top;
+}
+
+.artist-album span {
+	color: #fff;
+    font-size: 20px;
+    padding: 5px 15px 10px;
+}
+
+.artist-album h3 {
+	color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 15px 32px;
+}
+
+.artist-album p {
+	color: #fff;
+    font-size: 15px;
+    margin: 0px;
+    padding:0 18px;
+}
+
+.box-menu {
+	width: 300px;
+    height: 100%;
+    vertical-align: bottom;
+    padding: 25px 0;
+    float:right;
+}
+
+.box-menu button {
+	width: 72px;
+    border-radius: 72px;
+    height: 72px;
+    vertical-align: bottom;
+    float:right;
+}
+
+.box-menu button:hover {
+	background:#FFE716;
+}
+
+.artist-album a {
+	color:#fff;
+}
+
+.artist-album a:hover, .artist-album span:hover {
+	color:#FFE716;
+	text-decoration:none;
+}
+
+.check-song {
+	height: 67%;
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.check-song span {
+	color: #fff;
+    font-size: 30px;
+}
+
+.check-uppersong {
+	width: 25px;
+    height: 25px;
+}
+/* 노래박스 끝 */
+
+
+/* 노래 검색 */
+.upmaking-searchbar {
+	width:100%;
+	height:40px;
+	margin-bottom:30px;
+}
+
+.song-boxsearch {
+	width:100%;
+	height:120px;
+	padding:5px 10px;
+	border:1px solid #ccc;
+}
+
+.song-boxsearch * {
+	display:inline-block;
+}
+
+.album-imgsearch {
+	vertical-align: bottom;
+}
+
+.album-imgsearch img {
+	width:100px;
+	height:100px;
+}
+
+.artist-albumsearch {
+	width: 238px;
+    vertical-align: top;
+}
+
+.artist-albumsearch span {
+	color: #fff;
+    font-size: 16px;
+    padding: 5px 15px 10px;
+}
+
+.artist-albumsearch h3 {
+	color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 15px 23px;
+}
+
+.artist-albumsearch p {
+	color: #fff;
+    font-size: 15px;
+    margin: 0px;
+    padding:0 15px;
+}
+
+.box-menusearch {
+	width: 100px;
+    height: 100%;
+    vertical-align: bottom;
+    padding: 25px 0;
+    float:right;
+}
+
+.box-menusearch button {
+	width: 72px;
+    border-radius: 72px;
+    height: 72px;
+    vertical-align: bottom;
+    float:right;
+}
+
+.box-menusearch button:hover {
+	background:#FFE716;
+}
+
+.artist-albumsearch a {
+	color:#fff;
+}
+
+.artist-albumsearch a:hover, .artist-albumsearch span:hover {
+	color:#FFE716;
+	text-decoration:none;
+}
+
+.check-songsearch {
+	height: 63%;
+    width: 30px;
+    text-align: center;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.check-songsearch span {
+	color: #fff;
+    font-size: 20px;
+}
+
+.check-uppersong {
+	width: 25px;
+    height: 25px;
+}
+
+/* 노래검색 끝 */
+
+/* 등록 버튼 */
+.upperregist-save {
+	color: #fff;
+    border: 1px solid #ccc;
+    float: right;
+    width: 100px;
+    height: 50px;
+    border-radius: 40px;
+    font-weight: bold;
+    margin: 62px 30px;
+    text-align: center;
+    padding: 13px 0px;
+}
+
+.upperregist-save:hover {
+	color:#000;
+	background:#ffe716;
+	text-decoration:none;
 }

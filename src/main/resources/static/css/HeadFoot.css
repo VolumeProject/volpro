@@ -18,7 +18,7 @@ html, body {width:100%; height:100%;}
 
 .header .top_left > ul > li.first,
 .header .top_right > ul > li.first,
-.header .top_middle > ul > li.first {border-left:1px solid #FFE716;}
+/* .header .top_middle > ul > li.first {border-left:1px solid #FFE716;} */
 
 /* .header .top_left {float:left; width:400px;} */
 .header .top_left ul li {width:255px; text-align:center; height:100px; margin-top:-10px;}
@@ -26,22 +26,22 @@ html, body {width:100%; height:100%;}
 .header .top_right ul li {width:100px; text-align:center; height:100px; margin-top:-10px;}
 .header .top_middle ul li {width:255px; text-align:center; height:100px; margin-top:-10px;}
 .header nav ul li a {display:block; color:#FFE716; height:100%; font-size:24px; font-weight:bold;}
-.header nav ul li a:hover {color:#000; background:#FFE716; text-decoration:none;}
-.header nav ul li a:hover .glyphicon {color:#000;}
-.header nav ul li .logoimg:hover {background:#000;}
+.header nav ul li a:hover {color:#1c1c1c; background:#FFE716; text-decoration:none;}
+.header nav ul li a:hover .glyphicon {color:#1c1c1c;}
+.header nav ul li .logoimg:hover {background:#1c1c1c;}
 
-.dropdown button {background:#000;}
-.dropdown button:hover {background:#000;}
-.dropdown button:focus {background:#000;}
+.dropdown button {background:#1c1c1c;}
+.dropdown button:hover {background:#1c1c1c;}
+.dropdown button:focus {background:#1c1c1c;}
 
-.top_right button {border-color:#000;}
+.top_right button {border-color:#1c1c1c;}
 .top_right button:focus {outline:none; box-shadow: none;}
-.top_right button:hover {border-color:#000;}
-.top_right button:active {border-color:#000;}
+.top_right button:hover {border-color:#1c1c1c;}
+.top_right button:active {border-color:#1c1c1c;}
 
 .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
-    color: #333;
-    background-color: #333;
+    color: #000;
+    background-color: #1c1c1c;
 }
 
 .dropdown-menu>li>a {width: 159px; padding: 39px 33px; clear: both; line-height: 1.42857143; white-space: nowrap;}
@@ -54,7 +54,7 @@ html, body {width:100%; height:100%;}
 	height:45px;
 	width:45px;
 	text-align:center;
-	background:#000;
+	background:#1c1c1c;
 	cursor:pointer;
 	transition:left 0.4s ease;
 	z-index:1;
@@ -78,7 +78,7 @@ html, body {width:100%; height:100%;}
 	width:250px;
 	height:100%;
 	left:-250px; /* -250px; */
-	background:#000;
+	background:#1c1c1c;
 	transition:left 0.4s ease;
 	z-index:9999;
 }
@@ -93,12 +93,12 @@ html, body {width:100%; height:100%;}
 	font-weight:600;
 	line-height:65px;
 	text-align:center;
-	background:#000;
+	background:#1c1c1c;
 	letter-spacing:1px;
 }
 
 .sidebar ul {
-	background:#000;
+	background:#1c1c1c;
 	height:100%;
 	width:100%;
 	list-style:none;	
@@ -127,7 +127,7 @@ html, body {width:100%; height:100%;}
 
 .sidebar ul li.active a {
 	color:#FFE716;
-	background:#000;
+	background:#1c1c1c;
 	border-left-color:#FFE716;
 }
 
@@ -153,18 +153,18 @@ html, body {width:100%; height:100%;}
 
 .sidebar ul li.active ul li a {
 	color:#FFE716;
-	background:#000;
+	background:#1c1c1c;
 	border-left-color:transparent;
 }
 
 .sidebar ul li.active ul li a:hover {
-	color:#000;
+	color:#1c1c1c;
 	background:#FFE716;
 	border-left-color:transparent;
 }
 
 .sidebar ul ul li a:hover {
-	color:#000!important;
+	color:#1c1c1c!important;
 	background:#FFE716;
 }
 

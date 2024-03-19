@@ -30,7 +30,7 @@
 <title>Volume Index</title>
 </head>
 
-<body style="background:#000;">
+<body style="background:#1c1c1c;">
 	<div class="container-fluid search-bar">
 		<form name="seacher" method="get" class="seacher" action="/volume/search">
 			<input type="text" class="text-area" placeholder="검색어를 입력해 주세요">
@@ -39,9 +39,9 @@
 		<button class="searchmark" id="close" type="submit">X</button>
 	</div>
 
-	<div class="container-fluid" style="height: 100px; background: #000; padding-right:0px; padding-left:0px;">
+	<div class="container-fluid" style="height: 100px; background: #1c1c1c; padding-right:0px; padding-left:0px;">
 		<header class="header">
-			<div class="col-lg-1">
+			<div class="col-lg-1" style="height: 101px; border-bottom: 1px solid #ffe716;">
 				<div class="btnside">
 					<!-- <span class="fas fa-bars"></span> -->
 					<span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
@@ -70,7 +70,7 @@
 				</nav>
 			</div>
 			
-			<div class="col-lg-2">
+			<div class="col-lg-2" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_left">
 					<ul style="list-style: none; padding-left: 0px;">
 						<li class="first"><a class="logoimg" href="/"><img
@@ -80,7 +80,7 @@
 				</nav>
 			</div>
 			
-			<div class="col-lg-7">
+			<div class="col-lg-7" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_middle">
 					<ul style="list-style: none; padding-left: 0px;">
 						<li><a href="">PlayList</a></li>
@@ -91,25 +91,25 @@
 				</nav>
 			</div>
 			
-			<div class="col-lg-2">
+			<div class="col-lg-2" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_right">
 					<ul style="list-style:none; padding-top:10px;">
 						<li>
 							<!-- <a href="#"></a> -->
 							<button class="btn btn-default searchmark" type="button"
 									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="true" style="width: 100%; height:100%; padding-top:17px; background:#000;">
+									aria-expanded="true" style="width: 100%; height:100%; padding-top:17px; background:#1c1c1c;">
 									<span class="glyphicon glyphicon-search" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
 							</button>
 						</li>
 						<li><div class="dropdown"> 
 								<button class="btn btn-default dropdown-toggle" type="button"
 									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="true" style="border-color:#000; width: 100%; height:100%; padding-top:17px;">
+									aria-expanded="true" style="border-color:#1c1c1c; width: 100%; height:100px; padding-top:17px;">
 									<span class="glyphicon glyphicon-user" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
 								</button>
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1"
-									style="position: absolute; top: 105%; left: -62px; z-index: 1000; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #000; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, .175);">
+									style="position: absolute; top: 105%; left: -62px; z-index: 1000; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #1c1c1c; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, .175);">
 									<c:if test="${empty member }">
 										<li class="first"><a href="/volume/login" style="padding:40px 30px;">로그인</a></li>
 										<li><a href="" style="padding:40px 30px;">회원가입</a></li>
