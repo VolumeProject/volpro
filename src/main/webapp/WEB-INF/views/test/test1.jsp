@@ -66,7 +66,7 @@
 					</li>
 					<li><a href="#">Upper</a></li>
 					<li><a href="#">Amateurs</a></li>
-					<li><a href="#">My Page</a></li>
+					<li><a href="#">1111111111111</a></li>
 				</ul>
 			</nav>
 			
