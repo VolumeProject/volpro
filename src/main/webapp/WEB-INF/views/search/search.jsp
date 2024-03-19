@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
-<link href="/resources/css/search.css" rel='stylesheet'>
+<link href="/resources/css/search/search.css" rel='stylesheet'>
 
 <div class="container-fluid">
 	<div class="page-title">
@@ -193,4 +193,4 @@
 	</div>
 	<div class="col-lg-1"></div>
 </div>
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>

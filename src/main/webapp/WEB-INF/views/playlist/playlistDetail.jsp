@@ -1,36 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="header.jsp" %>
+<%@ include file="../header.jsp" %>
 
-<link href="/resources/css/upperDetail.css" rel='stylesheet'>
+<link href="/resources/css/playlist/playlistDetail.css" rel='stylesheet'>
 
 <div class="container">
 	<div class="upper-detail">
 		<div class="detail-title">
-			<img src="/resources/images/logo2.png" alt="..." class="img-circle">
+			<img src="/resources/images/logo2.png" alt="..." class="img-thumbnail">
 			<div class="user-upper">
-				<h2>어퍼이름</h2>
-				<p><small>작성자</small></p>
+				<h2>플리제목</h2>
 				<br/>
 				<span><small>작성날짜</small></span>
 			</div>
-			<div class="deteil-comment">
-				<p>코멘트 쓰는 자리입니다. 그렇게 길게는 못쓰게 할거에요</p>
-			</div>
-			<div class="detail-tags">
-				<p><a href="#">요니루는</a></p>
-				<p><a href="#">지금</a></p>
-				<p><a href="#">졸리다</a></p>
-				<p><a href="#">이거</a></p>
-				<p><a href="#">태그</a></p>
-				<p><a href="#">랍니다</a></p>
-			</div>
 			<div class="detail-menu">
-				<button type="button" class="btn-detailallplay" id="btn-play">전곡재생</button>
-				<button type="button" class="btn-detailsave">저장</button>
-				<button type="button" class="btn-detaillike">좋아요</button>
-				<button type="button" class="btn-detailmodify">수정</button>
-				<button type="button" class="btn-detailshare">공유</button>
+				<button type="button" class="btn-plliallplay" id="btn-play">전곡재생</button>
+				<button type="button" class="btn-pllishuffle">셔플</button>
+				<button type="button" class="btn-pllimodify">수정</button>
+				<button type="button" class="btn-pllishare">공유</button>
 			</div>
 		</div>
 	</div>
@@ -51,7 +38,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -75,7 +61,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -99,7 +84,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -123,7 +107,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -147,7 +130,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -171,7 +153,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -195,7 +176,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -219,7 +199,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -243,7 +222,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -267,7 +245,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -291,7 +268,6 @@
 		</div>
 		<div class="box-menu">
 			<button type="button" class="glyphicon glyphicon-play" id="btn-play"></button>
-			<button type="button" class="btn-addplaylist">ADD List</button>
 			<button type="button" class="btn-addupper">ADD Upper</button>
 			<button type="button" class="btn-like">Like</button>
 			<button type="button" class="btn-detail">Detail</button>
@@ -301,4 +277,4 @@
 </div>
 </div>
 
-<%@ include file="footer.jsp" %>
+<%@ include file="../footer.jsp" %>
