@@ -17,7 +17,8 @@
 	integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
 	crossorigin="anonymous"></script>
 
-<link href="/resources/css/headfoot.css" rel='stylesheet'>
+
+<link href="/resources/css/HeadFoot.css" rel='stylesheet'>
 <link href="/resources/css/common.css" rel="stylesheet">
 <link href="/resources/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet"
@@ -101,7 +102,7 @@
 									<span class="glyphicon glyphicon-search" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
 							</button>
 						</li>
-						<li><div class="dropdown">
+						<li><div class="dropdown"> 
 								<button class="btn btn-default dropdown-toggle" type="button"
 									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="true" style="border-color:#000; width: 100%; height:100%; padding-top:17px;">
