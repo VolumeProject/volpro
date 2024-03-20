@@ -11,47 +11,28 @@
     z-index:9000;
 }
 
-.container-login {
+.container-terms {
+	text-align: center;
 	padding : 200px auto;
 	width: 900px; 
-	height: 400px;
+	height: auto;
 	border:1px solid #FFE716;
 	border-radius: 2%;
-	display: flex;
+	display: block;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
     margin: 0 auto; /* 수평 가운데 정렬 */
 }
 
-.container-login label {
+.container-terms label {
 	color: #FFE716;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom:10px;
-    margin-top:10px;
+    margin-top:5px;
 }
 
-.container-login input[type="text"],
-.container-login input[type="password"] {
-    flex: 1; /* 입력창이 남은 공간을 모두 차지하도록 설정 */
-    padding: 10px; /* 입력창 내부 여백 설정 */
-    box-sizing: border-box; /* 입력창의 너비에 padding과 border를 포함시킴 */
-    width: 300px; /* 가로 길이 자동 조정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* 입력창 아래 간격 추가 */
-}
-
-.input-group label {
-    width: 200px; /* 라벨의 고정된 너비 설정 */
-    margin-right: 10px; /* 라벨과 입력창 사이 간격 설정 */
-}
-
-.container-login button {
+.container-terms button {
     width: 180px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
     border-radius: 5%;
     height: 50px; /* 높이 조정 */
@@ -63,18 +44,44 @@
     margin-top: 15px;
 }
 
-.container-login button:hover {
+.container-terms button:hover {
 	background:#FFFFFF;
 }
 
 .btn-login-container {
     text-align: center; /* 내부 요소 가운데 정렬 */
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .btn-login-container a {
     margin-right: 7px; /* 링크 간격 설정 */
     color: #FFE716; /* 링크의 텍스트 색상을 노란색으로 설정 */
+}
+
+.termsForm {
+	width:700px;
+	margin:20px auto 5px;
+	resize: none;
+	pointer-events: none;
+}
+
+.checkbox {
+	display:inline-block;
+	text-align: right;
+	margin-left: 10px;
+}
+
+.essential {
+	color: #FFE716;
+}
+
+.agreebox {
+	margin: -10px 0 10px 500px;
+}
+
+.term {
+	margin:10px 0;
 }
 
 
