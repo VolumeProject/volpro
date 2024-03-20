@@ -50,7 +50,7 @@
 				<nav class="sidebar">
 					<div class="text">Side Menu</div>
 					<ul>
-						<li><a href="#">Playlist</a></li>
+						<li><a href="/volume/playlist">Playlist</a></li>
 						<li>
 							<a href="#" class="chart-btn">Chart
 								<span class="fas fa-caret-down first"></span>
@@ -83,8 +83,8 @@
 			<div class="col-lg-7" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_middle">
 					<ul style="list-style: none; padding-left: 0px;">
-						<li><a href="">PlayList</a></li>
-						<li><a href="">Chart</a></li>
+						<li><a href="/volume/playlist">PlayList</a></li>
+						<li><a href="/volume/chart">Chart</a></li>
 						<li><a href="/volume/upper">Upper</a></li>
 						<li><a href="">Amateurs</a></li>
 					</ul>
@@ -94,6 +94,9 @@
 			<div class="col-lg-2" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_right">
 					<ul style="list-style:none; padding-top:10px;">
+						<li>
+							<button type="button" class="btn-use"><span>이용권 구매</span></button>
+						</li>
 						<li>
 							<!-- <a href="#"></a> -->
 							<button class="btn btn-default searchmark" type="button"

@@ -38,4 +38,18 @@ public class MainController {
 		return "/upper/upperRegist";
 	}
 	
+	@GetMapping("/playlist")
+	public String playlist() {
+		return "/playlist/playlist";
+	}
+	
+	@GetMapping("/chart")
+	public String chart() {
+		return "/chart/chart";
+	}
+	
+	@GetMapping("/musicdetail")
+	public String musicdetail() {
+		return "/music/musicDetail";
+	}
 }
