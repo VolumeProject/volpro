@@ -44,29 +44,29 @@
 				<tr>
 					<th>태그</th>
 					<td class="upmaking-choice">
-						<span>태그1</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="1">
-						<span>태그2</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="2">
-						<span>태그3</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="3">
-						<span>태그4</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="4">
-						<span>태그5</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="5">
-						<span>태그6</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="6">
-						<span>태그7</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="7">
-						<span>태그8</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="8">
-						<span>태그9</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="9">
-						<span>태그10</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="10">
-						<span>태그11</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="11">
-						<span>태그12</span>
+						<span>태그</span>
 						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="12">
 					</td>
 				</tr>
@@ -90,9 +90,8 @@
 	<div class="col-lg-6 container">
 		<h2>곡 리스트</h2>
 		<div class="song-box">
-			<span class="ico-drag"></span>
 			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" id="check-uppersong"></span>
+				<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
 			</div>
 			<div class="album-img">
 				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>

@@ -1,95 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-
+    pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
 <link href="/resources/css/chart/chart.css" rel='stylesheet'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous" />
-
-</head>
-
-<style>
-
-.center {
-    position: fixed;
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-}
-
-.menu {
-    width: 300px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.item {
-    border-top: 1px solid #000;
-    overflow: hidden;
-    background: #C28C2E;
-    color: #222220;
-}
-
-.btn {
-    display: block;
-    padding: 16px 20px;
-    background: #ffe716;
-    color: #222220;
-    position: relative;
-    font-weight: bold;
-}
-
-.btn i {
-    margin-right: 10px;
-}
-
-.smenu {
-    background: #1c1c1c;
-    overflow: auto;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-}
-
-.smenu a {
-    color: #ffe716;
-    display: block;
-    padding: 16px 26px;
-    font-size: 14px;
-    margin: 4px 0;
-    position: relative;
-}
-
-.smenu a:before {
-    content: "";
-    width: 5px;
-    height: 100%;
-    position: absolute;
-    background: #ffe716;
-    left: 0;
-    top: 0;
-    transition: 0.3s;
-    opacity: 0;
-}
-
-.smenu a:hover::before {
-    opacity: 1;
-}
-
-/*#profile:hover .smenu {
-    max-height: 100%;
-}*/
-
-.item:target .smenu {
-    max-height: 15em;
-}
-
-</style>
-
-
-
 
 <div class="container-fluid">
 	<div class="page-title">
@@ -100,9 +13,7 @@
 	</div>
 </div>
 
-
-
-    <div class="center">
+<div class="center">
         <div class="menu">
             <li class="item" id="profile">
                 <a href="#profile" class="btn"><i class="far fa-user" aria-hidden="true"></i> 기간별</a>
@@ -139,7 +50,6 @@
             </li>
         </div>
     </div>
-
 
 <div class="container">
 	<div class="content-title">
@@ -382,6 +292,4 @@
 	</div>
 </div>
 
-
-</body>
-</html>
+<%@ include file="../footer.jsp" %>

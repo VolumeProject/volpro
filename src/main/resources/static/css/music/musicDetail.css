@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* 노래 상세 메인 */
+
+.upper-detail * {
+	display:inline-block;
+}
+
+.upper-detail {
+	margin-top:50px;
+}
+
+.detail-title img {
+	float: left;
+    width: 400px;
+    height: 400px;
+}
+
+.user-upper {
+	margin-top:135px;
+}
+
+.user-upper h2 {
+	color: #fff;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 25px 50px;
+    letter-spacing: 10px;
+}
+
+.user-upper p {
+	color: #fff;
+    font-size: 30px;
+}
+
+.user-upper span {
+	color: #fff;
+    font-size: 20px;
+    margin: 0px 50px;
+}
+
+.detail-menu button {
+	width: 72px;
+    border-radius: 72px;
+    height: 72px;
+    vertical-align: bottom;
+   	margin-top: 20px;
+    margin-left: 45px;
+}
+
+.detail-menu button:hover {
+	background:#FFE716;
+}
+
+/* 노래 상세 메인 끝 */
+
+/* 노래 정보 */
+
+.info-box {
+	border:1px solid #ccc;
+	margin-top:50px;
+}
+
+table,th,td {
+	color:#fff;
+}
+
+th {
+	font-size: 24px;
+    width: 585px;
+    text-align: center;
+    height:100px;
+}
+
+td {
+	width: 585px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* 노래 정보 끝 */
+
+.info-box h3 {
+	color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 30px 65px;
+}
+
+/* 가사 */
+
+.lyric-box {
+	width:1000px;
+	border:1px solid #ccc;
+	margin-bottom:50px;
+}
+
+.lyric p {
+	color:#fff;
+	font-size:16px;
+}
+
+/* 가사 끝 */
+
