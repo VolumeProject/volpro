@@ -1,0 +1,194 @@
+@charset "UTF-8";@charset "UTF-8";
+
+* {
+	padding:0;
+	margin:0;
+}
+
+.mp-content * {
+	display:inline-block;
+}
+
+.mp-title h1{
+	font-size:130px;
+	font-weight:bold;
+	color:#2E2E2E;
+	padding-bottom:120px;
+}
+
+.mp-title h2{
+	font-size:60px;
+	font-weight:bold;
+	color:#eee;
+	padding-left:285px;
+	padding-bottom:50px;
+}
+
+.img-circle {
+    width: 250px;
+    height: 250px;
+}
+
+.info-sidebar {
+	display: inline-block;
+	border-right:1px solid #eee;
+	text-align: right;
+	position: relative;
+	right:60px;
+}
+
+.pf-title {
+	font-size: 40px;
+	color: #eee;
+	font-weight:bold;
+}
+
+.pf-title2 {
+	font-size: 30px;
+	color: #eee;
+	font-weight:bold;
+	padding-top: 50px;
+}
+
+.nav>li>a {
+    padding: 10px 0;
+}
+
+.nav-pills a  {
+	font-size: 20px;
+	color: #eee;
+}
+
+.nav-pills a:hover {
+	font-size: 22px;
+	color: #FFE716;
+	background:#1c1c1c;
+	font-weight:bold;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.pro-info {
+	padding: 20px 30px;
+}
+
+.pro-info h1 {
+    padding-bottom: 20px;
+    display: block;
+    color:#eee;
+    font-size: 60px;
+}
+
+.pro-info p {
+    display: block;
+    color:#eee;
+    font-size: 20px;
+    height: 80px;
+}
+
+.pro-info a {
+    padding-right: 25px;
+    color:#eee;
+    font-size: 20px;
+}
+
+.pro-info a:hover {
+    padding-right: 25px;
+    color:#eee;
+    font-size: 20px;
+	text-decoration: none;   
+}
+
+.upper-songlist {
+    margin-top: 70px;
+}
+
+.upper-songlist h1 {
+	font-size: 30px;
+	color:#eee;
+	padding-bottom: 20px;
+}
+
+.song-box {
+	width:100%;
+	height:150px;
+	padding:10px 15px;
+	border:1px solid #eee;
+	
+}
+
+.song-box * {
+	display:inline-block;
+}
+
+.artist-album span {
+	color: #fff;
+    font-size: 20px;
+    padding: 0px 15px 15px;
+}
+
+.artist-album h3 {
+	color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 15px 32px;
+}
+
+.artist-album p {
+	color: #fff;
+    font-size: 15px;
+    margin: 0px;
+    padding:0 18px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 0px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
+    position: relative;
+    bottom: 5px;
+}
+
+.box-menu {
+	width: 453px;
+    height: 100%;
+    vertical-align: bottom;
+    padding: 25px 0;
+    float:right;
+    position: relative;
+    left: 190px;
+    top: 13px;
+}
+
+.box-menu span {
+	font-size: 30px;
+    color: #eee;
+    padding: 10px;
+}
+
+.box-menu span:hover {
+	color:#FFE716;
+}
+
+.artist-album a {
+	color:#fff;
+}
+
+.artist-album a:hover, .artist-album span:hover {
+	color:#FFE716;
+	text-decoration:none;
+}
+
+.check-song {
+	height: 60%;
+    width: 35px;
+    vertical-align: bottom;
+}
+
+.check-uppersong {
+	width: 25px;
+    height: 25px;
+}

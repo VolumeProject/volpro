@@ -10,5 +10,15 @@ public class TestController {
 	public String test1() {
 		return "/test/test1";
 	}
+	
+	@GetMapping("/test/mp/info")
+	public String testInfo() {
+		return "/myPage/info";
+	}
+	
+	@GetMapping("/test/mp/info/edit")
+	public String testInfoEdit() {
+		return "/myPage/infoEdit";
+	}
 	 
 }
