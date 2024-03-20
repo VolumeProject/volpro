@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .page-title h1 {
-	position: absolute;
+	margin : 35px auto 0 45px;
     top: 80px;
     left: 60px;
     font-size: 170px;
@@ -11,27 +11,8 @@
     z-index:9000;
 }
 
-
-.login-box input[type="text"],
-.login-box input[type="password"] {
-    flex: 1; /* 입력창이 남은 공간을 모두 차지하도록 설정 */
-    padding: 10px; /* 입력창 내부 여백 설정 */
-    box-sizing: border-box; /* 입력창의 너비에 padding과 border를 포함시킴 */
-    width: auto; /* 가로 길이 자동 조정 */
-    border-radius: 5px; /* 모서리를 둥글게 설정 */
-}
-
-
-.login-box label {
-	color: #FFE716;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom:10px;
-    margin-top:10px;
-}
-
 .container-login {
-	margin: 200px auto 160px auto;
+	padding : 200px auto;
 	width: 900px; 
 	height: 400px;
 	border:1px solid #FFE716;
@@ -39,29 +20,25 @@
 	display: flex;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center; /* 수직 가운데 정렬 */
-}
-
-.login-box {
-    width: 500px; /* 변경된 가로 사이즈 */
     margin: 0 auto; /* 수평 가운데 정렬 */
 }
 
-.login-box button {
-    width: 180px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
-    border-radius: 5%;
-    height: 50px; /* 높이 조정 */
-    font-size: 20px; /* 폰트 크기 조정 */
-    vertical-align: bottom;
-    background:#FFE716;
-    font-size: 20px;
+.container-login label {
+	color: #FFE716;
+    font-size: 30px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-bottom:10px;
+    margin-top:10px;
 }
 
-.login-box button:hover {
-	background:#FFFFFF;
+.container-login input[type="text"],
+.container-login input[type="password"] {
+    flex: 1; /* 입력창이 남은 공간을 모두 차지하도록 설정 */
+    padding: 10px; /* 입력창 내부 여백 설정 */
+    box-sizing: border-box; /* 입력창의 너비에 padding과 border를 포함시킴 */
+    width: 300px; /* 가로 길이 자동 조정 */
+    border-radius: 5px; /* 모서리를 둥글게 설정 */
 }
-
 
 .input-group {
     display: flex;
@@ -74,6 +51,22 @@
     margin-right: 10px; /* 라벨과 입력창 사이 간격 설정 */
 }
 
+.container-login button {
+    width: 180px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
+    border-radius: 5%;
+    height: 50px; /* 높이 조정 */
+    font-size: 20px; /* 폰트 크기 조정 */
+    vertical-align: bottom;
+    background:#FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.container-login button:hover {
+	background:#FFFFFF;
+}
+
 .btn-login-container {
     text-align: center; /* 내부 요소 가운데 정렬 */
     margin-top: 20px;
@@ -81,7 +74,7 @@
 
 .btn-login-container a {
     margin-right: 7px; /* 링크 간격 설정 */
-    color: yellow; /* 링크의 텍스트 색상을 노란색으로 설정 */
+    color: #FFE716; /* 링크의 텍스트 색상을 노란색으로 설정 */
 }
 
 

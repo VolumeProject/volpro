@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+.page-title h1 {
+	margin : 35px auto 0 45px;
+    top: 80px;
+    left: 60px;
+    font-size: 170px;
+    font-weight: bold;
+    float: left;
+    color: rgba(255, 255, 255, 0.3);
+    z-index:9000;
+}
+
+.container-terms {
+	text-align: center;
+	padding : 200px auto;
+	width: 900px; 
+	height: auto;
+	border:1px solid #FFE716;
+	border-radius: 2%;
+	display: block;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+}
+
+.container-terms label {
+	color: #FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+
+.container-terms button {
+    width: 180px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
+    border-radius: 5%;
+    height: 50px; /* 높이 조정 */
+    font-size: 20px; /* 폰트 크기 조정 */
+    vertical-align: bottom;
+    background:#FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.container-terms button:hover {
+	background:#FFFFFF;
+}
+
+.btn-login-container {
+    text-align: center; /* 내부 요소 가운데 정렬 */
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.btn-login-container a {
+    margin-right: 7px; /* 링크 간격 설정 */
+    color: #FFE716; /* 링크의 텍스트 색상을 노란색으로 설정 */
+}
+
+.termsForm {
+	width:700px;
+	margin:20px auto 5px;
+	resize: none;
+	pointer-events: none;
+}
+
+.checkbox {
+	display:inline-block;
+	text-align: right;
+	margin-left: 10px;
+}
+
+.essential {
+	color: #FFE716;
+}
+
+.agreebox {
+	margin: -10px 0 10px 500px;
+}
+
+.term {
+	margin:10px 0;
+}
+
+
+
+.container {
+	width: 100%;
+	overflow: hidden;
+	background:#000000;
+}
+
+.page {
+        display: none;
+        transition: transform 0.5s ease-in-out;
+    }
+
+.active {
+	display: block;
+	transform: translateX(0%);
+}
+
+.next {
+	transform: translateX(-100%);
+}
+
+.prev {
+	transform: translateX(100%);
+}
+
+
+
+
+
+.page-title h1 {
+	margin : 35px auto 0 45px;
+    top: 80px;
+    left: 60px;
+    font-size: 170px;
+    font-weight: bold;
+    float: left;
+    color: rgba(255, 255, 255, 0.3);
+    z-index:9000;
+}
+
+.container-join {
+	padding : 200px auto;
+	width: 900px; 
+	height: auto;
+	border:1px solid #FFE716;
+	border-radius: 2%;
+	display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+}
+
+.container-join label {
+	color: #FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.container-join input[type="text"],
+.container-join input[type="password"] {
+    padding: 10px; /* 입력창 내부 여백 설정 */
+    box-sizing: border-box; /* 입력창의 너비에 padding과 border를 포함시킴 */
+    width: 300px; /* 가로 길이 자동 조정 */
+    border-radius: 5px; /* 모서리를 둥글게 설정 */
+}
+
+.input-group span {
+	color:white;
+	margin:0px 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* 입력창 아래 간격 추가 */
+    margin-top: 20px;
+}
+
+.input-group label {
+    width: 200px; /* 라벨의 고정된 너비 설정 */
+    margin-right: -10px; /* 라벨과 입력창 사이 간격 설정 */
+}
+
+.container-join button {
+    width: 120px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
+    border-radius: 5%;
+    height: 40px; /* 높이 조정 */
+    font-size: 15px; /* 폰트 크기 조정 */
+    background:#FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin : 0 20px;
+}
+
+.container-join button:hover {
+	background:#FFFFFF;
+}
+
+.btn-join-container {
+    text-align: center; /* 내부 요소 가운데 정렬 */
+    margin-top: 20px;
+}
+
+.btn-join-container a {
+    margin-right: 7px; /* 링크 간격 설정 */
+    color: #FFE716; /* 링크의 텍스트 색상을 노란색으로 설정 */
+}
+
+.btn-join-container button {
+    width: 180px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
+    border-radius: 5%;
+    height: 50px; /* 높이 조정 */
+    font-size: 20px; /* 폰트 크기 조정 */
+    vertical-align: bottom;
+    background:#FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.selection-button {
+    width: 120px;
+    height: 40px;
+    background-color: #FFE716; 
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 30px 40px;
+}
+
+.selection-button:hover {
+    background-color: #FFFFFF; 
+    color: black;
+}
+
+.selection-button.selected {
+    background-color: #FFFFFF; 
+    color: black;
+}
+
+.container-preper button {
+    width: 120px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
+    border-radius: 5%;
+    height: 40px; /* 높이 조정 */
+    font-size: 15px; /* 폰트 크기 조정 */
+    background:#FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin : 50px 20px;
+}
+
+.container-preper {
+	padding : 200px auto;
+	width: 900px; 
+	height: auto;
+	border:1px solid #FFE716;
+	border-radius: 2%;
+	display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    text-align:center;
+}
+
+.container-preper label {
+	color: #FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.container-dislike button {
+    width: 120px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
+    border-radius: 5%;
+    height: 40px; /* 높이 조정 */
+    font-size: 15px; /* 폰트 크기 조정 */
+    background:#FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin : 50px 20px;
+}
+
+.container-dislike {
+	padding : 200px auto;
+	width: 900px; 
+	height: auto;
+	border:1px solid #FFE716;
+	border-radius: 2%;
+	display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    text-align:center;
+}
+
+.container-dislike label {
+	color: #FFE716;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.complete-msg {
+	color: #FFE716;
+	font-size: 90px;
+    font-weight: bold;
+    text-align: center;
+    margin:30px 0;
+}
+
+.complete-msg p{
+	color: #FFFFFF;
+	font-size: 40px;
+    text-align: center;
+    margin:10px 0;
+}
