@@ -13,14 +13,9 @@ public class MemberController {
 		return "/member/login";
 	}
 	
-	@GetMapping("/terms")
-	public String terms() {
-		return "/member/terms";
-	}
-	
-	@GetMapping("/form")
-	public String form() {
-		return "/member/form";
+	@GetMapping("/join")
+	public String join() {
+		return "/member/join";
 	}
 	
 }
