@@ -111,8 +111,8 @@
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1"
 									style="position: absolute; top: 105%; left: -62px; z-index: 1000; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #1c1c1c; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, .175);">
 									<c:if test="${empty member }">
-										<li class="first"><a href="/volume/login" style="padding:40px 30px;">로그인</a></li>
-										<li><a href="" style="padding:40px 30px;">회원가입</a></li>
+										<li class="first"><a href="/member/login" style="padding:40px 30px;">로그인</a></li>
+										<li><a href="/member/terms" style="padding:40px 30px;">회원가입</a></li>
 									</c:if>
 									<c:if test="${!empty member }">
 										<li>${member.username }님</li>

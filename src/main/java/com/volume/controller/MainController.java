@@ -37,10 +37,5 @@ public class MainController {
 	public String upperregist() {
 		return "/upper/upperRegist";
 	}
-
-	@GetMapping("/login")
-	public String login() {
-		return "/member/login";
-	}
 	
 }
