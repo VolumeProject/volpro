@@ -12,7 +12,7 @@
 </div>
 
 <div class="container-login">
-	<form name="loginForm" id="loginForm" method="get" class="loginForm" action="/member/searchPwComplete">
+	<form name="loginForm" id="loginForm" method="get" class="loginForm" action="/member/changePw">
 		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 		<div class="input-group">
 			<label for="username">이름</label>
