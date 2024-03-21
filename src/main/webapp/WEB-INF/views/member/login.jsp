@@ -26,8 +26,8 @@
 			<button type="submit" class="btn-share">로그인</button>
 		</div>
 		<div class="btn-login-container">
-			<a class="btn_login btn_Blue" href="javascript:fn_login();">아이디&nbsp;&nbsp;/</a>
-			<a class="btn_login btn_Blue" href="javascript:fn_login();">비밀번호찾기&nbsp;</a>
+			<a class="btn_login btn_Blue" href="/member/searchId">아이디&nbsp;&nbsp;/</a>
+			<a class="btn_login btn_Blue" href="/member/searchPw">비밀번호찾기&nbsp;</a>
 			<a class="btn_login btn_Blue" href="/member/join">&nbsp;&nbsp;회원가입&nbsp;&nbsp;</a>
 		</div>
 	</form>

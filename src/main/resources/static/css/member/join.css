@@ -93,21 +93,25 @@
 }
 
 .page {
-        display: none;
-        transition: transform 0.5s ease-in-out;
-    }
+    display: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+
 
 .active {
-	display: block;
-	transform: translateX(0%);
+    display: block;
+    transform: translateX(0%);
 }
 
 .next {
-	transform: translateX(-100%);
+	transition: transform 0.5s ease-in-out;
+    transform: translateX(-100%);  
 }
 
 .prev {
-	transform: translateX(100%);
+	transition: transform 0.5s ease-in-out;
+	transform: translateX(+100%);
 }
 
 
@@ -126,7 +130,7 @@
 }
 
 .container-join {
-	padding : 200px auto;
+	padding : 20px 0px;
 	width: 900px; 
 	height: auto;
 	border:1px solid #FFE716;
@@ -161,8 +165,8 @@
 .input-group {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* 입력창 아래 간격 추가 */
-    margin-top: 20px;
+    margin-bottom: 5px; /* 입력창 아래 간격 추가 */
+    margin-top: 5px;
 }
 
 .input-group label {
@@ -304,4 +308,13 @@
 	font-size: 40px;
     text-align: center;
     margin:10px 0;
+}
+
+.check span {
+	color:white;
+	margin:0 190px 20px 0;
+}
+
+.check {
+	text-align:center;
 }
