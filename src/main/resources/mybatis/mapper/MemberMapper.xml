@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volume.mapper.MemberMapper">
+
+	<sql id="memberColumns">
+		users_no,users_id,users_pw,users_name,users_phone,users_nickname,users_email,users_regdate,users_profile,
+		users_introduction,users_subscriptioncount
+	</sql>
+	
+	<insert id="signUp">
+		<!-- <selectKey keyProperty="users_no" order="BEFORE" resultType="Long">
+			select users_seq.nextval from dual
+		</selectKey> -->
+		insert into users (
+			users_no, users_id, users_pw, users_name, users_phone, users_nickname, users_email, users_regdate, users_profile, users_introduction, users_subscriptioncount
+		) values (
+			users_seq.nextval, #{users_id}, #{users_pw}, #{username}, #{phone}, #{nickname}, #{email}, sysdate, #{profile}, #{introduction}, #{subscriptioncount}
+		)
+	</insert>
+	
+</mapper>

@@ -9,73 +9,96 @@
 	<div class="page" id="page1">
 		<div class="container-fluid">
 			<div class="page-title">
-				<h1>TERMS</h1>
+				<h1>約款</h1>
 			</div>
 		</div>
 		
 		<div class="container-terms">
 			<div class="term">
 				<textarea class="termsForm" id="termsForm1" rows="6" cols="50">
-					치피치피 차파차파
+第1条（目的） この約款は、企業（電子商取引事業者）が運営する企業サイバーモール（以下「モール」という）が提供するインターネット関連サービス（以下「サービス」という）を利用するにあたって、サイバーモールと利用者の権利·義務および責任事項を規定することを目的とします。
+
+※「パソコン通信、無線等を利用する電子商取引についても、その性質に反しない限り、本約款を準用します。」
+
+第2条（定義）
+
+① 「モール」とは、業者が財貨またはサービス(以下「財貨等」という)を利用者に提供するために、コンピュータなどの情報通信設備を利用して財貨等を取引できるように設定した仮想の営業場のことで、あわせてサイバーモールを運営する事業者の意味でも使用します。
+
+② 「利用者」とは、「モール」にアクセスし、本約款に従って「モール」が提供するサービスを受ける会員及び非会員のことです。
 				</textarea>
 				<div class="agreebox">
 					<input type="checkbox" class="checkbox" id="checkbox1"> <span
-						class="essential">(필수) 약관에 동의합니다.</span>
+						class="essential">(必修)約款に同意します。</span>
 				</div>
 			</div>
 			<div class="term">
 				<textarea class="termsForm" id="termsForm2" rows="6" cols="50">
-					치피치피 차파차파
+個人情報処理方針
+
+[順番]
+1. 総則
+2. 個人情報の収集に関する同意
+3. 個人情報の収集及び利用目的
+4. 収集する個人情報項目
+5. 個人情報自動収集装置の設置、運営及びその拒否に関する事項
+6. 目的外使用及び第三者への提供
 				</textarea>
 				<div class="agreebox">
 					<input type="checkbox" class="checkbox" id="checkbox2"> <span
-						class="essential">(필수) 약관에 동의합니다.</span>
+						class="essential">(必修)約款に同意します。</span>
 				</div>
 			</div>
 			<div class="term">
 				<textarea class="termsForm" id="termsForm3" rows="6" cols="50">
-		       		선택 약관 내용
+収集する個人情報の選択項目
+居住地域
+
+個人情報の保有及び利用期間
+最終ログイン後2年経過時、または情報主体の会員退会申請時
+
+同意拒否権利事実及び不利益内容
+利用者は同意を拒否する権利があります。 選択事項に同意しなくても会員登録が可能です。
 		       	</textarea>
 				<div class="agreebox">
 					<input type="checkbox" class="checkbox" id="checkbox3"> <span
-						class="essential">(선택) 약관에 동의합니다.</span>
+						class="essential">(選択)約款に同意します</span>
 				</div>
 			</div>
-			<label><input type="checkbox" id="checkAll"> 모두 동의</label>
+			<label><input type="checkbox" id="checkAll"> 全部同意</label>
 		</div>
 		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+			<button type="submit" class="btn-share" onclick="nextPage()">次に</button>
 		</div>
 	</div>
 
 	<div class="page" id="page2">
 		<div class="container-fluid">
 			<div class="page-title">
-				<h1>JOIN</h1>
+				<h1>加入情報</h1>
 			</div>
 		</div>
 		
 		<div class="container-join">
-			<form name="joinForm" id="joinForm" method="post" class="joinForm" action="/volume/member/join">
+			<form name="joinForm" id="joinForm" method="post" class="joinForm" action="/member/signup">
 				<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 				<div class="input-group">
-					<label for="id">아이디</label>
-					<input type="text" name="id" id="id" placeholder="아이디" />
-					<button type="button" class="btn-share">중복확인</button>
+					<label for="users_id">ユーザーID</label>
+					<input type="text" name="users_id" id="users_id" placeholder="ユーザーID" />
+					<button type="button" class="btn-share">重複確認</button>
 				</div>
 				<div class="input-group">
-					<label for="password">비밀번호</label>
-					<input type="password" name="password" id="password" placeholder="비밀번호" />
-				</div>
-				<div class="check"><span>인증 일치여부</span></div>
-				<div class="input-group">
-					<label for="passwordcheck">비밀번호 확인</label>
-					<input type="password" name="passwordcheck" id="passwordcheck" placeholder="비밀번호 확인" />
-					<span> 비밀번호 영문숫자 조합</span>
+					<label for="password">パスワード</label>
+					<input type="password" name="password" id="password" placeholder="パスワード" />
 				</div>
 				<div class="check"><span>인증 일치여부</span></div>
 				<div class="input-group">
-					<label for="username">이름</label>
+					<label for="passwordcheck">パスワード確認</label>
+					<input type="password" name="passwordcheck" id="passwordcheck" placeholder="パスワード確認" />
+					<span> 英字、数字の組み合わせ</span>
+				</div>
+				<div class="check"><span>인증 일치여부</span></div>
+				<div class="input-group">
+					<label for="username">名前</label>
 					<input type="text" name="username" id="username" placeholder="이름" />
 				</div>
 				<div class="input-group">
@@ -94,14 +117,14 @@
 				<div class="check"><span>인증 일치여부</span></div>
 				<div class="input-group">
 					<label for="emailcheck">이메일 인증</label>
-					<input type="text" name="emailcheck" id="emailcheck" placeholder="이메일 확인" />
+					<input type="text" name="emailcheck" id="emailcheck" placeholder="이메일 인증번호" />
 				</div>
 				<div class="check"><span>인증 일치여부</span></div>
 			</form>
 		</div>
 		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-			<button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+			<button class="btn-share" onclick="prevPage()">이전으로</button>
+			<button class="btn-share" onclick="submitForm()">다음으로</button> <!--  -->
 		</div>
 	</div>
 	<div class="page" id="page3">
@@ -208,6 +231,10 @@
 	        checkbox.checked = checkAllCheckbox.checked;
 	    });
 	});
+	
+	function submitForm() {
+        document.getElementById("joinForm").submit();
+    }
 	
 	// 이전 페이지
 	function prevPage() {
