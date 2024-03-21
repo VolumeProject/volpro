@@ -18,9 +18,25 @@ public class MemberController {
 		return "/member/join";
 	}
 	
+	@GetMapping("/searchId")
+	public String searchId() {
+		return "/member/searchId";
+	}
+	
+	@GetMapping("/searchIdComplete")
+	public String searchIdComplete() {
+		return "/member/searchIdComplete";
+	}
+	
+	@GetMapping("/searchPw")
+	public String searchPw() {
+		return "/member/searchPw";
+	}
+	
+	@GetMapping("/searchPwComplete")
+	public String searchPwComplete() {
+		return "/member/searchPwComplete";
+	}
+	
 }
-
-
-	
-	
 

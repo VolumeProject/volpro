@@ -61,17 +61,19 @@
 				<div class="input-group">
 					<label for="id">아이디</label>
 					<input type="text" name="id" id="id" placeholder="아이디" />
-					<button type="submit" class="btn-share">중복확인</button>
+					<button type="button" class="btn-share">중복확인</button>
 				</div>
 				<div class="input-group">
 					<label for="password">비밀번호</label>
 					<input type="password" name="password" id="password" placeholder="비밀번호" />
 				</div>
+				<div class="check"><span>인증 일치여부</span></div>
 				<div class="input-group">
 					<label for="passwordcheck">비밀번호 확인</label>
 					<input type="password" name="passwordcheck" id="passwordcheck" placeholder="비밀번호 확인" />
 					<span> 비밀번호 영문숫자 조합</span>
 				</div>
+				<div class="check"><span>인증 일치여부</span></div>
 				<div class="input-group">
 					<label for="username">이름</label>
 					<input type="text" name="username" id="username" placeholder="이름" />
@@ -89,10 +91,12 @@
 					<input type="text" name="email" id="email" placeholder="이메일" />
 					<button type="submit" class="btn-share">인증전송</button>
 				</div>
+				<div class="check"><span>인증 일치여부</span></div>
 				<div class="input-group">
 					<label for="emailcheck">이메일 인증</label>
 					<input type="text" name="emailcheck" id="emailcheck" placeholder="이메일 확인" />
 				</div>
+				<div class="check"><span>인증 일치여부</span></div>
 			</form>
 		</div>
 		<div class="btn-join-container">
@@ -225,17 +229,17 @@
 	    var nextPage = currentPage.nextElementSibling;
 
 	    // 1페이지 -> 2페이지
-	    /* if (currentPage.id === "page1" && nextPage.id === "page2") {
+	    if (currentPage.id === "page1" && nextPage.id === "page2") {
 	        var checkbox1 = document.getElementById("checkbox1");
 	        var checkbox2 = document.getElementById("checkbox2");
 	        if (!checkbox1.checked || !checkbox2.checked) {
 	            alert("필수 항목을 모두 체크해주세요.");
 	            return;
 	        }
-	    } */
+	    }
 	    
 	 	// 2페이지 -> 3페이지
-	    /* if (currentPage.id === "page2" && nextPage.id === "page3") {
+	    if (currentPage.id === "page2" && nextPage.id === "page3") {
 	    	var id = document.getElementById("id").value;
 	        var password = document.getElementById("password").value;
 	        var passwordcheck = document.getElementById("passwordcheck").value;
@@ -249,7 +253,7 @@
 	            alert("빈 항목을 모두 입력해주세요.");
 	            return; 
 	        }
-	    } */
+	    } 
 	    
 	    if (nextPage) {
 	        currentPage.classList.remove('active');
