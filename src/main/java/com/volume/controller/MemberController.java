@@ -33,6 +33,11 @@ public class MemberController {
 		return "/member/searchPw";
 	}
 	
+	@GetMapping("/changePw")
+	public String changePw() {
+		return "/member/changePw";
+	}
+	
 	@GetMapping("/searchPwComplete")
 	public String searchPwComplete() {
 		return "/member/searchPwComplete";
