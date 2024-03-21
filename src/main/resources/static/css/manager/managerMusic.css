@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* 페이지 타이틀 */
+
+.page-title h1 {
+	position: absolute;
+    top: 115px;
+    left: 60px;
+    font-size: 170px;
+    font-weight: bold;
+    float: left;
+    color: rgba(255, 255, 255, 0.3);
+    z-index:9000;
+}
+
+.search-img img {
+	width:100%;
+	height:700px;
+	object-fit:cover;
+}
+
+/* 페이지 타이틀 끝 */
+
+/* 상단 고정 검색바 */
+
+.user-search {
+	text-align:center;
+}
+
+.usertext-area {
+	width: 50%;
+    height: 50px;
+}
+
+.btn-usersearch {
+	width: 100px;
+    height: 50px;
+    background: #1c1c1c;
+    color: #ffe716;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #ffe716;
+}
+
+/* 상단 고정 검색바 끝 */
+
+
+/* 유저 리스트 테이블 */
+
+.user-list {
+	text-align: -webkit-center;
+}
+
+table,th,td {
+	color:#fff;
+	text-align:center;
+}
+
+table {
+	width: 100%;
+    margin: 100px 0;
+    border: 1px solid #ccc;
+}
+
+th {
+	font-size: 24px;
+}
+
+td {
+	font-size: 16px;
+    height: 50px;
+    border-top: 1px solid #626262;
+}
+
+/* 유저 리스트 테이블 끝 */
+
+.btn-mumodify, .btn-mudelete {
+	color: #fff;
+    width: 50px;
+    height: 30px;
+    font-weight: bold;
+    vertical-align: -webkit-baseline-middle;
+    background: #1c1c1c;
+    border-color: #ffe716;
+}

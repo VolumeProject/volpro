@@ -18,7 +18,7 @@
 	crossorigin="anonymous"></script>
 
 
-<link href="/resources/css/HeadFoot.css" rel='stylesheet'>
+<link href="/resources/css/manager/managerHeader.css" rel='stylesheet'>
 <link href="/resources/css/common.css" rel="stylesheet">
 <link href="/resources/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet"
@@ -50,22 +50,12 @@
 				<nav class="sidebar">
 					<div class="text">Side Menu</div>
 					<ul>
-						<li><a href="/volume/playlist">Playlist</a></li>
-						<li>
-							<a href="#" class="chart-btn">Chart
-								<span class="fas fa-caret-down first"></span>
-							</a>
-							<ul class="chart-show">
-								<li><a href="#">Genre</a></li>
-								<li><a href="#">Today</a></li>
-								<li><a href="#">Global</a></li>
-								<li><a href="#">K-pop</a></li>
-								<li><a href="#">Year</a></li>
-							</ul>
-						</li>
-						<li><a href="/volume/upper">Upper</a></li>
-						<li><a href="#">Amateurs</a></li>
-						<li><a href="#">My Page</a></li>
+						<li><a href="/volume/playlist">1:1문의</a></li>
+						<li><a href="#" class="chart-btn">음원관리</a></li>
+						<li><a href="/volume/upper">결제내역</a></li>
+						<li><a href="#">통계</a></li>
+						<li><a href="#">유저조회</a></li>
+						<li><a href="#">전체알람</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -83,10 +73,12 @@
 			<div class="col-lg-7" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_middle">
 					<ul style="list-style: none; padding-left: 0px;">
-						<li><a href="/volume/playlist">PlayList</a></li>
-						<li><a href="/volume/chart">Chart</a></li>
-						<li><a href="/volume/upper">Upper</a></li>
-						<li><a href="">Amateurs</a></li>
+						<li><a href="#">1:1문의</a></li>
+						<li><a href="#">음원관리</a></li>
+						<li><a href="#">결제내역</a></li>
+						<li><a href="#">통계</a></li>
+						<li><a href="#">유저조회</a></li>
+						<li><a href="#">전체알람</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -95,35 +87,17 @@
 				<nav class="top_right">
 					<ul style="list-style:none; padding-top:10px;">
 						<li>
-							<button type="button" class="btn-use"><span>이용권</span></button>
-						</li>
-						<li>
 							<!-- <a href="#"></a> -->
 							<button class="btn btn-default searchmark" type="button"
 									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="true" style="width: 100%; height:100%; padding-top:5px; background:#1c1c1c;">
+									aria-expanded="true" style="width: 100%; height:100%; background:#1c1c1c;">
 									<span class="glyphicon glyphicon-search" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
 							</button>
 						</li>
 						<li><div class="dropdown"> 
-								<button class="btn btn-default dropdown-toggle" type="button"
-									id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="true" style="border-color:#1c1c1c; width: 100%; height:100px; padding-top:5px;">
-									<span class="glyphicon glyphicon-user" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
-								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1"
-									style="position: absolute; top: 105%; left: -62px; z-index: 1000; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #1c1c1c; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, .175);">
-									<c:if test="${empty member }">
-										<li class="first"><a href="/member/login" style="padding:40px 30px;">로그인</a></li>
-										<li><a href="/member/join" style="padding:40px 30px;">회원가입</a></li>
-									</c:if>
-									<c:if test="${!empty member }">
-										<li>${member.username }님</li>
-										<li class="first"><a href="/">로그아웃</a></li>
-										<li><a href="/">마이페이지</a></li>
-										<li><a href="/">문의요청</a></li>
-									</c:if>
-								</ul>
+								<%-- <c:if test="${!empty member }"> --%>
+									<p>관리자님</p>
+								<%-- </c:if> --%>
 							</div></li>
 					</ul>
 				</nav>
