@@ -12,10 +12,20 @@
 			select users_seq.nextval from dual
 		</selectKey> -->
 		insert into users (
-			users_no, users_id, users_pw, users_name, users_phone, users_nickname, users_email, users_regdate, users_profile, users_introduction, users_subscriptioncount
+			users_no, users_id, users_pw, users_name, users_phone, users_nickname, users_email, users_regdate 
 		) values (
-			users_seq.nextval, #{users_id}, #{users_pw}, #{username}, #{phone}, #{nickname}, #{email}, sysdate, #{profile}, #{introduction}, #{subscriptioncount}
+			users_seq.nextval, #{users_id}, #{users_pw}, #{users_name}, #{users_phone}, #{users_nickname}, #{users_email}, sysdate 
 		)
 	</insert>
+	
+	<select id="getGenre" resultType="com.volume.domain.GenreVo">
+		select * from genre
+	</select>
+	
+	<insert id="preferInsert">
+		insert into prefer (prefer_no, prefer_userno, prefer_genreno) 
+		values (prefer_seq.nextval, 41, #{genre_no})
+	</insert>
+
 	
 </mapper>

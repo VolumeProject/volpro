@@ -6,7 +6,7 @@
 <link href="/resources/css/member/join.css" rel='stylesheet'>
 
 <div class="container" style="background:#1c1c1c;">
-	<div class="page" id="page1">
+	<!-- <div class="page" id="page1">
 		<div class="container-fluid">
 			<div class="page-title">
 				<h1>約款</h1>
@@ -69,9 +69,9 @@
 		<div class="btn-join-container">
 			<button type="submit" class="btn-share" onclick="nextPage()">次に</button>
 		</div>
-	</div>
+	</div> -->
 
-	<div class="page" id="page2">
+	<!-- <div class="page" id="page2">
 		<div class="container-fluid">
 			<div class="page-title">
 				<h1>加入情報</h1>
@@ -79,7 +79,7 @@
 		</div>
 		
 		<div class="container-join">
-			<form name="joinForm" id="joinForm" method="post" class="joinForm" action="/member/signup">
+			<form name="joinForm" id="joinForm" method="post" class="joinForm">
 				<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 				<div class="input-group">
 					<label for="users_id">ユーザーID</label>
@@ -87,79 +87,67 @@
 					<button type="button" class="btn-share">重複確認</button>
 				</div>
 				<div class="input-group">
-					<label for="password">パスワード</label>
-					<input type="password" name="password" id="password" placeholder="パスワード" />
+					<label for="users_pw">パスワード</label>
+					<input type="password" name="users_pw" id="password" placeholder="パスワード" />
+					<span> 英字、数字の組み合わせ</span>
 				</div>
-				<div class="check"><span>인증 일치여부</span></div>
+				<div class="password-strength" id="password-strength">보안 강도: <span id="strength-text">약함</span></div>
 				<div class="input-group">
 					<label for="passwordcheck">パスワード確認</label>
 					<input type="password" name="passwordcheck" id="passwordcheck" placeholder="パスワード確認" />
-					<span> 英字、数字の組み合わせ</span>
 				</div>
-				<div class="check"><span>인증 일치여부</span></div>
+				<div id="password-match" class="match-text">인증 일치 여부</div>
 				<div class="input-group">
-					<label for="username">名前</label>
-					<input type="text" name="username" id="username" placeholder="이름" />
-				</div>
-				<div class="input-group">
-					<label for="phone">휴대전화</label>
-					<input type="text" name="phone" id="phone" placeholder="휴대전화" />
+					<label for="users_name">名前</label>
+					<input type="text" name="users_name" id="username" placeholder="이름" />
 				</div>
 				<div class="input-group">
-					<label for="nickname">닉네임</label>
-					<input type="text" name="nickname" id="nickname" placeholder="닉네임" />
+					<label for="users_phone">휴대전화</label>
+					<input type="text" name="users_phone" id="phone" placeholder="휴대전화" />
 				</div>
 				<div class="input-group">
-					<label for="email">이메일</label>
-					<input type="text" name="email" id="email" placeholder="이메일" />
-					<button type="submit" class="btn-share">인증전송</button>
+					<label for="users_nickname">닉네임</label>
+					<input type="text" name="users_nickname" id="nickname" placeholder="닉네임" />
 				</div>
-				<div class="check"><span>인증 일치여부</span></div>
+				<div class="input-group">
+					<label for="users_email">이메일</label>
+					<input type="text" name="users_email" id="email" placeholder="이메일" />
+					<button type="button" class="btn-email" id="btn-email">인증전송</button>
+				</div>
 				<div class="input-group">
 					<label for="emailcheck">이메일 인증</label>
-					<input type="text" name="emailcheck" id="emailcheck" placeholder="이메일 인증번호" />
+					<input type="text" name="emailcheck" id="emailcheck" placeholder="인증번호 입력" />
 				</div>
-				<div class="check"><span>인증 일치여부</span></div>
+				<div class="checkemail"><span>인증번호를 입력해주세요.</span></div>
 			</form>
 		</div>
 		<div class="btn-join-container">
 			<button class="btn-share" onclick="prevPage()">이전으로</button>
-			<button class="btn-share" onclick="submitForm()">다음으로</button> <!--  -->
+			<button class="btn-share" onclick="nextPage()">다음으로</button> 
 		</div>
-	</div>
+	</div> -->
 	<div class="page" id="page3">
 		<div class="container-fluid">
 			<div class="page-title">
-				<h1>PREPER</h1>
+				<h1>PREFER</h1>
 			</div>
 		</div>
 		
-		<div class="container-preper">
-			<div id="genreSelection3">
-				<button class="selection-button">Button 1</button>
-				<button class="selection-button">Button 2</button>
-				<button class="selection-button">Button 3</button>
-				<button class="selection-button">Button 4</button>
-				<button class="selection-button">Button 5</button>
-				<button class="selection-button">Button 6</button>
-				<button class="selection-button">Button 7</button>
-				<button class="selection-button">Button 8</button>
-				<button class="selection-button">Button 9</button>
-				<button class="selection-button">Button 10</button>
-				<button class="selection-button">Button 11</button>
-				<button class="selection-button">Button 12</button>
-				<!-- 필요한 만큼 장르 버튼을 추가할 수 있습니다 -->
-			</div>
-			<form id="genreForm" action="processGenres.jsp" method="post">
-				<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
-				<input type="hidden" name="selectedGenres" id="selectedGenres" value="">
-				<!-- 선택된 장르들을 전송하기 위한 hidden input -->
-			</form>
-		</div>
-		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-			<button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
-		</div>
+		<div class="container-prefer">
+        <div id="genreSelection3">
+            <c:forEach var="item" items="${genreList}">
+                <button class="selection-button" value="${item.genre_no}">${item.genre_name}</button>
+            </c:forEach>
+        </div>
+        <form id="genreForm3" method="post">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+            <input type="hidden" name="selectedGenres3" id="selectedGenresPage3" value="">
+        </form>
+    </div>
+    <div class="btn-join-container">
+        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
+        <button type="submit" class="btn-share" onclick="sendSelectedGenresToServer()">다음으로</button>
+    </div>
 	</div>
 	<div class="page" id="page4">
 		<div class="container-fluid">
@@ -169,31 +157,21 @@
 		</div>
 		
 		<div class="container-dislike">
-			<div id="genreSelection4">
-				<button class="selection-button">Button 1</button>
-				<button class="selection-button">Button 2</button>
-				<button class="selection-button">Button 3</button>
-				<button class="selection-button">Button 4</button>
-				<button class="selection-button">Button 5</button>
-				<button class="selection-button">Button 6</button>
-				<button class="selection-button">Button 7</button>
-				<button class="selection-button">Button 8</button>
-				<button class="selection-button">Button 9</button>
-				<button class="selection-button">Button 10</button>
-				<button class="selection-button">Button 11</button>
-				<button class="selection-button">Button 12</button>
-				<!-- 필요한 만큼 장르 버튼을 추가할 수 있습니다 -->
-			</div>
-			<form id="genreForm" action="processGenres.jsp" method="post">
-				<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
-				<input type="hidden" name="selectedGenres" id="selectedGenres" value="">
-				<!-- 선택된 장르들을 전송하기 위한 hidden input -->
-			</form>
-		</div>
-		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-			<button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
-		</div>
+        <div id="genreSelection4">
+            <c:forEach var="item" items="${genreList}">
+                <button class="selection-button" value="${item.genre_no}">${item.genre_name}</button>
+            </c:forEach>
+        </div>
+        <form id="genreForm4" method="post">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+            <input type="hidden" name="selectedGenres4" id="selectedGenresPage4" value="">
+            <!-- 선택된 장르들을 전송하기 위한 hidden input -->
+        </form>
+    </div>
+    <div class="btn-join-container">
+        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
+        <button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+    </div>
 	</div>
 	<div class="page" id="page5">
 		<div class="container-fluid">
@@ -222,8 +200,14 @@
 	    currentPage.classList.add('active');
 	};
 	
+	//메일보내기
+	var code=""; // 넘어오는 인증값
+	var incode="1"; // 내가 입력한 인증값
+
+	var authCheck=false; // 인증했는지 확인하는값?
+	
 	// 1페이지 약관 모두동의 
-	const checkAllCheckbox = document.getElementById("checkAll");
+	/* const checkAllCheckbox = document.getElementById("checkAll");
 	const otherCheckboxes = document.querySelectorAll(".checkbox");
 
 	checkAllCheckbox.addEventListener("click", function() {
@@ -234,12 +218,16 @@
 	
 	function submitForm() {
         document.getElementById("joinForm").submit();
-    }
+    } */
 	
 	// 이전 페이지
 	function prevPage() {
 	    var currentPage = document.querySelector('.page.active');
 	    var prevPage = currentPage.previousElementSibling;
+	    
+		if (currentPage.id === "page3" && prevPage.id === "page2") {
+			authCheck=false;
+	    }
 	
 	    if (prevPage) {
 	        currentPage.classList.remove('active');
@@ -267,7 +255,7 @@
 	    
 	 	// 2페이지 -> 3페이지
 	    if (currentPage.id === "page2" && nextPage.id === "page3") {
-	    	var id = document.getElementById("id").value;
+	    	var id = document.getElementById("users_id").value;
 	        var password = document.getElementById("password").value;
 	        var passwordcheck = document.getElementById("passwordcheck").value;
 	        var username = document.getElementById("username").value;
@@ -276,12 +264,20 @@
 	        var email = document.getElementById("email").value;
 	        var emailcheck = document.getElementById("emailcheck").value;
 
+	        // 유효성검사
 	        if (id === "" || password === "" || passwordcheck === "" || username === "" || phone === "" || nickname === "" || email === "" || emailcheck === "") {
 	            alert("빈 항목을 모두 입력해주세요.");
 	            return; 
 	        }
+	        
+	        // 메일인증검사
+			if(authCheck !== true) {
+				alert("메일인증은 필수항목 입니다");
+				return;
+			}
+	        
 	    } 
-	    
+	 	
 	    if (nextPage) {
 	        currentPage.classList.remove('active');
 	        nextPage.classList.remove('next');
@@ -290,57 +286,188 @@
 	    }
 	}
 	
-	// 페이지 3에서 선택된 항목의 개수를 추적하는 변수
-    let selectedGenresPage3 = 0;
+	
+	
+	
+	// 이메일 전송 및 AJAX 요청 처리
+	$(function() {
+		$("#btn-email").on("click", function() {
+			var regEmail=/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[a-zA-Z0-9\-]+/;
+			if(!regEmail.test($("#email").val())){
+				alert("이메일 주소가 유효하지 않습니다");
+				$("#email").focus();
+				return false;
+			}
+			var email=$("#email").val();
+			$.ajax({
+				type:'get',
+				url:"/member/mail?mail="+email,
+				success:function(data){
+					alert("메일전송 완료");
+					code = data; // checkIncode 넘어온값
+					$("#checkNum").removeAttr("disabled");
+					$("#checkNum").css("background", "#fff");					
+				}
+			}); //ajax end
+		}); // onclick end
+			
+		// 이메일 인증번호 확인
+		$("#emailcheck").on("input", function() {
+		    var inputCode = $(this).val();
+		    if (code === inputCode) {
+		    	$(".checkemail span").css("color", "green").text("인증성공");
+		        authCheck = true;
+		    } else {
+		    	$(".checkemail span").css("color", "red").text("인증번호를 확인해주세요");
+		        authCheck = false;
+		    }
+		});
+		
+	});		
+	
+	/* // 비밀번호 보안강도
+	const passwordInput = document.getElementById('password');
+	const passwordcheckInput = document.getElementById('passwordcheck');
+	const passwordStrengthText = document.getElementById('strength-text');
+	const passwordMatchText = document.getElementById('password-match');
 
-    // 페이지 4에서 선택된 항목의 개수를 추적하는 변수
-    let selectedGenresPage4 = 0;
+	passwordInput.addEventListener('input', function() {
+	    const password = passwordInput.value;
+	    const result = zxcvbn(password);
 
-    // 페이지 3의 버튼 선택 기능
-    document.addEventListener("DOMContentLoaded", function() {
-        const buttons = document.querySelectorAll("#genreSelection3 .selection-button");
-        
-        buttons.forEach(button => {
-            button.addEventListener("click", function() {
-                if (button.classList.contains("selected")) {
-                    button.classList.remove("selected");
-                    button.style.backgroundColor = "#FFE716"; // 선택 해제시 노란색
-                    selectedGenresPage3--;
-                } else {
-                    if (selectedGenresPage3 < 3) {
-                        button.classList.add("selected");
-                        button.style.backgroundColor = "#fa9a1b"; // 선택시 빨간색
-                        selectedGenresPage3++;
-                    } else {
-                        alert("최대 3개의 버튼만 선택할 수 있습니다.");
-                    }
-                }
-            });
-        });
-    });
+	    // 보안 강도에 따라 표시할 텍스트 및 스타일 설정
+	    let strengthText;
+	    let strengthColor;
 
-    // 페이지 4의 버튼 선택 기능
-    document.addEventListener("DOMContentLoaded", function() {
-        const buttons = document.querySelectorAll("#genreSelection4 .selection-button");
-        
-        buttons.forEach(button => {
-            button.addEventListener("click", function() {
-                if (button.classList.contains("selected")) {
-                    button.classList.remove("selected");
-                    button.style.backgroundColor = "#FFE716"; // 선택 해제시 노란색
-                    selectedGenresPage4--;
-                } else {
-                    if (selectedGenresPage4 < 3) {
-                        button.classList.add("selected");
-                        button.style.backgroundColor = "#fa9a1b"; // 선택시 빨간색
-                        selectedGenresPage4++;
-                    } else {
-                        alert("최대 3개의 버튼만 선택할 수 있습니다.");
-                    }
-                }
-            });
-        });
-    });
+	    switch (result.score) {
+	        case 0:
+	            strengthText = '매우 약함';
+	            strengthColor = 'red';
+	            break;
+	        case 1:
+	            strengthText = '약함';
+	            strengthColor = 'orange';
+	            break;
+	        case 2:
+	            strengthText = '보통';
+	            strengthColor = 'yellow';
+	            break;
+	        case 3:
+	            strengthText = '강함';
+	            strengthColor = 'green';
+	            break;
+	        case 4:
+	            strengthText = '매우 강함';
+	            strengthColor = 'darkgreen';
+	            break;
+	        default:
+	            strengthText = '';
+	            strengthColor = '';
+	    }
+
+	    // 보안 강도 텍스트 및 스타일 업데이트
+	    passwordStrengthText.textContent = strengthText;
+	    passwordStrengthText.style.color = strengthColor;
+	    
+		 // 비밀번호 일치 여부 업데이트
+	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '인증 일치 여부';
+	    passwordMatchText.textContent = matchText;
+	    passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? 'green' : '';
+	});
+	
+	passwordcheckInput.addEventListener('input', function() {
+		// 비밀번호 일치 여부 업데이트
+	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '인증 일치 여부';
+	    passwordMatchText.textContent = matchText;
+	    passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? 'green' : '';
+	}); */
+	
+	
+	
+	let selectedGenresPage3Array = []; // 페이지 3에서 선택된 장르의 ID 리스트
+	let selectedGenresPage4Array = []; // 페이지 4에서 선택된 장르의 ID 리스트
+
+	// 페이지 3의 버튼 선택 기능
+	document.addEventListener("DOMContentLoaded", function() {
+	    const buttons = document.querySelectorAll("#genreSelection3 .selection-button");
+	    
+	    buttons.forEach(button => {
+	        button.addEventListener("click", function() {
+	            const genreId = button.value;
+	            const index = selectedGenresPage3Array.indexOf(genreId);
+	            if (index > -1) {
+	                // 이미 선택된 장르를 다시 클릭한 경우 제거
+	                selectedGenresPage3Array.splice(index, 1);
+	                button.classList.remove("selected");
+	                button.style.backgroundColor = "#FFE716";
+	            } else {
+	                // 선택되지 않은 장르를 클릭한 경우 추가
+	                if (selectedGenresPage3Array.length < 3) {
+	                    selectedGenresPage3Array.push(genreId);
+	                    button.classList.add("selected");
+	                    button.style.backgroundColor = "#fa9a1b";
+	                } else {
+	                    alert("최대 3개의 버튼만 선택할 수 있습니다.");
+	                }
+	            }
+	        });
+	    });
+	});
+
+	// 페이지 4의 버튼 선택 기능
+	document.addEventListener("DOMContentLoaded", function() {
+	    const buttons = document.querySelectorAll("#genreSelection4 .selection-button");
+	    
+	    buttons.forEach(button => {
+	        button.addEventListener("click", function() {
+	            const genreId = button.value;
+	            const index = selectedGenresPage4Array.indexOf(genreId);
+	            if (index > -1) {
+	                // 이미 선택된 장르를 다시 클릭한 경우 제거
+	                selectedGenresPage4Array.splice(index, 1);
+	                button.classList.remove("selected");
+	                button.style.backgroundColor = "#FFE716";
+	            } else {
+	                // 선택되지 않은 장르를 클릭한 경우 추가
+	                if (selectedGenresPage4Array.length < 3) {
+	                    selectedGenresPage4Array.push(genreId);
+	                    button.classList.add("selected");
+	                    button.style.backgroundColor = "#fa9a1b";
+	                } else {
+	                    alert("최대 3개의 버튼만 선택할 수 있습니다.");
+	                }
+	            }
+	        });
+	    });
+	});
+    
+	// 페이지 3에서 선택된 장르들을 배열에 담아 서버로 전송하는 함수
+	function sendSelectedGenresToServer() {
+	    // 선택된 장르들을 JSON 형태로 변환
+	    const data = {
+	        selectedGenres: selectedGenresPage3Array
+	    };
+
+	    // AJAX를 이용하여 서버로 전송
+	    $.ajax({
+	        type: "POST",
+	        url: "/member/preferInsert", // 여기에 컨트롤러의 엔드포인트 URL을 입력하세요
+	        data: JSON.stringify(data),
+	        contentType: "application/json",
+	        success: function(response) {
+	            console.log("서버로 전송 완료");
+	            // 성공적으로 전송된 후의 처리를 추가할 수 있습니다.
+	        },
+	        error: function(xhr, status, error) {
+	            console.error("오류 발생:", error);
+	            // 전송 중 오류가 발생한 경우의 처리를 추가할 수 있습니다.
+	        }
+	    });
+	}
+	
+	// 2페이지 폼 제출
+	/* var form = document.getElementById("joinForm");
+    form.submit(); */
     
     function redirectToURL(url) {
         window.location.href = url;
