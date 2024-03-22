@@ -20,5 +20,10 @@ public class TestController {
 	public String testInfoEdit() {
 		return "/myPage/infoEdit";
 	}
+	
+	@GetMapping("/test/mp/info/personal")
+	public String testpersonal() {
+		return "/myPage/personal";
+	}
 	 
 }
