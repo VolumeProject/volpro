@@ -231,7 +231,7 @@
     color: black;
 }
 
-.container-preper button {
+.container-prefer button {
     width: 120px; /* 버튼의 가로 너비를 100%로 설정하여 부모 요소의 폭에 맞춤 */
     border-radius: 5%;
     height: 40px; /* 높이 조정 */
@@ -242,7 +242,7 @@
     margin : 50px 20px;
 }
 
-.container-preper {
+.container-prefer {
 	padding : 200px auto;
 	width: 900px; 
 	height: auto;
@@ -255,7 +255,7 @@
     text-align:center;
 }
 
-.container-preper label {
+.container-prefer label {
 	color: #FFE716;
     font-size: 20px;
     font-weight: bold;
@@ -312,9 +312,29 @@
 
 .check span {
 	color:white;
-	margin:0 190px 20px 0;
+	margin:0 140px 20px 0;
+}
+
+.checkemail span {
+	color:white;
+	margin:0 0 0 190px;
 }
 
 .check {
 	text-align:center;
+}
+
+.password-container {
+    margin-top: 20px;
+}
+
+.password-strength {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left:195px;
+    color:white;
+}
+
+.match-text {
+	margin-left:195px;
 }
