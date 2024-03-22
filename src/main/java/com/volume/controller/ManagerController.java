@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ManagerController {
 
 
-	@GetMapping("/")
+	@GetMapping("/stats")
 	public String managermain() { 
-		return "/manager/manager";
+		return "/manager/managerStats";
 	}
 	
 	@GetMapping("/user")
@@ -32,5 +32,20 @@ public class ManagerController {
 	@GetMapping("/regist")
 	public String musicRegist() {
 		return "/manager/managerMusicRegist";
+	}
+	
+	@GetMapping("/modify")
+	public String musicModify() {
+		return "/manager/managerMusicModify";
+	}
+	
+	@GetMapping("/notice")
+	public String notice() {
+		return "/manager/managerNotice";
+	}
+	
+	@GetMapping("/qna")
+	public String qna() {
+		return "/manager/managerQna";
 	}
 }

@@ -6,7 +6,7 @@
 
 <div class="container-fluid" style=" width:100%; height:300px;">
 	<div class="page-title">
-		<h1>Payment</h1>
+		<h1>PAYMENT</h1>
 	</div>
 </div>
 

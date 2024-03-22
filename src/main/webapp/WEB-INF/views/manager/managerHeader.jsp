@@ -50,12 +50,12 @@
 				<nav class="sidebar">
 					<div class="text">Side Menu</div>
 					<ul>
-						<li><a href="/volume/playlist">1:1문의</a></li>
-						<li><a href="#" class="chart-btn">음원관리</a></li>
-						<li><a href="/volume/upper">결제내역</a></li>
-						<li><a href="#">통계</a></li>
-						<li><a href="#">유저조회</a></li>
-						<li><a href="#">전체알람</a></li>
+						<li><a href="/manager/qna">1:1문의</a></li>
+						<li><a href="/manager/music" class="chart-btn">음원관리</a></li>
+						<li><a href="/manager/payment">결제내역</a></li>
+						<li><a href="/manager/stats">통계</a></li>
+						<li><a href="/manager/user">유저조회</a></li>
+						<li><a href="/manager/notice">전체알람</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -73,12 +73,12 @@
 			<div class="col-lg-7" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_middle">
 					<ul style="list-style: none; padding-left: 0px;">
-						<li><a href="#">1:1문의</a></li>
-						<li><a href="#">음원관리</a></li>
-						<li><a href="#">결제내역</a></li>
-						<li><a href="#">통계</a></li>
-						<li><a href="#">유저조회</a></li>
-						<li><a href="#">전체알람</a></li>
+						<li><a href="/manager/qna">1:1문의</a></li>
+						<li><a href="/manager/music">음원관리</a></li>
+						<li><a href="/manager/payment">결제내역</a></li>
+						<li><a href="/manager/stats">통계</a></li>
+						<li><a href="/manager/user">유저조회</a></li>
+						<li><a href="/manager/notice">전체알람</a></li>
 					</ul>
 				</nav>
 			</div>

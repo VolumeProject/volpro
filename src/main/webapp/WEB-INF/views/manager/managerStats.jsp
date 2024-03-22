@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="managerHeader.jsp" %>
 
-<link href="/resources/css/manager/manager.css" rel='stylesheet'>
+<link href="/resources/css/manager/managerStats.css" rel='stylesheet'>
 
 <div class="container-fluid" style=" width:100%; height:500px;">
 	<div class="page-title">
