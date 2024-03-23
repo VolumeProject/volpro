@@ -6,7 +6,7 @@
 
 <div class="container-fluid" style=" width:100%; height:300px;">
 	<div class="page-title">
-		<h1>MUSIC REGIST</h1>
+		<h1>MUSIC MODIFY</h1>
 	</div>
 </div>
 
@@ -28,43 +28,43 @@
 			<tr>
 				<th>제목</th>
 				<td>
-					<input type="text" class="mu-info" id="title" placeholder="곡 제목을 입력하세요">
+					<input type="text" class="mu-info" id="title" placeholder="곡 제목을 입력하세요"> Pop Virus
 				</td>
 			</tr>
 			<tr>
 				<th>앨범</th>
 				<td>
-					<input type="text" class="mu-info" id="album" placeholder="앨범 제목을 입력하세요">
+					<input type="text" class="mu-info" id="album" placeholder="앨범 제목을 입력하세요"> Pop Virus
 				</td>
 			</tr>
 			<tr>
 				<th>아티스트</th>
 				<td>
-					<input type="text" class="mu-info" id="artist" placeholder="아티스트 명을 입력하세요">
+					<input type="text" class="mu-info" id="artist" placeholder="아티스트 명을 입력하세요">  星野源
 				</td>
 			</tr>
 			<tr>
 				<th>발매일</th>
 				<td>
-					<input type="text" class="mu-info" id="regdate" placeholder="6자리로 입력해주세요. (ex.240101)">
+					<input type="text" class="mu-info" id="regdate" placeholder="6자리로 입력해주세요. (ex.240101)">　181219
 				</td>
 			</tr>
 			<tr>
 				<th>작곡가</th>
 				<td>
-					<input type="text" class="mu-info" id="composer" placeholder="작곡가를 입력하세요">
+					<input type="text" class="mu-info" id="composer" placeholder="작곡가를 입력하세요"> 星野源
 				</td>
 			</tr>
 			<tr>
 				<th>작사가</th>
 				<td>
-					<input type="text" class="mu-info" id="lyricist" placeholder="작사가를 입력하세요">
+					<input type="text" class="mu-info" id="lyricist" placeholder="작사가를 입력하세요">　星野源
 				</td>
 			</tr>
 			<tr>
 				<th>그 외 작업자</th>
 				<td>
-					<input type="text" class="mu-info" id="else" placeholder="기타 작업자가 있다면 입력하세요">
+					<input type="text" class="mu-info" id="else" placeholder="기타 작업자가 있다면 입력하세요">　アレンジ：미오,나가오카 료스케,이시바시 에이코,호시노 겐
 				</td>
 			</tr>
 			<tr>
