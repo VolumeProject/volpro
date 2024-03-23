@@ -17,7 +17,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
 	integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
 	crossorigin="anonymous"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
 
 <link href="/resources/css/HeadFoot.css" rel='stylesheet'>
 <link href="/resources/css/common.css" rel="stylesheet">
@@ -27,6 +27,7 @@
 	integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
 	crossorigin="anonymous">
 <link href="https://netdna.bootstrapcdn.com/font-awesoment-awesome.css" rel="stylesheet">
+
 
 <title>Volume Index</title>
 </head>
