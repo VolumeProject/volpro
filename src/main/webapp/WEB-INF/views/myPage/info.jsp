@@ -24,7 +24,7 @@
 			<div class="col-lg-9">
 				<div class="my-info">
 					<div class="pro-img col-lg-4">
-						<img class="img-circle" src="/resources/images/logohigh1.jpg" alt="...">
+						<img class="img-circle" src="/resources/images/nothingProImg.png" alt="...">
 					</div>
 					<div class="pro-info col-lg-8">
 						<h1>닉네임</h1>

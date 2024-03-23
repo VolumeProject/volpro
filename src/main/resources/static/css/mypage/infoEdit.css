@@ -4,10 +4,6 @@
 	margin:0;
 }
 
-.mp-content * {
-	display:inline-block;
-}
-
 .mp-title h1{
 	font-size:130px;
 	font-weight:bold;
@@ -89,29 +85,192 @@
     height: 80px;
 }
 
-.pro-info a {
-    padding-right: 25px;
-    color:#eee;
-    font-size: 20px;
-}
-
-.pro-info a:hover {
-    padding-right: 25px;
-    color:#eee;
-    font-size: 20px;
-	text-decoration: none;   
-}
-
 .edit-form {
 	display:inline-block;
+	text-align:center;
 }
 
+.edit-form span {
+	color:#eee;
+	font-size:20px;
+	padding-right: 15px;
+	text-align:left;
+}
 
+.edit-form .inputform {
+	padding-bottom:25px;
+	text-align: left;
+}
 
+.edit-form .nick {
+	background-color: initial;
+    border-radius: 4px;
+    width: 375px;
+    height: 50px;
+    border: 1px solid #eee;
+    color: #eee;
+    text-align: left;
+    padding: 0 5px;
+}
+.edit-form .word {
+	background-color: initial;
+    border-radius: 4px;
+    width: 375px;
+    height: 50px;
+    border: 1px solid #eee;
+    color: #eee;
+    text-align: center;
+    position: relative;
+    left: 40px;
+    line-height: 38px;
+    height:200px;
+    text-align: left;
+    padding: 0 5px;
+    resize: none;
+}
 
+.edit-form .justone{
+	position: relative;
+    bottom: 170px;
+}
 
+.text_box {
+ position:relative; 
+ display:inline-block; 
+ width:100%;
+ }
+.text_box textarea {
+width:100%; 
+line-height:28px; 
+padding:20px; 
+outline:0; 
+}
 
+.text_box .count {
+position:absolute; 
+right:20px; 
+bottom:40px; 
+color:#eee; 
+font-size:10px;
+}
 
+.edit-form .himdureo {
+font-size:10px;
+}
 
+/* * {
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans KR', sans-serif;
+	box-sizing: border-box;
+	box-sizing: border-box;
+}
 
+ul, ol, li {
+	list-style: none;
+} */
 
+.file_cus label {
+	display: block;
+	width: 500px;
+	margin: 50px auto 0;
+	font-size: 0;
+	cursor: pointer;
+}
+
+.file_cus p {
+	font-size:15px;
+	padding-top:10px;
+}
+
+input[type="file"] {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	font-size: initial;
+	clip: rect(0, 0, 0, 0);
+}
+
+.file_name {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(100% - 108px);
+	height: 40px;
+	padding: 0 12px;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	font-size: 14px;
+	line-height: 38px;
+	color: #eee;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.file_btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 40px;
+	margin-left: 8px;
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 40px;
+	color: #eee;
+	text-align: center;
+}
+
+input[type="file"]:focus-visible ~ .file_btn, .file_cus:hover .file_btn
+	{
+	background: #eee;
+	color:#1c1c1c;
+}
+
+.edit-btn {
+	padding:50px;
+}
+
+.edit-btn .btn-ok{
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #eee;
+	height: 40px;
+	width:80px;
+	font-size:20px;
+}
+
+.edit-btn .btn-reset {
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #eee;
+	height: 40px;
+	width:80px;
+	font-size:20px;
+}
+
+.edit-btn input:focus{
+	background-color: #eee;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #1c1c1c;
+	height: 40px;
+	width:80px;
+	font-size:20px;
+}
+
+.edit-btn input:hover {
+	background-color: #eee;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #1c1c1c;
+	height: 40px;
+	width:80px;
+	font-size:20px;
+}
