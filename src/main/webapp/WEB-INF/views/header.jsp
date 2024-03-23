@@ -11,6 +11,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
 <script src="/resources/js/jquery-3.3.1.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
