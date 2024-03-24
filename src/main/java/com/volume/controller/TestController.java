@@ -25,5 +25,10 @@ public class TestController {
 	public String testpersonal() {
 		return "/myPage/personal";
 	}
+	
+	@GetMapping("/test/mp/info/pwcheck")
+	public String testpwcheck() {
+		return "/myPage/pwcheck";
+	}
 	 
 }
