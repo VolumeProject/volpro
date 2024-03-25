@@ -24,8 +24,29 @@
 	
 	<insert id="preferInsert">
 		insert into prefer (prefer_no, prefer_userno, prefer_genreno) 
-		values (prefer_seq.nextval, 41, #{genre_no})
+		values (prefer_seq.nextval, #{users_no}, #{genre_no})
 	</insert>
 
+	<!-- 회원 상세정보 조회 -->
+	<select id="findByLoginId" parameterType="string" resultType="com.volume.domain.UsersVo">
+		select
+			<include refid="memberColumns"/>
+		from
+			users
+		where
+			users_id = #{users_id}		
+	</select>
+	
+	<select id="getUserNoFromId" resultType="int">
+		select users_no from users where users_id = #{users_id};
+	</select>
+
+	<select id="countByLoginId" parameterType="string" resultType="int">
+		select count(*) from users where users_id = #{value}
+	</select>
+	
+	<select id="countByLoginUsername" parameterType="string" resultType="int">
+		select count(*) from users where users_name = #{value}
+	</select>
 	
 </mapper>

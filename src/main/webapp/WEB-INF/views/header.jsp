@@ -11,6 +11,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
+
 <script src="/resources/js/jquery-3.3.1.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
@@ -120,7 +123,7 @@
 									</c:if>
 									<c:if test="${!empty member }">
 										<li>${member.username }님</li>
-										<li class="first"><a href="/">로그아웃</a></li>
+										<li class="first"><a href="/user/logout">로그아웃</a></li>
 										<li><a href="/">마이페이지</a></li>
 										<li><a href="/">문의요청</a></li>
 									</c:if>

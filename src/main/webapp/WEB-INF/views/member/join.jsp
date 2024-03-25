@@ -6,7 +6,7 @@
 <link href="/resources/css/member/join.css" rel='stylesheet'>
 
 <div class="container" style="background:#1c1c1c;">
-	<!-- <div class="page" id="page1">
+	<%-- <div class="page" id="page1">
 		<div class="container-fluid">
 			<div class="page-title">
 				<h1>約款</h1>
@@ -69,9 +69,9 @@
 		<div class="btn-join-container">
 			<button type="submit" class="btn-share" onclick="nextPage()">次に</button>
 		</div>
-	</div> -->
+	</div>
 
-	<!-- <div class="page" id="page2">
+	<div class="page" id="page2">
 		<div class="container-fluid">
 			<div class="page-title">
 				<h1>加入情報</h1>
@@ -80,11 +80,11 @@
 		
 		<div class="container-join">
 			<form name="joinForm" id="joinForm" method="post" class="joinForm">
-				<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 				<div class="input-group">
 					<label for="users_id">ユーザーID</label>
 					<input type="text" name="users_id" id="users_id" placeholder="ユーザーID" />
-					<button type="button" class="btn-share">重複確認</button>
+					<br><p id="idmsg" style="margin:0 0;"></p>
 				</div>
 				<div class="input-group">
 					<label for="users_pw">パスワード</label>
@@ -95,8 +95,8 @@
 				<div class="input-group">
 					<label for="passwordcheck">パスワード確認</label>
 					<input type="password" name="passwordcheck" id="passwordcheck" placeholder="パスワード確認" />
+					<div id="password-match" class="match-text">비밀번호 일치 확인</div>
 				</div>
-				<div id="password-match" class="match-text">인증 일치 여부</div>
 				<div class="input-group">
 					<label for="users_name">名前</label>
 					<input type="text" name="users_name" id="username" placeholder="이름" />
@@ -125,29 +125,24 @@
 			<button class="btn-share" onclick="prevPage()">이전으로</button>
 			<button class="btn-share" onclick="nextPage()">다음으로</button> 
 		</div>
-	</div> -->
+	</div>   --%>
 	<div class="page" id="page3">
 		<div class="container-fluid">
 			<div class="page-title">
 				<h1>PREFER</h1>
 			</div>
 		</div>
-		
 		<div class="container-prefer">
         <div id="genreSelection3">
             <c:forEach var="item" items="${genreList}">
                 <button class="selection-button" value="${item.genre_no}">${item.genre_name}</button>
             </c:forEach>
         </div>
-        <form id="genreForm3" method="post">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-            <input type="hidden" name="selectedGenres3" id="selectedGenresPage3" value="">
-        </form>
-    </div>
-    <div class="btn-join-container">
-        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-        <button type="submit" class="btn-share" onclick="sendSelectedGenresToServer()">다음으로</button>
-    </div>
+	    </div>
+	    <div class="btn-join-container">
+	        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
+	        <button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+	    </div>
 	</div>
 	<div class="page" id="page4">
 		<div class="container-fluid">
@@ -155,24 +150,18 @@
 				<h1>DISLIKE</h1>
 			</div>
 		</div>
-		
 		<div class="container-dislike">
         <div id="genreSelection4">
             <c:forEach var="item" items="${genreList}">
                 <button class="selection-button" value="${item.genre_no}">${item.genre_name}</button>
             </c:forEach>
         </div>
-        <form id="genreForm4" method="post">
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-            <input type="hidden" name="selectedGenres4" id="selectedGenresPage4" value="">
-            <!-- 선택된 장르들을 전송하기 위한 hidden input -->
-        </form>
-    </div>
-    <div class="btn-join-container">
-        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-        <button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
-    </div>
-	</div>
+   		</div>
+	    <div class="btn-join-container">
+	        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
+	        <button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+	    </div>
+	</div> 
 	<div class="page" id="page5">
 		<div class="container-fluid">
 			<div class="page-title">
@@ -191,8 +180,16 @@
 	</div>
 </div>
 
+<%@ include file="../footer.jsp"%>
 
 <script>
+
+	var token = $("meta[name='_csrf']").attr("content"); //메타 태그중에 이름이 _csrf인것 중 속성이 content인것
+	var header = $("meta[name='_csrf_header']").attr("content"); //메타 태그중에 이름이 _csrf_header인것
+	
+	var checkIdCheck = ""; // 아이디 중복 확인
+	var checkPasswordCheck = ""; // 비밀번호 일치 확인
+	
 	
 	// 페이지가 로드될 때 초기화
 	window.onload = function() {
@@ -207,7 +204,7 @@
 	var authCheck=false; // 인증했는지 확인하는값?
 	
 	// 1페이지 약관 모두동의 
-	/* const checkAllCheckbox = document.getElementById("checkAll");
+	const checkAllCheckbox = document.getElementById("checkAll");
 	const otherCheckboxes = document.querySelectorAll(".checkbox");
 
 	checkAllCheckbox.addEventListener("click", function() {
@@ -216,9 +213,6 @@
 	    });
 	});
 	
-	function submitForm() {
-        document.getElementById("joinForm").submit();
-    } */
 	
 	// 이전 페이지
 	function prevPage() {
@@ -276,6 +270,35 @@
 				return;
 			}
 	        
+			if(checkIdCheck === 'no') {
+				alert("다른 아이디를 입력해주세요.");
+				return;
+      		}
+			
+			if(checkPasswordCheck === 'no') {
+				alert("비밀번호 일치를 확인해주세요.");
+				return;
+      		}
+	        
+			// 2페이지 폼 제출 
+			var formData = {
+		    	users_id: id,
+		        users_pw: password,
+		        users_name: username,
+		        users_phone: phone,
+		        users_nickname: nickname,
+		        users_email: email
+		    };
+		    $.ajax({
+		        type: "POST",
+		        url: "/member/signup", // 서버의 URL로 수정 필요
+		        data: formData,
+		        beforeSend: function(xhr) { // csrf 사용시 헤더에 토큰불러와서 같이보냄
+           			xhr.setRequestHeader(header, token);
+           		},
+		        success: function() {
+		        },
+		    });
 	    } 
 	 	
 	    if (nextPage) {
@@ -286,8 +309,40 @@
 	    }
 	}
 	
-	
-	
+	// 아이디 중복체크
+	$("#users_id").blur(function() {
+         if(!$("#users_id").val()) {
+            $("#idmsg").html("<span style='color:#f00;'>아이디는 필수 입력사항 입니다</span>");
+         }else {
+            $("#idmsg").html("");
+         }
+             
+         $.ajax({
+            type:'get', //비동기식 데이터 전송방식 // post이니 토큰 같이 넘겨줘야함
+            url:'/member/member-count', // 서버에게 보내는 url 주소
+            data:{users_id:$("#users_id").val()}, // 서버에게 보내는 데이터
+           		
+           	beforeSend: function(xhr) { // csrf 사용시 헤더에 토큰불러와서 같이보냄
+           		xhr.setRequestHeader(header, token);
+           	},
+           		
+            success:function(data) {  // 비동기식 데이터 처리가 성공했을때
+               if(data > 0){
+                  if($("#users_id").val() != "") {
+                	 $("#idmsg").html("<span style='color:#f00;'>사용불가</span>");
+                	 checkIdCheck = "no";
+                  }
+               }else{
+                  if($("#users_id").val() != ""){
+                	 $("#idmsg").html("<span style='color:#0f0;'>사용가능</span>");
+                     checkIdCheck = "ok";
+                  }
+                }
+             }, error:function(xhr,status,error) {
+                alert("통신에러!");
+             }
+          })
+	});
 	
 	// 이메일 전송 및 AJAX 요청 처리
 	$(function() {
@@ -315,7 +370,7 @@
 		$("#emailcheck").on("input", function() {
 		    var inputCode = $(this).val();
 		    if (code === inputCode) {
-		    	$(".checkemail span").css("color", "green").text("인증성공");
+		    	$(".checkemail span").css("color", "#0f0").text("인증성공");
 		        authCheck = true;
 		    } else {
 		    	$(".checkemail span").css("color", "red").text("인증번호를 확인해주세요");
@@ -325,7 +380,7 @@
 		
 	});		
 	
-	/* // 비밀번호 보안강도
+	// 비밀번호 보안강도
 	const passwordInput = document.getElementById('password');
 	const passwordcheckInput = document.getElementById('passwordcheck');
 	const passwordStrengthText = document.getElementById('strength-text');
@@ -370,109 +425,36 @@
 	    passwordStrengthText.style.color = strengthColor;
 	    
 		 // 비밀번호 일치 여부 업데이트
-	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '인증 일치 여부';
+	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '비밀번호 일치 확인';
+		if(matchText === '일치') {
+			checkPasswordCheck = 'ok';
+		}else {
+			checkPasswordCheck = 'no';
+			passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? 'red' : '';
+		}
 	    passwordMatchText.textContent = matchText;
-	    passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? 'green' : '';
+	    passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? '#0f0' : '';
 	});
 	
 	passwordcheckInput.addEventListener('input', function() {
 		// 비밀번호 일치 여부 업데이트
-	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '인증 일치 여부';
+	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '비밀번호 일치 확인';
+	    if(matchText === '일치') {
+			checkPasswordCheck = 'ok';
+		}else {
+			checkPasswordCheck = 'no';
+			passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? 'red' : '';
+		}
 	    passwordMatchText.textContent = matchText;
-	    passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? 'green' : '';
-	}); */
+	    passwordMatchText.style.color = passwordInput.value === passwordcheckInput.value ? '#0f0' : '';
+	}); 
 	
-	
-	
-	let selectedGenresPage3Array = []; // 페이지 3에서 선택된 장르의 ID 리스트
-	let selectedGenresPage4Array = []; // 페이지 4에서 선택된 장르의 ID 리스트
-
-	// 페이지 3의 버튼 선택 기능
-	document.addEventListener("DOMContentLoaded", function() {
-	    const buttons = document.querySelectorAll("#genreSelection3 .selection-button");
-	    
-	    buttons.forEach(button => {
-	        button.addEventListener("click", function() {
-	            const genreId = button.value;
-	            const index = selectedGenresPage3Array.indexOf(genreId);
-	            if (index > -1) {
-	                // 이미 선택된 장르를 다시 클릭한 경우 제거
-	                selectedGenresPage3Array.splice(index, 1);
-	                button.classList.remove("selected");
-	                button.style.backgroundColor = "#FFE716";
-	            } else {
-	                // 선택되지 않은 장르를 클릭한 경우 추가
-	                if (selectedGenresPage3Array.length < 3) {
-	                    selectedGenresPage3Array.push(genreId);
-	                    button.classList.add("selected");
-	                    button.style.backgroundColor = "#fa9a1b";
-	                } else {
-	                    alert("최대 3개의 버튼만 선택할 수 있습니다.");
-	                }
-	            }
-	        });
-	    });
-	});
-
-	// 페이지 4의 버튼 선택 기능
-	document.addEventListener("DOMContentLoaded", function() {
-	    const buttons = document.querySelectorAll("#genreSelection4 .selection-button");
-	    
-	    buttons.forEach(button => {
-	        button.addEventListener("click", function() {
-	            const genreId = button.value;
-	            const index = selectedGenresPage4Array.indexOf(genreId);
-	            if (index > -1) {
-	                // 이미 선택된 장르를 다시 클릭한 경우 제거
-	                selectedGenresPage4Array.splice(index, 1);
-	                button.classList.remove("selected");
-	                button.style.backgroundColor = "#FFE716";
-	            } else {
-	                // 선택되지 않은 장르를 클릭한 경우 추가
-	                if (selectedGenresPage4Array.length < 3) {
-	                    selectedGenresPage4Array.push(genreId);
-	                    button.classList.add("selected");
-	                    button.style.backgroundColor = "#fa9a1b";
-	                } else {
-	                    alert("최대 3개의 버튼만 선택할 수 있습니다.");
-	                }
-	            }
-	        });
-	    });
-	});
-    
-	// 페이지 3에서 선택된 장르들을 배열에 담아 서버로 전송하는 함수
-	function sendSelectedGenresToServer() {
-	    // 선택된 장르들을 JSON 형태로 변환
-	    const data = {
-	        selectedGenres: selectedGenresPage3Array
-	    };
-
-	    // AJAX를 이용하여 서버로 전송
-	    $.ajax({
-	        type: "POST",
-	        url: "/member/preferInsert", // 여기에 컨트롤러의 엔드포인트 URL을 입력하세요
-	        data: JSON.stringify(data),
-	        contentType: "application/json",
-	        success: function(response) {
-	            console.log("서버로 전송 완료");
-	            // 성공적으로 전송된 후의 처리를 추가할 수 있습니다.
-	        },
-	        error: function(xhr, status, error) {
-	            console.error("오류 발생:", error);
-	            // 전송 중 오류가 발생한 경우의 처리를 추가할 수 있습니다.
-	        }
-	    });
-	}
-	
-	// 2페이지 폼 제출
-	/* var form = document.getElementById("joinForm");
-    form.submit(); */
-    
     function redirectToURL(url) {
         window.location.href = url;
     }
+    
+ 	
+    
 	
 </script>
 
-<%@ include file="../footer.jsp"%>

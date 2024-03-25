@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -55,6 +56,13 @@ public class MemberController {
 		return checkIncode;
 	}
 	
+	@ResponseBody
+	@GetMapping("/member-count")  
+	public int countMemberByLoginId(@RequestParam String users_id) {
+		System.out.println(">>>>>>>>>"+users_id);
+		return memberService.countMemberByLoginId(users_id);
+	}
+	
 	@GetMapping("/signup")
 	public String signUpForm(String incodeCheck, Model model) {
 		if(checkIncode.equals(incodeCheck)) {
@@ -68,14 +76,12 @@ public class MemberController {
 		
 	}
 	
-	@PostMapping("/preferInsert")
-	@ResponseBody
-	public void preferInsert(@RequestParam("selectedGenres") String[] selectedGenres) {
-		for (String genre_noString : selectedGenres) {
-			int genre_no = Integer.parseInt(genre_noString);
-			memberService.preperInsert(genre_no);
-        }
-	}
+	/*
+	 * @PostMapping("/preferInsert") public void
+	 * preferInsert(@RequestParam("selectedGenres") List<Integer>
+	 * selectedGenres,@RequestParam("users_id") String users_id) { for (int genre_no
+	 * : selectedGenres) { memberService.preperInsert(genre_no, users_id); } }
+	 */
 	    
 	
 	
