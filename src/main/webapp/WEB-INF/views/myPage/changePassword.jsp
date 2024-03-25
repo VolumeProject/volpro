@@ -1,62 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<link href="/resources/css/mypage/infoEdit.css" rel='stylesheet'>
+<link href="/resources/css/mypage/pwchange.css" rel='stylesheet'>
 
 	<div class="container">
 		<div class="mp-title">
 			<h1>MY PAGE</h1>
-			<h2>プロフィル修正</h2>
+			<h2>個人情報修正</h2>
 		</div>
 		<div class="mp-content">
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
 					<li role="presentation"><a href="#" class="pf-view">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">プロフィル修正</a></li>
+					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
 					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">個人情報修正</a></li>
 					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="pro-info col-lg-9">
-				<form name="my-edit" method="post" enctype="multipart/form-data" action="#" onsubmit="return check()">
-					<div class="edit-info">
-						<img class="img-circle" id="previewImg" src="/resources/images/nothingProImg.png" alt="your image">
-						<div class="file_cus">
-							<label> 
-								<input type="file" id="fileupload">
-								<span class="file_name">파일을 선택해주세요.</span>
-								<span class="file_btn">파일선택</span>
-							</label>
-							<p>이미지는 반드시 1:1비율의 이미지를 사용해주세요.</p>
+				<h1>パスワード変更</h1>
+				<div class="edit-form">
+					<form name="pwChange" method="post"action="#" onsubmit="return check()">
+						<div class="pwchange">
+							<label for="presentpw">現在のパスワード</label>
+							<input type="password" name="presentpw" class="presentpw" id="presentpw" style="margin-right: 120px;"><br>
+							<label for="newpw">新しいパスワード</label>
+							<input type="password" name="newpw" class="newpw" id="newpw">
+							<p>비밀번호 조건</p><br>
+							<label for="pwck">パスワード確認</label>
+							<input type="password" name="pwck" class="pwck" id="pwck" style="margin-right: 120px;">
 						</div>
-						
-						<div class="edit-form">
-							<div class="inputform">
-								<span>ニックネーム</span>
-								<input type="text" name="nick" class="nick" id="nick" placeholder="닉네임을 입력해주세요.">
-							</div>
-							<div class="inputform text_box">
-								<span class="justone">ひとこと</span>
-								<textarea name="word" class="word" id="word" placeholder="한마디"></textarea>
-								<div class="count"><span class="himdureo">0</span>/100</div>
-							</div>
+						<div class="change-btn">
+							<input type="submit" value="変更" class="btn-ok">&nbsp;&nbsp;
 						</div>
-					</div>
-					<div class="edit-btn">
-						<input type="submit" value="저장" class="btn-ok">&nbsp;&nbsp;
-						<input type="reset" value="초기화" class="btn-reset">&nbsp;&nbsp;
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
 
 <script type="text/javascript">
+
 
 
 	$(window).on('load', function() {

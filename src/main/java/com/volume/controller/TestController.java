@@ -25,5 +25,29 @@ public class TestController {
 	public String testpersonal() {
 		return "/myPage/personal";
 	}
-	 
+	
+	@GetMapping("/test/mp/info/pwcheck")
+	public String testpwcheck() {
+		return "/myPage/pwcheck";
+	}
+	
+	@GetMapping("/test/mp/info/personal/edit")
+	public String testPersonalEdit() {
+		return "/myPage/personalEdit";
+	}
+	
+	@GetMapping("/test/mp/info/personal/pwchange")
+	public String testpwchange() {
+		return "/myPage/changePassword";
+	}
+	
+	@GetMapping("/test/mp/info/personal/wdpw")
+	public String testwd() {
+		return "/myPage/wdpwcheck";
+	}
+
+	@GetMapping("/test/mp/info/personal/wd")
+	public String testwithdraw() {
+		return "/myPage/withdraw";
+	}
 }

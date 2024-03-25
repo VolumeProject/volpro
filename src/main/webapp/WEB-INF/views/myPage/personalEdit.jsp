@@ -1,57 +1,81 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<link href="/resources/css/mypage/infoEdit.css" rel='stylesheet'>
+<link href="/resources/css/mypage/personalEdit.css" rel='stylesheet'>
 
 	<div class="container">
 		<div class="mp-title">
 			<h1>MY PAGE</h1>
-			<h2>プロフィル修正</h2>
+			<h2>個人情報修正</h2>
 		</div>
 		<div class="mp-content">
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
 					<li role="presentation"><a href="#" class="pf-view">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">プロフィル修正</a></li>
+					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
 					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">個人情報修正</a></li>
 					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="pro-info col-lg-9">
-				<form name="my-edit" method="post" enctype="multipart/form-data" action="#" onsubmit="return check()">
-					<div class="edit-info">
-						<img class="img-circle" id="previewImg" src="/resources/images/nothingProImg.png" alt="your image">
-						<div class="file_cus">
-							<label> 
-								<input type="file" id="fileupload">
-								<span class="file_name">파일을 선택해주세요.</span>
-								<span class="file_btn">파일선택</span>
-							</label>
-							<p>이미지는 반드시 1:1비율의 이미지를 사용해주세요.</p>
+				<div class="edit-form">
+					<form name="personalEdit" method="post"action="#" onsubmit="return check()">
+						<div class="personal-edit">
+							<table>
+								<tr>
+									<th>
+										ID
+									</th>
+									<td>
+										<input type="text" name="aidi" class="aidi" id="aidi">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										ニックネーム
+									</th>
+									<td>
+										<input type="text" name="nickname" class="nickname" id="nickname">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										名前
+									</th>
+									<td>
+										<input type="text" name="name" class="name" id="name">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										電話番号
+									</th>
+									<td>
+										<input type="text" name="phone" class="phone" id="phone">
+									</td>
+								</tr>
+								<tr>
+									<th>
+										E-Mail
+									</th>
+									<td>
+										<input type="email" name="email" class="email" id="email">
+									</td>
+								</tr>
+							</table>
 						</div>
-						
-						<div class="edit-form">
-							<div class="inputform">
-								<span>ニックネーム</span>
-								<input type="text" name="nick" class="nick" id="nick" placeholder="닉네임을 입력해주세요.">
-							</div>
-							<div class="inputform text_box">
-								<span class="justone">ひとこと</span>
-								<textarea name="word" class="word" id="word" placeholder="한마디"></textarea>
-								<div class="count"><span class="himdureo">0</span>/100</div>
-							</div>
+						<div class="edit-btn">
+							<input type="submit" value="次へ" class="btn-ok">&nbsp;&nbsp;
+							<input type="reset" value="リセット" class="btn-reset">&nbsp;&nbsp;
+							<input type="button" value="パスワード変更" class="btn-pass">&nbsp;&nbsp;
 						</div>
-					</div>
-					<div class="edit-btn">
-						<input type="submit" value="저장" class="btn-ok">&nbsp;&nbsp;
-						<input type="reset" value="초기화" class="btn-reset">&nbsp;&nbsp;
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

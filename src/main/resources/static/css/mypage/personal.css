@@ -52,10 +52,9 @@
 }
 
 .nav-pills a:hover {
-	font-size: 22px;
+	font-size: 20px;
 	color: #FFE716;
-	background: #1c1c1c;
-	font-weight: bold;
+	background-color: initial;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
