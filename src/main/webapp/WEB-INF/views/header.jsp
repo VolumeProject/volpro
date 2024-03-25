@@ -34,8 +34,8 @@
 
 <body style="background:#1c1c1c;">
 	<div class="container-fluid search-bar">
-		<form name="seacher" method="get" class="seacher" action="/volume/search">
-			<input type="text" class="text-area" placeholder="검색어를 입력해 주세요">
+		<form name="search" method="get" class="seacher" action="/youtube/">
+			<input type="text" class="text-area" name="search" placeholder="검색어를 입력해 주세요">
 			<button class="btn-search" type="submit">검색</button>
 		</form>
 		<button class="searchmark" id="close" type="submit">X</button>
