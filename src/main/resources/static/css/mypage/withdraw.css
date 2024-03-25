@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.mainmessage {
+	text-align:center;
+	color:#eee;
+	margin:200px 0;
+}
+
+.title h1{
+	font-size:100px;
+	font-weight:bold;
+	padding-bottom:80px;
+}
+
+.title p{
+	font-size:40px;
+	padding-bottom:40px;
+}
+
+.survey p{
+	font-size:20px;
+	padding-bottom:20px;
+}
+
+.survey-btn{
+	margin-bottom:100px;
+}
+
+.survey .survey-btn {
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #eee;
+	height: 40px;
+	width: 170px;
+	font-size: 20px;
+}
+
+.survey input:focus {
+	background-color: #eee;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #1c1c1c;
+	height: 40px;
+	width: 170px;
+	font-size: 20px;
+}
+
+.survey input:hover {
+	background-color: #eee;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #1c1c1c;
+	height: 40px;
+	width: 170px;
+	font-size: 20px;
+}
+
+.main .main-btn {
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #eee;
+	height: 80px;
+	width: 400px;
+	font-size: 35px;
+}
+
+.main input:focus {
+	background-color: #eee;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #1c1c1c;
+	height: 80px;
+	width: 400px;
+	font-size: 35px;
+}
+
+.main input:hover {
+	background-color: #eee;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #1c1c1c;
+	height: 80px;
+	width: 400px;
+	font-size: 35px;
+}

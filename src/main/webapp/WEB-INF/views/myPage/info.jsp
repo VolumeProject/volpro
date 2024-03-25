@@ -12,13 +12,14 @@
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
-					<li role="presentation"><a href="#" class="pf-view" style="font-weight:bold; font-size:21px">プロフィル閲覧</a></li>
+					<li role="presentation"><a href="#" class="pf-view" style="font-size:20px; color: #FFE716;">プロフィル閲覧</a></li>
 					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
 					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
 					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-9">
