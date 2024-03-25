@@ -17,8 +17,9 @@
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
-					<li role="presentation"><a href="#" class="pf-view" style="font-weight:bold; font-size:21px;">個人情報閲覧</a></li>
+					<li role="presentation"><a href="#" class="pf-view" style=" font-size:20px; color: #FFE716;">個人情報閲覧</a></li>
 					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="per-info col-lg-9">

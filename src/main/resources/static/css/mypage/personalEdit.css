@@ -76,104 +76,90 @@
 }
 
 .edit-form {
-	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
 }
 
-.pwcheck {
-	margin: 110px 0;
+.edit-form table {
+	margin-left:auto; 
+    margin-right:auto;
 }
 
-label {
-    display: inline-block;
+.personal-edit {
+	margin: 40px 0;
+}
+
+.edit-form th {
     max-width: 100%;
     font-weight: 700;
     color: #eee;
     font-size: 23px;
     margin:0;
+    text-align: right;
 }
 
-.edit-form .pwck {
+.personal-edit input {
 	background-color: initial;
     border-radius: 4px;
-    width: 300px;
+    width: 350px;
     height: 50px;
     border: 1px solid #eee;
     color: #eee;
     text-align: left;
     padding: 0 5px;
-    position: relative;
-    left: 25%;
-    bottom: -23px;
-    transform: translate(-50%, -50%);
+    margin: 30px 30px;
 }
 
-.edit-form .ck {
-	background-color: initial;
-	border-radius: 4px;
-	border: 1px solid #eee;
-	color: #eee;
-	height: 50px;
-    width: 175px;
-	font-size: 20px;
-	position: relative;
-    left: 17%;
-    transform: translateX(-50%);
+.edit-btn{
+	margin:100px 0;
 }
 
-.pwcheck button:focus {
-	background-color: #eee;
-	border-radius: 4px;
-	border: 1px solid #eee;
-	color: #1c1c1c;
-	height: 50px;
-    width: 175px;
-	font-size: 20px;
-	position: relative;
-    left: 17%;
-    transform: translateX(-50%);
-}
-
-.pwcheck button:hover {
-	background-color: #eee;
-	border-radius: 4px;
-	border: 1px solid #eee;
-	color: #1c1c1c;
-	height: 50px;
-    width: 175px;
-	font-size: 20px;
-	position: relative;
-    left: 17%;
-    transform: translateX(-50%);
-}
-
-.check-btn .btn-ok {
+.edit-btn .btn-ok {
 	background-color: initial;
 	border-radius: 4px;
 	border: 1px solid #eee;
 	color: #eee;
 	height: 40px;
-	width: 80px;
+	width: 170px;
 	font-size: 20px;
 }
 
-.check-btn input:focus {
+.edit-btn .btn-reset {
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #eee;
+	height: 40px;
+	width: 170px;
+	font-size: 20px;
+}
+
+.edit-btn .btn-pass {
+	background-color: initial;
+	border-radius: 4px;
+	border: 1px solid #eee;
+	color: #eee;
+	height: 40px;
+	width: 170px;;
+	font-size: 20px;
+}
+
+.edit-btn input:focus {
 	background-color: #eee;
 	border-radius: 4px;
 	border: 1px solid #eee;
 	color: #1c1c1c;
 	height: 40px;
-	width: 80px;
+	width: 170px;
 	font-size: 20px;
 }
 
-.check-btn input:hover {
+.edit-btn input:hover {
 	background-color: #eee;
 	border-radius: 4px;
 	border: 1px solid #eee;
 	color: #1c1c1c;
 	height: 40px;
-	width: 80px;
+	width: 170px;
 	font-size: 20px;
 }

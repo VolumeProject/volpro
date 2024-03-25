@@ -1,42 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<link href="/resources/css/mypage/pwCheck.css" rel='stylesheet'>
+<link href="/resources/css/mypage/withdraw.css" rel='stylesheet'>
 
-	<div class="container">
-		<div class="mp-title">
-			<h1>MY PAGE</h1>
-			<h2>個人情報修正</h2>
+	<div class="mainmessage">
+		<div class="title">
+			<h1>退会が完了しました</h1>
+			<p>今までご利用いただきありがとうございました</p>
 		</div>
-		<div class="mp-content">
-			<div class="info-sidebar col-lg-3">
-				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"><p class="pf-title">プロフィル</p></li>
-					<li role="presentation"><a href="#" class="pf-view">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
-				</ul>
-				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"><p class="pf-title2">個人情報</p></li>
-					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">個人情報修正</a></li>
-					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
-				</ul>
-			</div>
-			<div class="pro-info col-lg-9">
-				<h1>現在のパスワード確認</h1>
-				<div class="edit-form">
-					<form name="pwCheck" method="post"action="#" onsubmit="return check()">
-						<div class="pwcheck">
-							<label for="pwck">現在のパスワード</label>
-							<input type="password" name="pwck" class="pwck" id="pwck">
-							<button class="ck" onClick="#">パスワード確認</button>
-						</div>
-						<div class="check-btn">
-							<input type="submit" value="次へ" class="btn-ok">&nbsp;&nbsp;
-						</div>
-					</form>
-				</div>
-			</div>
+		<div class="survey">
+			<p>Volumeの発展のためアンケートにご協力ください</p>
+			<input type="button" class="survey-btn" value="アンケート">
+		</div>
+		<div class="main">
+			<input type="button" class="main-btn" value="メイン画面に戻る">
 		</div>
 	</div>
 
