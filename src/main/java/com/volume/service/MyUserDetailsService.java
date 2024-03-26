@@ -23,12 +23,12 @@ public class MyUserDetailsService implements UserDetailsService { // 1. 회원�
 	
 	@Override
 	// 2. 회원정보 담는 인터페이스 - 3.이걸 구현한 클래스가 user클래스
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+	public UserDetails loadUserByUsername(String users_id) throws UsernameNotFoundException {
 		// 1. 회원 정보 및 비밀번호 조회
-		UsersVo member = memberMapper.findByLoginId(username);
+		UsersVo member = memberMapper.findByLoginId(users_id);
 		// String encodedPassword = member == null ? "" : member.getPassword();
 		if(member == null) {
-			throw new UsernameNotFoundException(username);
+			throw new UsernameNotFoundException(users_id);
 		}
 		
 		// builder 함수로 객체생성

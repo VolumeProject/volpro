@@ -38,15 +38,31 @@
 	</select>
 	
 	<select id="getUserNoFromId" resultType="int">
-		select users_no from users where users_id = #{users_id};
+		select users_no from users where users_id = #{users_id}
 	</select>
 
 	<select id="countByLoginId" parameterType="string" resultType="int">
 		select count(*) from users where users_id = #{value}
 	</select>
 	
-	<select id="countByLoginUsername" parameterType="string" resultType="int">
-		select count(*) from users where users_name = #{value}
+	<select id="checkUsernameEmail" parameterType="string" resultType="int">
+		select count(*) from users where users_name = #{users_name} and users_email = #{users_email}
 	</select>
+	
+	<select id="findId" parameterType="string" resultType="String">
+		select users_id from users where users_name = #{users_name} and users_email = #{users_email}
+	</select>
+	
+	<select id="checkUserIdEmail" parameterType="string" resultType="int">
+		select count(*) from users where users_id = #{users_id} and users_email = #{users_email}
+	</select>
+	
+	<select id="findNoforPwChange" parameterType="string" resultType="int">
+		select users_no from users where users_id = #{users_id} and users_email = #{users_email}
+	</select>
+	
+	<update id="updatePw">
+		update users set users_pw = #{users_pw} where users_no = #{users_no}
+	</update>
 	
 </mapper>

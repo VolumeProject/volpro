@@ -6,7 +6,7 @@
 <link href="/resources/css/member/join.css" rel='stylesheet'>
 
 <div class="container" style="background:#1c1c1c;">
-	<%-- <div class="page" id="page1">
+	<div class="page" id="page1">
 		<div class="container-fluid">
 			<div class="page-title">
 				<h1>約款</h1>
@@ -125,7 +125,7 @@
 			<button class="btn-share" onclick="prevPage()">이전으로</button>
 			<button class="btn-share" onclick="nextPage()">다음으로</button> 
 		</div>
-	</div>   --%>
+	</div>   
 	<div class="page" id="page3">
 		<div class="container-fluid">
 			<div class="page-title">
@@ -195,7 +195,43 @@
 	window.onload = function() {
 	    var currentPage = document.querySelector('.page');
 	    currentPage.classList.add('active');
+	    
+	    setupGenreButtonEvents();
 	};
+	
+	// 페이지3 및 페이지4의 장르 버튼 클릭 이벤트 설정 함수
+	function setupGenreButtonEvents() {
+	    var genreButtonsPage3 = document.querySelectorAll('#genreSelection3 .selection-button');
+	    var genreButtonsPage4 = document.querySelectorAll('#genreSelection4 .selection-button');
+
+	    genreButtonsPage3.forEach(function(button) {
+	        button.addEventListener('click', function() {
+	            toggleGenreSelection(button, 'page3');
+	        });
+	    });
+
+	    genreButtonsPage4.forEach(function(button) {
+	        button.addEventListener('click', function() {
+	            toggleGenreSelection(button, 'page4');
+	        });
+	    });
+	}
+
+	// 장르 버튼 선택 및 선택 해제 함수
+	function toggleGenreSelection(button, pageId) {
+	    var selectedGenres = document.querySelectorAll('.selected');
+	    var maxAllowedGenres = pageId === 'page3' ? 10 : 10; // 페이지3와 페이지4의 최대 선택 가능한 장르 개수 설정
+
+	    if (button.classList.contains('selected')) {
+	        button.classList.remove('selected'); // 이미 선택된 경우 선택 해제
+	    } else {
+	        if (selectedGenres.length < maxAllowedGenres) {
+	            button.classList.add('selected'); // 최대 선택 가능한 개수 이내인 경우 선택
+	        } else {
+	            alert("최대 " + maxAllowedGenres + "개까지 선택 가능합니다.");
+	        }
+	    }
+	}
 	
 	//메일보내기
 	var code=""; // 넘어오는 인증값
@@ -452,9 +488,5 @@
     function redirectToURL(url) {
         window.location.href = url;
     }
-    
- 	
-    
 	
 </script>
-
