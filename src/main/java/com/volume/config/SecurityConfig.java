@@ -40,10 +40,10 @@ public class SecurityConfig {
 				// 시큐리티를 사용하면 모든페이지에 인증을 해야하는데 /**로 루트밑 폴더 파일을 인증없이 접근할수있도록 허가해줌
 				
 				http.formLogin((formLogin) -> formLogin
-						.usernameParameter("id") // 20240304 추가
-						.passwordParameter("password") // 기본은 username/password인데 id/pw로 쓰고싶음 그러면 여길 id/pw로 수정 후 jsp수정
-						.loginPage("/login") // 내가 만든 로그인페이지로 연결
-						.defaultSuccessUrl("/")); // 로그인 성공시 루트로 이동
+						.usernameParameter("users_id") // 20240304 추가
+						.passwordParameter("users_pw") // 기본은 username/password인데 id/pw로 쓰고싶음 그러면 여길 id/pw로 수정 후 jsp수정
+						.loginPage("/member/login") // 내가 만든 로그인페이지로 연결
+						.defaultSuccessUrl("/volume/")); // 로그인 성공시 루트로 이동
 				// 로그인 요청 URL과 로그인 성공시 메인으로 이동한다
 				
 				// 로그아웃 처리

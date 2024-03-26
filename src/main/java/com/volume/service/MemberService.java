@@ -54,4 +54,26 @@ public class MemberService {
 		return memberMapper.countByLoginId(username);
 	}
 	
+	public int checkUsernameEmail(String users_name, String users_email) {
+		return memberMapper.checkUsernameEmail(users_name, users_email);
+	}
+	
+	public String findId(String users_name, String users_email) {
+		return memberMapper.findId(users_name, users_email);
+	}
+	
+	public int checkUserIdEmail(String users_id, String users_email) {
+		return memberMapper.checkUserIdEmail(users_id, users_email);
+	}
+	
+	public int findNoforPwChange(String users_id, String users_email) {
+		return memberMapper.findNoforPwChange(users_id, users_email);
+	}
+	
+	public void updatePw(String users_pw, int users_no) {
+		users_pw = passwordEncoder.encode(users_pw);
+		memberMapper.updatePw(users_pw, users_no);
+	}
+	
+	
 }

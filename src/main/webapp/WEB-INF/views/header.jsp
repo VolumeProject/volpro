@@ -3,7 +3,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%-- <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %> --%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -95,6 +95,8 @@
 				</nav>
 			</div>
 			
+			
+			
 			<div class="col-lg-2" style="border-bottom: 1px solid #ffe716;">
 				<nav class="top_right">
 					<ul style="list-style:none; padding-top:10px;">
@@ -115,18 +117,18 @@
 									aria-expanded="true" style="border-color:#1c1c1c; width: 100%; height:100px; padding-top:5px;">
 									<span class="glyphicon glyphicon-user" style="display: inline; line-height: 70px; color:#FFE716; font-size:30px;"></span>
 								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1"
-									style="position: absolute; top: 105%; left: -62px; z-index: 1000; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #1c1c1c; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, .175);">
-									<c:if test="${empty member }">
-										<li class="first"><a href="/member/login" style="padding:40px 30px;">로그인</a></li>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="position: absolute; top: 105%; left: -62px; z-index: 1000; float: left; min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #1c1c1c; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, .15); border-radius: 4px; box-shadow: 0 6px 12px rgba(0, 0, 0, .175);">
+									<sec:authorize access="isAnonymous()">
+										<li class="first"><a href="/member/login" style="padding:40px 30px;">로그인</a></li> 
 										<li><a href="/member/join" style="padding:40px 30px;">회원가입</a></li>
-									</c:if>
-									<c:if test="${!empty member }">
-										<li>${member.username }님</li>
-										<li class="first"><a href="/user/logout">로그아웃</a></li>
-										<li><a href="/">마이페이지</a></li>
-										<li><a href="/">문의요청</a></li>
-									</c:if>
+									</sec:authorize>
+									<sec:authorize access="isAuthenticated()">
+										<sec:authentication property="principal" var="principal"/>
+										<span style="padding:40px 30px; color:#FFE716; font-size:15px; font-weight:bold; display:inline-block; border:1px solid #FFE716;">${principal.username}님</span>
+										<li><a href="/user/logout" style="padding:40px 30px;">로그아웃</a></li>
+										<li><a href="mypage.do" style="padding:40px 30px;">마이페이지</a></li>
+										<li><a href="/" style="padding:40px 30px;">문의요청</a></li>
+									</sec:authorize>
 								</ul>
 							</div></li>
 					</ul>

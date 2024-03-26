@@ -51,7 +51,7 @@
 
 .input-group span {
 	color: white;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .container-login button {
@@ -87,5 +87,20 @@
 
 .check {
 	text-align:center;
+}
+
+.password-container {
+    margin-top: 20px;
+}
+
+.password-strength {
+    font-weight: bold;
+    margin-left:240px;
+    color:white;
+}
+
+.match-text {
+	margin-left:20px;
+	color:white;
 }
 
