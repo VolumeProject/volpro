@@ -71,6 +71,11 @@ td {
 }
 
 /* 노래박스 */
+.allbox {
+	max-height:790px;
+	overflow-y:auto;
+}
+
 .song-box {
 	width:100%;
 	height:150px;
@@ -92,7 +97,7 @@ td {
 }
 
 .artist-album {
-	width: 238px;
+	width: 349px;
     vertical-align: top;
 }
 

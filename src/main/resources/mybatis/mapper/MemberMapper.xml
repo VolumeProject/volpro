@@ -24,8 +24,45 @@
 	
 	<insert id="preferInsert">
 		insert into prefer (prefer_no, prefer_userno, prefer_genreno) 
-		values (prefer_seq.nextval, 41, #{genre_no})
+		values (prefer_seq.nextval, #{users_no}, #{genre_no})
 	</insert>
 
+	<!-- 회원 상세정보 조회 -->
+	<select id="findByLoginId" parameterType="string" resultType="com.volume.domain.UsersVo">
+		select
+			<include refid="memberColumns"/>
+		from
+			users
+		where
+			users_id = #{users_id}		
+	</select>
+	
+	<select id="getUserNoFromId" resultType="int">
+		select users_no from users where users_id = #{users_id}
+	</select>
+
+	<select id="countByLoginId" parameterType="string" resultType="int">
+		select count(*) from users where users_id = #{value}
+	</select>
+	
+	<select id="checkUsernameEmail" parameterType="string" resultType="int">
+		select count(*) from users where users_name = #{users_name} and users_email = #{users_email}
+	</select>
+	
+	<select id="findId" parameterType="string" resultType="String">
+		select users_id from users where users_name = #{users_name} and users_email = #{users_email}
+	</select>
+	
+	<select id="checkUserIdEmail" parameterType="string" resultType="int">
+		select count(*) from users where users_id = #{users_id} and users_email = #{users_email}
+	</select>
+	
+	<select id="findNoforPwChange" parameterType="string" resultType="int">
+		select users_no from users where users_id = #{users_id} and users_email = #{users_email}
+	</select>
+	
+	<update id="updatePw">
+		update users set users_pw = #{users_pw} where users_no = #{users_no}
+	</update>
 	
 </mapper>

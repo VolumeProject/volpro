@@ -13,10 +13,17 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.model.SearchListResponse;
 import com.google.api.services.youtube.model.SearchResult;
+import com.volume.domain.MusicVo;
+import com.volume.mapper.YoutubeMapper;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class YoutubeService {
 
+	private final YoutubeMapper yMapper;
+	
 	//@Value 어노테이션을 사용하여 application.yml에서 정의한 YouTube API 키를 주입 받음
     @Value("${youtube.api.key}")
     private String apiKey;
@@ -64,5 +71,10 @@ public class YoutubeService {
         }
         
         return list;
+    }
+    
+    public List<MusicVo> getMusicList() {
+    	List<MusicVo> list = yMapper.getMusicList();
+    	return list;
     }
 }

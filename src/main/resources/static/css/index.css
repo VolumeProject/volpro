@@ -9,8 +9,48 @@
 	border-bottom:1px solid #fff;
 }
 
+.index-playlist {
+	overflow-x:auto;
+}
+
+.playlist-box {
+	white-space:nowrap;
+	/* min-width: 1500px; */
+    height: 100%;
+    display: inline-block;
+}
+
+.row {
+	margin:0 30px;
+}
+
+
+.row img {
+	width:200px;
+	height:200px;
+}
+
 .row-text a, .row-text span {
 	color: #FFF;
     font-weight: bold;
     margin: -25px 0px;
+}
+
+.chart-box {
+	width: 100%;
+    overflow-x: auto;
+    display: inline-grid;
+}
+
+.main-chart {
+	min-width: 5200px;
+    min-height: 230px;
+    max-height: 230px;
+}
+
+.media {
+	min-width: 300px;
+    min-height: 50px;
+    width: 300px;
+    display: inline-block;
 }

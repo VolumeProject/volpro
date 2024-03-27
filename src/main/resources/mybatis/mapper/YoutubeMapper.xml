@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volume.mapper.YoutubeMapper">
+
+	<insert id="musicRegist">
+		insert into music (music_no,music_title,music_artist,music_composer,music_lyricist,music_etc,music_album,music_lyrics,music_uri,music_genre,index_num) 
+		values (music_seq.nextval,#{music_title},#{music_artist},#{music_composer},#{music_lyricist},#{music_etc},#{music_album},#{music_lyrics},#{music_uri},#{music_genre},music_seq.nextval * 1024)
+	</insert>
+	
+	<select id="getMusicList" resultType="com.volume.domain.MusicVo">
+		<![CDATA[
+			select /*+ index_desc (music music_pk) */ * from music where music_no > 0 order by music_no desc
+		]]>
+	</select>
+</mapper>

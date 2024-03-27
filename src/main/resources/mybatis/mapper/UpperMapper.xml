@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volume.mapper.UpperMapper">
+
+	<insert id="insert">
+		insert into upper (upper_no,upper_title,upper_comment,upper_picture) values (upper_seq.nextval,#{upper_title},#{upper_comment},#{upper_picture})
+	</insert>
+	
+	<insert id="inserttag">
+		insert into uppertag (uppertag_tagno) values (#{uppertag_tags})
+	</insert>
+
+	<insert id="insertlist">
+		insert into upperlist ()
+	</insert>
+</mapper>

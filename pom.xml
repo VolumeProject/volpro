@@ -123,7 +123,8 @@
 			<!-- <version>3.2.2</version> -->
 		</dependency>
 
-		<!-- <dependency>
+		<!-- 시큐리티 적용 -->
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
@@ -133,12 +134,12 @@
 			<scope>test</scope>
 		</dependency>
 		
-		sec 태그 사용
+		<!-- sec 태그 -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-taglibs</artifactId>
 		    <version>6.2.2</version>
-		</dependency> -->
+		</dependency>
 	
 		<!-- 스포티파이 api 사용 -->
 		<!-- <dependency>
@@ -177,6 +178,7 @@
 		</dependency>
 	
 		</dependencies>
+				
 
 	<!-- 스포티파이용 리포지토리스 -->
 	<!-- <repositories>

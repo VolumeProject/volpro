@@ -23,181 +23,101 @@
 }
 </style>
 
+<form name="up-regist" method="post" action="/upper/insert">
 <div class="container">
 	<h1>어퍼 등록하기</h1>
-	<a href="#" class="upperregist-save">등록</a>
+	<button type="submit" class="btn-upregist">등록</button>
 	<div class="upper-making">
 		<div class="upper-info">
 			<table class="infotable">
 				<tr>
 					<th>제목 입력</th>
 					<td>
-						<input type="text" class="uppermaking-title" id="makingupper-title" placeholder="어퍼 플리 이름을 만들어주세요">
+						<input type="text" class="uppermaking-title" name="upper_title" placeholder="어퍼 플리 이름을 만들어주세요">
 					</td>
 				</tr>
 				<tr>
 					<th>코멘트</th>
 					<td>
-						<input type="text" class="uppermaking-comment" id="makingupper-title" placeholder="코멘트를 한 마디 남겨주세요">
+						<input type="text" class="uppermaking-comment" name="upper_comment" placeholder="코멘트를 한 마디 남겨주세요">
 					</td>
 				</tr>
 				<tr>
 					<th>태그</th>
 					<td class="upmaking-choice">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="1">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="2">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="3">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="4">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="5">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="6">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="7">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="8">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="9">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="10">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="11">
-						<span>태그</span>
-						<input type="checkbox" class="uppermaking-tags" id="makingupper-tags" value="12">
+						<span>태그1</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="1">
+						<span>태그2</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="2">
+						<span>태그3</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="3">
+						<span>태그4</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="4">
+						<span>태그5</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="5">
+						<span>태그6</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="6">
+						<span>태그7</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="7">
+						<span>태그8</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="8">
+						<span>태그9</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="9">
+						<span>태그10</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="10">
+						<span>태그11</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="11">
+						<span>태그12</span>
+						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="12">
 					</td>
 				</tr>
 				<tr>
 					<th>대표 이미지</th>
 					<td>
-						<input type="file" class="uppermaking-firstimg" id="makingupper-firstimg">
+						<input type="file" class="uppermaking-firstimg" name="upper_picture">
 					</td>
 				</tr>
 			</table>
+		
 		</div>
 		
 		<div class="uppermaking-preview">
 			<img src="/resources/images/logo2.png" alt="..." class="img-circle">
 		</div>
 	</div>
+	
 </div>
+
 
 <div class="container-fluid">
 	<div class="col-lg-1"></div>
 	<div class="col-lg-6 container">
 		<h2>곡 리스트</h2>
-		<div class="song-box">
-			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
-			</div>
-			<div class="album-img">
-				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
-			</div>
-			<div class="artist-album">
-				<a href="#"><span>강기훈</span></a>
-				<br/>
-				<h3><a href="#">앨범이름 / 곡 이름</a></h3>
-				<br/>
-				<p>발매일자</p>
-			</div>
-			<div class="box-menu">
-				<button type="button" class="btn-delete">삭제</button>
-			</div>
-		</div>
-		<div class="song-box">
-			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
-			</div>
-			<div class="album-img">
-				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
-			</div>
-			<div class="artist-album">
-				<a href="#"><span>홍혜림</span></a>
-				<br/>
-				<h3><a href="#">앨범이름 / 곡 이름</a></h3>
-				<br/>
-				<p>발매일자</p>
-			</div>
-			<div class="box-menu">
-				<button type="button" class="btn-delete">삭제</button>
-			</div>
-		</div>
-		<div class="song-box">
-			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
-			</div>
-			<div class="album-img">
-				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
-			</div>
-			<div class="artist-album">
-				<a href="#"><span>아티스트 이름</span></a>
-				<br/>
-				<h3><a href="#">앨범이름 / 곡 이름</a></h3>
-				<br/>
-				<p>발매일자</p>
-			</div>
-			<div class="box-menu">
-				<button type="button" class="btn-delete">삭제</button>
-			</div>
-		</div>
-		<div class="song-box">
-			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
-			</div>
-			<div class="album-img">
-				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
-			</div>
-			<div class="artist-album">
-				<a href="#"><span>유정한</span></a>
-				<br/>
-				<h3><a href="#">앨범이름 / 곡 이름</a></h3>
-				<br/>
-				<p>발매일자</p>
-			</div>
-			<div class="box-menu">
-				<button type="button" class="btn-delete">삭제</button>
-			</div>
-		</div>
-		<div class="song-box">
-			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" id="check-uppersong"></span>
-			</div>
-			<div class="album-img">
-				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
-			</div>
-			<div class="artist-album">
-				<a href="#"><span>김현우</span></a>
-				<br/>
-				<h3><a href="#">앨범이름 / 곡 이름</a></h3>
-				<br/>
-				<p>발매일자</p>
-			</div>
-			<div class="box-menu">
-				<button type="button" class="btn-delete">삭제</button>
-			</div>
-		</div>
-		<div class="song-box">
-			<div class="check-song">
-				<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
-			</div>
-			<div class="album-img">
-				<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
-			</div>
-			<div class="artist-album">
-				<a href="#"><span>아티스트 이름</span></a>
-				<br/>
-				<h3><a href="#">앨범이름 / 곡 이름</a></h3>
-				<br/>
-				<p>발매일자</p>
-			</div>
-			<div class="box-menu">
-				<button type="button" class="btn-delete">삭제</button>
-			</div>
+		<div class="allbox">
+			<c:forEach var="list" items="${list}" varStatus="status">
+				<input type="hidden" name="index_num" value="${list.index_num }">
+				<div class="song-box">
+					<div class="check-song">
+						<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
+					</div>
+					<div class="album-img">
+						<a href="#"><img src="/resources/images/logo3.png" alt="..." class="img-thumbnail"></a>
+					</div>
+					<div class="artist-album">
+						<a href="#"><span>${list.music_artist }</span></a>
+						<br/>
+						<h3><a href="#">${list.music_album } / ${list.music_title } / ${status.count }</a></h3>
+						<br/>
+						<p>${list.music_releasedate }</p>
+					</div>
+					<div class="box-menu">
+						<button type="button" class="btn-delete">삭제</button>
+					</div>
+				</div>
+			</c:forEach>
 		</div>
 	</div>
+	
 	<div class="col-lg-4">
 		<h2>노래 검색</h2>
 		<div class="uppermaking-search">
@@ -314,6 +234,7 @@
 	</div>
 	<div class="col-lg-1"></div>
 </div>
+</form>
 
 <script>
    /**
@@ -323,10 +244,10 @@
     * [x] dragover 이벤트가 발생하는 동안 마우스 드래그하고 마지막 위치해놓은 Element를 리턴하는 함수를 만듭니다.
     */
 
-   (() => {
+	(() => {
       const $ = (select) => document.querySelectorAll(select);
       const draggables = $('.song-box');
-      const containers = $('.container');
+      const containers = $('.allbox');
 
       draggables.forEach(el => {
          el.addEventListener('dragstart', () => {
@@ -402,6 +323,8 @@
 	         })
 	      });
 	   })();
+	   
+
 </script>
 
 <%@ include file="../footer.jsp" %>

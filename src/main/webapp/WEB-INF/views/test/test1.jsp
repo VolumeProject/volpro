@@ -8,6 +8,7 @@
 <div class="container">
 
 	
+	
 	<h1>Youtube Videos</h1>
     <ul>
         <% for (String videoUrl : (List<String>) request.getAttribute("videos")) { %>

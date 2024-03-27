@@ -150,7 +150,7 @@
 				</div>
 			</div>
 			<div class="upper-regist">
-				<a href="/volume/upperregist" class="upperregist">어퍼 등록</a>
+				<a href="/upper/upperregist" class="upperregist">어퍼 등록</a>
 			</div>
 		</div>
 		<div class="col-lg-4">

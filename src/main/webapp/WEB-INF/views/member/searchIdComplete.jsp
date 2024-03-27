@@ -12,7 +12,7 @@
 			</div>
 		</div>
 		<div class="complete-msg">
-			<span>아이디는 OOO 입니다.</span>
+			<span>아이디는 ${users_id } 입니다.</span>
 			<p>다시 로그인 해주세요.</p>
 		</div>
 		<div class="btn-join-container">

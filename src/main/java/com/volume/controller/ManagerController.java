@@ -1,12 +1,22 @@
 package com.volume.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.volume.domain.MusicVo;
+import com.volume.service.ManagerService;
+
+import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequestMapping("/manager")
+@RequiredArgsConstructor
 public class ManagerController {
+	
+	private final ManagerService mService;
 
 
 	@GetMapping("/stats")
@@ -32,6 +42,12 @@ public class ManagerController {
 	@GetMapping("/regist")
 	public String musicRegist() {
 		return "/manager/managerMusicRegist";
+	}
+	
+	@PostMapping("/register")
+	public String musicRegister(MusicVo mv) {
+		mService.registMusic(mv);
+		return "redirect:/manager/music";
 	}
 	
 	@GetMapping("/modify")
