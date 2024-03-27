@@ -50,4 +50,14 @@ public class TestController {
 	public String testwithdraw() {
 		return "/myPage/withdraw";
 	}
+	
+	@GetMapping("/test/util")
+	public String testutil() {
+		return "/util_presen";
+	}
+	
+	@GetMapping("/test/mp/info/follow")
+	public String testfollow() {
+		return "/myPage/follow";
+	}
 }
