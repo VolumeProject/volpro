@@ -14,8 +14,32 @@
 		where users_id = #{users_id}
 	</update>
 	
-	<select id="checkIdPw" resultType="int">
-		select count(*) from users where users_id = #{users_id} and users_pw = #{users_pw}
+	<select id="checkIdPw" resultType="String">
+		select users_pw from users where users_id = #{users_id}
 	</select>
+	
+	<select id="countId" parameterType="String" resultType="int">
+		select count(*) from users where users_id = #{users_id}
+	</select>
+	
+	<select id="countNickname" parameterType="String" resultType="int">
+		select count(*) from users where users_nickname = #{users_nickname}
+	</select>
+	
+	<update id="updatePersonal">
+		update users set 
+	   		users_nickname = #{users_nickname}, 
+	  		users_name = #{users_name}, 
+	 		users_phone = #{users_phone}
+		where users_id = #{users_id}
+	</update>
+	
+	<update id="updatePw">
+		update users set users_pw = #{users_pw} where users_id = #{users_id}
+	</update>
+	
+	<delete id="withdraw">
+		delete from users where users_id = #{users_id}
+	</delete>
 	
 </mapper>

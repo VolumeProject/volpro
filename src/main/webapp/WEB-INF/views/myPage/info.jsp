@@ -19,7 +19,7 @@
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
 					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view">個人情報閲覧</a></li>
 					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit">個人情報修正</a></li>
-					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
+					<li role="presentation"><a href="/mypage/wdPwCheck" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-9">

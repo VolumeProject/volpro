@@ -21,15 +21,15 @@
 			<span>英字、数字の組み合わせ</span>
 		</div>
 		<div class="password-strength" id="password-strength">
-			보안 강도: <span id="strength-text">약함</span>
+			保安強度: <span id="strength-text">弱い</span>
 		</div>
 		<div class="input-group">
 			<label for="passwordcheck">パスワード確認</label> 
 			<input type="password" name="passwordcheck" id="passwordcheck" placeholder="パスワード確認" />
-			<div id="password-match" class="match-text">비밀번호 일치 확인</div>
+			<div id="password-match" class="match-text">パスワードの一致確認</div>
 		</div>
 		<div class="btn-login-container">
-			<button type="submit" class="btn-share">비밀번호 변경</button>
+			<button type="submit" class="btn-share">パスワード変更</button>
 		</div>
 	</form>
 </div>
@@ -52,23 +52,23 @@
 
 		switch (result.score) {
 		case 0:
-			strengthText = '매우 약함';
+			strengthText = '非常に弱い';
 			strengthColor = 'red';
 			break;
 		case 1:
-			strengthText = '약함';
+			strengthText = '弱い';
 			strengthColor = 'orange';
 			break;
 		case 2:
-			strengthText = '보통';
+			strengthText = '普通';
 			strengthColor = 'yellow';
 			break;
 		case 3:
-			strengthText = '강함';
+			strengthText = '強い';
 			strengthColor = 'green';
 			break;
 		case 4:
-			strengthText = '매우 강함';
+			strengthText = '非常に強い';
 			strengthColor = 'darkgreen';
 			break;
 		default:
@@ -81,8 +81,8 @@
 		passwordStrengthText.style.color = strengthColor;
 
 		// 비밀번호 일치 여부 업데이트
-		const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '비밀번호 일치 확인';
-		if (matchText === '일치') {
+		const matchText = passwordInput.value === passwordcheckInput.value ? '一致' : 'パスワードの一致確認';
+		if (matchText === '一致') {
 			checkPasswordCheck = 'ok';
 		} else {
 			checkPasswordCheck = 'no';
@@ -94,8 +94,8 @@
 
 	passwordcheckInput.addEventListener('input', function() {
 		// 비밀번호 일치 여부 업데이트
-		const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '비밀번호 일치 확인';
-		if (matchText === '일치') {
+		const matchText = passwordInput.value === passwordcheckInput.value ? '一致' : 'パスワードの一致確認';
+		if (matchText === '一致') {
 			heckPasswordCheck = 'ok';
 		} else {
 			checkPasswordCheck = 'no';

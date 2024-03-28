@@ -25,7 +25,7 @@ html, body {width:100%; height:100%;}
 .header .top_right {float:right;}
 .header .top_right ul li {width:95px; text-align:center; height:100px; margin-top:-10px;}
 .header .top_middle ul li {width:255px; text-align:center; height:100px; margin-top:-10px;}
-.header nav ul li a {display:block; color:#FFE716; height:100%; font-size:24px; font-weight:bold;}
+.header nav ul li a {display:block; color:#FFE716; height:100%; text-align:center; font-size:24px; font-weight:bold;}
 .header nav ul li a:hover {color:#1c1c1c; background:#FFE716; text-decoration:none;}
 .header nav ul li a:hover .glyphicon {color:#1c1c1c;}
 .header nav ul li .logoimg:hover {background:#1c1c1c;}
