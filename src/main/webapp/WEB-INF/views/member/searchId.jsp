@@ -67,7 +67,7 @@
 	             }, error:function(xhr,status,error) {
 	                alert("통신에러!");
 	             }
-	          });
+	        });
 			
 			if(checkIdEmail === "ok"){
 				$.ajax({

@@ -12,24 +12,25 @@
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
-					<li role="presentation"><a href="#" class="pf-view" style="font-size:20px; color: #FFE716;">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
+					<li role="presentation"><a href="/mypage/mypage?users_id=${principal.username}" class="pf-view" style="font-size:20px; color: #FFE716;">プロフィル閲覧</a></li>
+					<li role="presentation"><a href="/mypage/infoEdit?users_id=${principal.username}" class="pf-edit">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
-					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view">個人情報閲覧</a></li>
+					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit">個人情報修正</a></li>
 					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-9">
 				<div class="my-info">
 					<div class="pro-img col-lg-4">
-						<img class="img-circle" src="/resources/images/nothingProImg.png" alt="...">
+						<!-- <img class="img-circle" src="/resources/images/nothingProImg.png" alt="..."> -->
+						<img src="${vo.users_profile}" class="img-circle" id="previewImg" alt="...">
 					</div>
 					<div class="pro-info col-lg-8">
-						<h1>닉네임</h1>
-						<p>나 눈이 잘 안보여 너무 흐릿하게 보여서 좀 싫다.</p>
+						<h1>${vo.users_nickname}</h1>
+						<p>${vo.users_introduction}</p>
 						<div class="follow">
 							<a href="#">follow</a>
 							<a href="#">follower</a>
