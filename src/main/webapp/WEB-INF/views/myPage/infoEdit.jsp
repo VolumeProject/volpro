@@ -12,23 +12,25 @@
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
-					<li role="presentation"><a href="#" class="pf-view">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">プロフィル修正</a></li>
+					<li role="presentation"><a href="/mypage/mypage?users_id=${principal.username}" class="pf-view">プロフィル閲覧</a></li>
+					<li role="presentation"><a href="/mypage/infoEdit?users_id=${principal.username}" class="pf-edit" style=" font-size:20px; color: #FFE716;">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
-					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view">個人情報閲覧</a></li>
+					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit">個人情報修正</a></li>
 					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="pro-info col-lg-9">
-				<form name="my-edit" method="post" enctype="multipart/form-data" action="#" onsubmit="return check()">
+				<form name="my-edit" method="post" enctype="multipart/form-data" action="/mypage/infoEdit">
+					<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+					<input type="hidden" name="users_id" value="${vo.users_id}" />
 					<div class="edit-info">
-						<img class="img-circle" id="previewImg" src="/resources/images/nothingProImg.png" alt="your image">
+						<img src="${vo.users_profile}" class="img-circle" id="previewImg" alt="...">
 						<div class="file_cus">
 							<label> 
-								<input type="file" id="fileupload">
+								<input type="file" name="uploadfile" id="uploadfile">
 								<span class="file_name">파일을 선택해주세요.</span>
 								<span class="file_btn">파일선택</span>
 							</label>
@@ -38,17 +40,17 @@
 						<div class="edit-form">
 							<div class="inputform">
 								<span>ニックネーム</span>
-								<input type="text" name="nick" class="nick" id="nick" placeholder="닉네임을 입력해주세요.">
+								<input type="text" name="users_nickname" class="users_nickname" id="users_nickname" placeholder="닉네임을 입력해주세요." value="${vo.users_nickname}">
 							</div>
 							<div class="inputform text_box">
-								<span class="justone">ひとこと</span>
-								<textarea name="word" class="word" id="word" placeholder="한마디"></textarea>
+								<span>ひとこと</span>
+								<textarea name="users_introduction" class="users_introduction" id="users_introduction" placeholder="한마디">${vo.users_introduction}</textarea>
 								<div class="count"><span class="himdureo">0</span>/100</div>
 							</div>
 						</div>
 					</div>
 					<div class="edit-btn">
-						<input type="submit" value="저장" class="btn-ok">&nbsp;&nbsp;
+						<button type="submit" class="btn-ok">저장</button>&nbsp;&nbsp;
 						<input type="reset" value="초기화" class="btn-reset">&nbsp;&nbsp;
 					</div>
 				</form>
@@ -71,7 +73,7 @@
 	}
 	
 	$(function() {
-		$("#fileupload").on('change', function() {
+		$("#uploadfile").on('change', function() {
 			readURL(this);
 		});
 	});

@@ -52,4 +52,5 @@ public class MainController {
 	public String musicdetail() {
 		return "/music/musicDetail";
 	}
+	
 }

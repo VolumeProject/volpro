@@ -124,5 +124,4 @@ public class MemberController {
 		return "/member/searchPwComplete";
 	}
 	
-
 }

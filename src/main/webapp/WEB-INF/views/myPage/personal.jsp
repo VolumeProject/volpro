@@ -12,13 +12,13 @@
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
-					<li role="presentation"><a href="#" class="pf-view">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
+					<li role="presentation"><a href="/mypage/mypage?users_id=${principal.username}" class="pf-view">プロフィル閲覧</a></li>
+					<li role="presentation"><a href="/mypage/infoEdit?users_id=${principal.username}" class="pf-edit">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
-					<li role="presentation"><a href="#" class="pf-view" style=" font-size:20px; color: #FFE716;">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view" style=" font-size:20px; color: #FFE716;">個人情報閲覧</a></li>
+					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit">個人情報修正</a></li>
 					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
@@ -32,11 +32,11 @@
 						<p>E-mail</p>
 					</div>
 					<div class="info-sub col-lg-7">
-						<p>inareal99</p>
-						<p>밥여</p>
-						<p>신연일</p>
-						<p>01055024852</p>
-						<p>inareal99@gmail.com</p>
+						<p>${vo.users_id }</p>
+						<p>${vo.users_nickname }</p>
+						<p>${vo.users_name }</p>
+						<p>${vo.users_phone }</p>
+						<p>${vo.users_email }</p>
 					</div>
 				</div>
 				<div class="util">

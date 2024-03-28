@@ -12,99 +12,78 @@
 			<div class="info-sidebar col-lg-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title">プロフィル</p></li>
-					<li role="presentation"><a href="#" class="pf-view">プロフィル閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit">プロフィル修正</a></li>
+					<li role="presentation"><a href="/mypage/mypage?users_id=${principal.username}" class="pf-view">プロフィル閲覧</a></li>
+					<li role="presentation"><a href="/mypage/infoEdit?users_id=${principal.username}" class="pf-edit">プロフィル修正</a></li>
 				</ul>
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
-					<li role="presentation"><a href="#" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="#" class="pf-edit" style=" font-size:20px; color: #FFE716;">個人情報修正</a></li>
+					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view">個人情報閲覧</a></li>
+					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit" style=" font-size:20px; color: #FFE716;">個人情報修正</a></li>
 					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="pro-info col-lg-9">
 				<h1>現在のパスワード確認</h1>
 				<div class="edit-form">
-					<form name="pwCheck" method="post"action="#" onsubmit="return check()">
+					<form name="pwCheck" method="post" action="/mypage/changePw">
+					<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+					<input type="hidden" name="users_id" id="users_id" value="${principal.username}" />
 						<div class="pwcheck">
-							<label for="pwck">現在のパスワード</label>
-							<input type="password" name="pwck" class="pwck" id="pwck">
-							<button class="ck" onClick="#">パスワード確認</button>
-						</div>
-						<div class="check-btn">
-							<input type="submit" value="次へ" class="btn-ok">&nbsp;&nbsp;
+							<label for="users_pw" style="margin-right: 40px;">現在のパスワード</label>
+							<input type="password" name="users_pw" class="pwck" id="users_pw">
 						</div>
 					</form>
+					<div class="check-btn">
+						<button name="ck" id="ck" class="btn-ok">次へ</button>&nbsp;&nbsp;
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-<script type="text/javascript">
+<script>
 
-
-	$(window).on('load', function() {
-		fileCus();
-	})
-
-	function fileCus() {
-		$(".file_cus input[type=file]").on("change", function() {
-			const fileName = $(this).val().split("\\").pop();
-			$(this).siblings(".file_name").text(fileName || "파일을 선택해주세요.");
-		});
-	}
+	var checkIdPw = "";
 	
+	var token = $("meta[name='_csrf']").attr("content"); //메타 태그중에 이름이 _csrf인것 중 속성이 content인것
+	var header = $("meta[name='_csrf_header']").attr("content"); //메타 태그중에 이름이 _csrf_header인것
+	
+	//이메일 전송 및 AJAX 요청 처리
 	$(function() {
-		$("#fileupload").on('change', function() {
-			readURL(this);
-		});
-	});
+		
+		$("#ck").on("click", function() {
+			
+			var users_id = document.getElementById("users_id").value;
+	        var users_pw = document.getElementById("users_pw").value;
+			
+			var formData = {
+			    	users_id: users_id,
+			        users_pw: users_pw
+			};
+			
+			$.ajax({
+	            type:'post', //비동기식 데이터 전송방식 
+	            url:'/mypage/pwcheckCount', // 서버에게 보내는 url 주소
+	            data: formData,
+		        beforeSend: function(xhr) { // csrf 사용시 헤더에 토큰불러와서 같이보냄
+           			xhr.setRequestHeader(header, token);
+           		},
+	            success:function(data) {  // 비동기식 데이터 처리가 성공했을때
+	               if(data > 0){
+	            	  $("form[name='pwCheck']").submit(); 
+	               }else{
+	                  alert("비밀번호가 일치하지 않습니다.");
+	                  return false;
+	                }
+	             }, error:function(xhr,status,error) {
+	                alert("통신에러!");
+	             }
+	        });
+			
+		}); // onclick end
+		
+	});		
 
-	function readURL(input) {
-
-		if (input.files && input.files[0]) {
-
-			var reader = new FileReader();
-
-			reader.onload = function(e) {
-				$('#previewImg').attr('src', e.target.result);
-			}
-
-			reader.readAsDataURL(input.files[0]);
-		}
-	}
-
-	// 키보다가 눌릴때 { } 안의 함수 실행
-	$('.text_box textarea').keyup(function() {
-
-		//  함수	content는 이 함수 이다.
-		var content = $(this).val();
-		$('.text_box .count span').html(content.length);
-		if (content.length > 100) {
-			alert("최대 100자까지 입력 가능합니다.");
-			$(this).val(content.substring(0, 100));
-			$('.text_box .count span').html(100);
-		}
-	});
-
-	//	$('#textBox').keyup(function (e) {
-	//		let content = $(this).val();
-	//	    
-	//	    // 글자수 세기
-	//	    if (content.length == 0 || content == '') {
-	//	    	$('.textCount').text('0자');
-	//	    } else {
-	//	    	$('.textCount').text(content.length + '자');
-	//	    }
-	//	    
-	//	    // 글자수 제한
-	//	    if (content.length > 200) {
-	//	    	// 200자 부터는 타이핑 되지 않도록
-	//	        $(this).val($(this).val().substring(0, 200));
-	//	        // 200자 넘으면 알림창 뜨도록
-	//	        alert('글자수는 200자까지 입력 가능합니다.');
-	//	    };
-	//	});
 </script>
 
 
