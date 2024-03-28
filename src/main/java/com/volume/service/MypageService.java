@@ -22,12 +22,32 @@ public class MypageService {
 		return;
 	}
 	
-	public int checkIdPw(String users_id, String users_pw) {
-		return mypageMapper.checkIdPw(users_id, users_pw);
+	public String checkIdPw(UsersVo vo) {
+		return mypageMapper.checkIdPw(vo);
 	}
 	
+	public int countId(final String users_id) {
+		return mypageMapper.countId(users_id);
+	}
 	
+	public int countNickname(final String users_nickname) {
+		return mypageMapper.countNickname(users_nickname);
+	}
 	
+	public void updatePersonal(UsersVo vo) {
+		mypageMapper.updatePersonal(vo);
+		return;
+	}
+	
+	public void updatePw(UsersVo vo) {
+		mypageMapper.updatePw(vo);
+		return;
+	}
+	
+	public void withdraw(UsersVo vo) {
+		mypageMapper.withdraw(vo);
+		return;
+	}
 	
 	
 	

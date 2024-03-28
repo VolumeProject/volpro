@@ -15,21 +15,21 @@
 	<form name="loginForm" id="loginForm" class="loginForm" method="post" action="/member/findId">
 		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 		<div class="input-group">
-			<label for="users_name">이름</label>
-			<input type="text" name="users_name" id="users_name" placeholder="이름을 입력해 주세요" />
+			<label for="users_name">名前</label>
+			<input type="text" name="users_name" id="users_name" placeholder="名前" />
 		</div>
 		<div class="input-group">
-			<label for="users_email">이메일</label>
-			<input type="text" name="users_email" id="users_email" placeholder="이메일" />
-			<button type="button" class="btn-email" id="btn-email">인증전송</button>
+			<label for="users_email">イーメール</label>
+			<input type="text" name="users_email" id="users_email" placeholder="イーメール" />
+			<button type="button" class="btn-email" id="btn-email">認証送信</button>
 		</div>
 		<div class="input-group">
-			<label for="emailcheck">이메일 인증</label>
-			<input type="text" name="emailcheck" id="emailcheck" placeholder="인증번호 입력" />
+			<label for="emailcheck">Eメール認証</label>
+			<input type="text" name="emailcheck" id="emailcheck" placeholder="認証番号入力" />
 		</div>
-		<div class="checkemail" style="margin-left:200px; color:white;"><span>인증번호를 입력해주세요.</span></div>
+		<div class="checkemail" style="margin-left:200px; color:white;"><span>認証番号を入力してください。</span></div>
 		<div class="btn-login-container">
-			<button type="submit" class="btn-share">아이디 찾기</button>
+			<button type="submit" class="btn-share">ID検索</button>
 		</div>
 	</form>
 </div>
@@ -43,7 +43,7 @@
 		$("#btn-email").on("click", function() {
 			var regEmail=/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[a-zA-Z0-9\-]+/;
 			if(!regEmail.test($("#users_email").val())){
-				alert("이메일 주소가 유효하지 않습니다");
+				alert("メールアドレスが無効です。");
 				$("#users_email").focus();
 				return false;
 			}
@@ -61,7 +61,7 @@
 	               if(data > 0){
 	                	 checkIdEmail = "ok";
 	               }else{
-	                  alert("가입정보가 일치하지 않습니다.");
+	                  alert("登録情報が一致しません。");
 	                  return false;
 	                }
 	             }, error:function(xhr,status,error) {
@@ -74,7 +74,7 @@
 					type:'get',
 					url:"/member/mail?mail="+users_email,
 					success:function(data){
-						alert("메일전송 완료");
+						alert("メール転送完了");
 						code = data; // checkIncode 넘어온값
 					}
 				}); //ajax end
@@ -85,10 +85,10 @@
 		$("#emailcheck").on("input", function() {
 		    var inputCode = $(this).val();
 		    if (code === inputCode) {
-		    	$(".checkemail span").css("color", "green").text("인증성공");
+		    	$(".checkemail span").css("color", "green").text("認証成功");
 		        authCheck = true;
 		    } else {
-		    	$(".checkemail span").css("color", "red").text("인증번호를 확인해주세요");
+		    	$(".checkemail span").css("color", "red").text("認証番号を確認してください。");
 		        authCheck = false;
 		    }
 		});

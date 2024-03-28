@@ -12,11 +12,11 @@
 			</div>
 		</div>
 		<div class="complete-msg">
-			<span>아이디는 ${users_id } 입니다.</span>
-			<p>다시 로그인 해주세요.</p>
+			<span>IDは${users_id }です。</span>
+			<p>もう一度ログインしてください。</p>
 		</div>
 		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="redirectToURL('/member/login')">로그인</button>
+			<button type="submit" class="btn-share" onclick="redirectToURL('/member/login')">ログイン</button>
 		</div>
 </div>
 

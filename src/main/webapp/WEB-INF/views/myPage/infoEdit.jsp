@@ -19,7 +19,7 @@
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
 					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view">個人情報閲覧</a></li>
 					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit">個人情報修正</a></li>
-					<li role="presentation"><a href="#" class="pf-wd">会員退会</a></li>
+					<li role="presentation"><a href="/mypage/wdPwCheck" class="pf-wd">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="pro-info col-lg-9">
@@ -31,27 +31,27 @@
 						<div class="file_cus">
 							<label> 
 								<input type="file" name="uploadfile" id="uploadfile">
-								<span class="file_name">파일을 선택해주세요.</span>
-								<span class="file_btn">파일선택</span>
+								<span class="file_name">ファイルを選択してください。</span>
+								<span class="file_btn">ファイル選択</span>
 							</label>
-							<p>이미지는 반드시 1:1비율의 이미지를 사용해주세요.</p>
+							<p>画像は必ず1:1の割合の画像を使用してください。</p>
 						</div>
 						
 						<div class="edit-form">
 							<div class="inputform">
 								<span>ニックネーム</span>
-								<input type="text" name="users_nickname" class="users_nickname" id="users_nickname" placeholder="닉네임을 입력해주세요." value="${vo.users_nickname}">
+								<input type="text" name="users_nickname" class="users_nickname" id="users_nickname" placeholder="ニックネーム" value="${vo.users_nickname}">
 							</div>
 							<div class="inputform text_box">
 								<span>ひとこと</span>
-								<textarea name="users_introduction" class="users_introduction" id="users_introduction" placeholder="한마디">${vo.users_introduction}</textarea>
+								<textarea name="users_introduction" class="users_introduction" id="users_introduction" placeholder="ひとこと">${vo.users_introduction}</textarea>
 								<div class="count"><span class="himdureo">0</span>/100</div>
 							</div>
 						</div>
 					</div>
 					<div class="edit-btn">
-						<button type="submit" class="btn-ok">저장</button>&nbsp;&nbsp;
-						<input type="reset" value="초기화" class="btn-reset">&nbsp;&nbsp;
+						<button type="submit" class="btn-ok">保存</button>&nbsp;&nbsp;
+						<input type="reset" value="初期化" class="btn-reset">&nbsp;&nbsp;
 					</div>
 				</form>
 			</div>
@@ -68,7 +68,7 @@
 	function fileCus() {
 		$(".file_cus input[type=file]").on("change", function() {
 			const fileName = $(this).val().split("\\").pop();
-			$(this).siblings(".file_name").text(fileName || "파일을 선택해주세요.");
+			$(this).siblings(".file_name").text(fileName || "ファイルを選択してください。");
 		});
 	}
 	
@@ -99,33 +99,12 @@
 		var content = $(this).val();
 		$('.text_box .count span').html(content.length);
 		if (content.length > 100) {
-			alert("최대 100자까지 입력 가능합니다.");
+			alert("最大100文字まで入力可能です。");
 			$(this).val(content.substring(0, 100));
 			$('.text_box .count span').html(100);
 		}
 	});
 
-	//	$('#textBox').keyup(function (e) {
-	//		let content = $(this).val();
-	//	    
-	//	    // 글자수 세기
-	//	    if (content.length == 0 || content == '') {
-	//	    	$('.textCount').text('0자');
-	//	    } else {
-	//	    	$('.textCount').text(content.length + '자');
-	//	    }
-	//	    
-	//	    // 글자수 제한
-	//	    if (content.length > 200) {
-	//	    	// 200자 부터는 타이핑 되지 않도록
-	//	        $(this).val($(this).val().substring(0, 200));
-	//	        // 200자 넘으면 알림창 뜨도록
-	//	        alert('글자수는 200자까지 입력 가능합니다.');
-	//	    };
-	//	});
 </script>
-
-
-
 
 <%@ include file="../footer.jsp" %>

@@ -91,39 +91,40 @@
 					<input type="password" name="users_pw" id="password" placeholder="パスワード" />
 					<span> 英字、数字の組み合わせ</span>
 				</div>
-				<div class="password-strength" id="password-strength">보안 강도: <span id="strength-text">약함</span></div>
+				<div class="password-strength" id="password-strength">保安強度: <span id="strength-text">弱い</span></div>
 				<div class="input-group">
 					<label for="passwordcheck">パスワード確認</label>
 					<input type="password" name="passwordcheck" id="passwordcheck" placeholder="パスワード確認" />
-					<div id="password-match" class="match-text">비밀번호 일치 확인</div>
+					<div id="password-match" class="match-text">パスワードの一致確認</div>
 				</div>
 				<div class="input-group">
 					<label for="users_name">名前</label>
-					<input type="text" name="users_name" id="username" placeholder="이름" />
+					<input type="text" name="users_name" id="username" placeholder="名前" />
 				</div>
 				<div class="input-group">
-					<label for="users_phone">휴대전화</label>
-					<input type="text" name="users_phone" id="phone" placeholder="휴대전화" />
+					<label for="users_phone">電話番号</label>
+					<input type="text" name="users_phone" id="phone" placeholder="電話番号" />
+					<span> 「-」は省略</span>
 				</div>
 				<div class="input-group">
-					<label for="users_nickname">닉네임</label>
-					<input type="text" name="users_nickname" id="nickname" placeholder="닉네임" />
+					<label for="users_nickname">ニックネーム</label>
+					<input type="text" name="users_nickname" id="nickname" placeholder="ニックネーム" />
 				</div>
 				<div class="input-group">
-					<label for="users_email">이메일</label>
-					<input type="text" name="users_email" id="email" placeholder="이메일" />
-					<button type="button" class="btn-email" id="btn-email">인증전송</button>
+					<label for="users_email">イーメール</label>
+					<input type="text" name="users_email" id="email" placeholder="イーメール" />
+					<button type="button" class="btn-email" id="btn-email">認証送信</button>
 				</div>
 				<div class="input-group">
-					<label for="emailcheck">이메일 인증</label>
-					<input type="text" name="emailcheck" id="emailcheck" placeholder="인증번호 입력" />
+					<label for="emailcheck">Eメール認証</label>
+					<input type="text" name="emailcheck" id="emailcheck" placeholder="Eメール認証" />
 				</div>
-				<div class="checkemail"><span>인증번호를 입력해주세요.</span></div>
+				<div class="checkemail"><span>認証番号を入力してください。</span></div>
 			</form>
 		</div>
 		<div class="btn-join-container">
-			<button class="btn-share" onclick="prevPage()">이전으로</button>
-			<button class="btn-share" onclick="nextPage()">다음으로</button> 
+			<button class="btn-share" onclick="prevPage()">以前に</button>
+			<button class="btn-share" onclick="nextPage()">次に</button> 
 		</div>
 	</div>   
 	<div class="page" id="page3">
@@ -140,8 +141,8 @@
         </div>
 	    </div>
 	    <div class="btn-join-container">
-	        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-	        <button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+	        <button type="submit" class="btn-share" onclick="prevPage()">以前に</button>
+	        <button type="submit" class="btn-share" onclick="nextPage()">次に</button>
 	    </div>
 	</div>
 	<div class="page" id="page4">
@@ -158,8 +159,8 @@
         </div>
    		</div>
 	    <div class="btn-join-container">
-	        <button type="submit" class="btn-share" onclick="prevPage()">이전으로</button>
-	        <button type="submit" class="btn-share" onclick="nextPage()">다음으로</button>
+	        <button type="submit" class="btn-share" onclick="prevPage()">以前に</button>
+	        <button type="submit" class="btn-share" onclick="nextPage()">次に</button>
 	    </div>
 	</div> 
 	<div class="page" id="page5">
@@ -169,13 +170,13 @@
 			</div>
 		</div>
 		<div class="complete-msg">
-			<span>회원가입이 완료 되었습니다.</span>
-			<p>VOLUME 회원이 되신걸 환영합니다!</p>
-			<p>차트, 플레이리스트, 어퍼 등 많은 기능이 있으니</p>
-			<p>많은 이용 부탁드립니다.</p>
+			<span>会員登録が完了しました。</span>
+			<p>VOLUMEの会員になったことを歓迎します！</p>
+			<p>チャート、プレイリスト、アッパーなど多くの機能があるので</p>
+			<p>たくさんのご利用をお願い致します。</p>
 		</div>
 		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="redirectToURL('/member/login')">로그인</button>
+			<button type="submit" class="btn-share" onclick="redirectToURL('/member/login')">ログイン</button>
 		</div>
 	</div>
 </div>
@@ -278,7 +279,7 @@
 	        var checkbox1 = document.getElementById("checkbox1");
 	        var checkbox2 = document.getElementById("checkbox2");
 	        if (!checkbox1.checked || !checkbox2.checked) {
-	            alert("필수 항목을 모두 체크해주세요.");
+	            alert("必須項目をすべてチェックしてください。");
 	            return;
 	        }
 	    }
@@ -296,23 +297,23 @@
 
 	        // 유효성검사
 	        if (id === "" || password === "" || passwordcheck === "" || username === "" || phone === "" || nickname === "" || email === "" || emailcheck === "") {
-	            alert("빈 항목을 모두 입력해주세요.");
+	            alert("空の項目をすべて入力してください。");
 	            return; 
 	        }
 	        
 	        // 메일인증검사
 			if(authCheck !== true) {
-				alert("메일인증은 필수항목 입니다");
+				alert("メール認証は必須項目です。");
 				return;
 			}
 	        
 			if(checkIdCheck === 'no') {
-				alert("다른 아이디를 입력해주세요.");
+				alert("他のIDを入力してください。");
 				return;
       		}
 			
 			if(checkPasswordCheck === 'no') {
-				alert("비밀번호 일치를 확인해주세요.");
+				alert("パスワードの一致を確認してください。");
 				return;
       		}
 	        
@@ -348,7 +349,7 @@
 	// 아이디 중복체크
 	$("#users_id").blur(function() {
          if(!$("#users_id").val()) {
-            $("#idmsg").html("<span style='color:#f00;'>아이디는 필수 입력사항 입니다</span>");
+            $("#idmsg").html("<span style='color:#f00;'>IDは必須入力事項です。</span>");
          }else {
             $("#idmsg").html("");
          }
@@ -365,12 +366,12 @@
             success:function(data) {  // 비동기식 데이터 처리가 성공했을때
                if(data > 0){
                   if($("#users_id").val() != "") {
-                	 $("#idmsg").html("<span style='color:#f00;'>사용불가</span>");
+                	 $("#idmsg").html("<span style='color:#f00;'>使用不可</span>");
                 	 checkIdCheck = "no";
                   }
                }else{
                   if($("#users_id").val() != ""){
-                	 $("#idmsg").html("<span style='color:#0f0;'>사용가능</span>");
+                	 $("#idmsg").html("<span style='color:#0f0;'>使用可能</span>");
                      checkIdCheck = "ok";
                   }
                 }
@@ -385,7 +386,7 @@
 		$("#btn-email").on("click", function() {
 			var regEmail=/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[a-zA-Z0-9\-]+/;
 			if(!regEmail.test($("#email").val())){
-				alert("이메일 주소가 유효하지 않습니다");
+				alert("メールアドレスが無効です。");
 				$("#email").focus();
 				return false;
 			}
@@ -394,7 +395,7 @@
 				type:'get',
 				url:"/member/mail?mail="+email,
 				success:function(data){
-					alert("메일전송 완료");
+					alert("メール転送完了");
 					code = data; // checkIncode 넘어온값
 					$("#checkNum").removeAttr("disabled");
 					$("#checkNum").css("background", "#fff");					
@@ -406,10 +407,10 @@
 		$("#emailcheck").on("input", function() {
 		    var inputCode = $(this).val();
 		    if (code === inputCode) {
-		    	$(".checkemail span").css("color", "#0f0").text("인증성공");
+		    	$(".checkemail span").css("color", "#0f0").text("認証成功");
 		        authCheck = true;
 		    } else {
-		    	$(".checkemail span").css("color", "red").text("인증번호를 확인해주세요");
+		    	$(".checkemail span").css("color", "red").text("認証番号を確認してください。");
 		        authCheck = false;
 		    }
 		});
@@ -432,23 +433,23 @@
 
 	    switch (result.score) {
 	        case 0:
-	            strengthText = '매우 약함';
+	            strengthText = '非常に弱い';
 	            strengthColor = 'red';
 	            break;
 	        case 1:
-	            strengthText = '약함';
+	            strengthText = '弱い';
 	            strengthColor = 'orange';
 	            break;
 	        case 2:
-	            strengthText = '보통';
+	            strengthText = '普通';
 	            strengthColor = 'yellow';
 	            break;
 	        case 3:
-	            strengthText = '강함';
+	            strengthText = '強い';
 	            strengthColor = 'green';
 	            break;
 	        case 4:
-	            strengthText = '매우 강함';
+	            strengthText = '非常に強い';
 	            strengthColor = 'darkgreen';
 	            break;
 	        default:
@@ -461,8 +462,8 @@
 	    passwordStrengthText.style.color = strengthColor;
 	    
 		 // 비밀번호 일치 여부 업데이트
-	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '비밀번호 일치 확인';
-		if(matchText === '일치') {
+	    const matchText = passwordInput.value === passwordcheckInput.value ? '一致' : 'パスワードの一致確認';
+		if(matchText === '一致') {
 			checkPasswordCheck = 'ok';
 		}else {
 			checkPasswordCheck = 'no';
@@ -474,8 +475,8 @@
 	
 	passwordcheckInput.addEventListener('input', function() {
 		// 비밀번호 일치 여부 업데이트
-	    const matchText = passwordInput.value === passwordcheckInput.value ? '일치' : '비밀번호 일치 확인';
-	    if(matchText === '일치') {
+	    const matchText = passwordInput.value === passwordcheckInput.value ? '一致' : 'パスワードの一致確認';
+	    if(matchText === '一致') {
 			checkPasswordCheck = 'ok';
 		}else {
 			checkPasswordCheck = 'no';

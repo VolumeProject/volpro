@@ -16,12 +16,10 @@ import com.volume.domain.UsersVo;
 import com.volume.service.MemberService;
 
 import lombok.RequiredArgsConstructor;
-//import lombok.extern.log4j.Log4j2;
 
 @Controller
 @RequestMapping("/member")
 @RequiredArgsConstructor
-//@Log4j2
 public class MemberController {
 
 	private final MemberService memberService;
