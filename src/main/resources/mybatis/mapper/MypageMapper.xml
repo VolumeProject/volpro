@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "//mybatis.org/DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.volume.mapper.MypageMapper">
+	
+	<select id="findUser" resultType="com.volume.domain.UsersVo">
+		select * from users where users_id = #{users_id}
+	</select>
+	
+	<update id="infoEdit">
+		update users set 
+	   		users_nickname = #{users_nickname}, 
+	  		users_introduction = #{users_introduction}, 
+	 		users_profile = #{users_profile}
+		where users_id = #{users_id}
+	</update>
+	
+	<select id="checkIdPw" resultType="String">
+		select users_pw from users where users_id = #{users_id}
+	</select>
+	
+	<select id="countId" parameterType="String" resultType="int">
+		select count(*) from users where users_id = #{users_id}
+	</select>
+	
+	<select id="countNickname" parameterType="String" resultType="int">
+		select count(*) from users where users_nickname = #{users_nickname}
+	</select>
+	
+	<update id="updatePersonal">
+		update users set 
+	   		users_nickname = #{users_nickname}, 
+	  		users_name = #{users_name}, 
+	 		users_phone = #{users_phone}
+		where users_id = #{users_id}
+	</update>
+	
+	<update id="updatePw">
+		update users set users_pw = #{users_pw} where users_id = #{users_id}
+	</update>
+	
+	<delete id="withdraw">
+		delete from users where users_id = #{users_id}
+	</delete>
+	
+</mapper>

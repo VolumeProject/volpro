@@ -12,11 +12,11 @@
 			</div>
 		</div>
 		<div class="complete-msg">
-			<span>비밀번호가 변경되었습니다.</span>
-			<p>다시 로그인 해주세요.</p>
+			<span>パスワードが変更されました。</span>
+			<p>もう一度ログインしてください。</p>
 		</div>
 		<div class="btn-join-container">
-			<button type="submit" class="btn-share" onclick="redirectToURL('/member/login')">로그인</button>
+			<button type="submit" class="btn-share" onclick="redirectToURL('/member/login')">ログイン</button>
 		</div>
 </div>
 

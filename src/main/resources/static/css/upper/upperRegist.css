@@ -13,6 +13,10 @@
 	vertical-align:top;
 }
 
+.upper-title, .upper-comment {
+	color:#000;
+}
+
 th {
 	color: #fff;
     width: 150px;

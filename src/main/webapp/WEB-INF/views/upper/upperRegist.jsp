@@ -23,9 +23,10 @@
 }
 </style>
 
-<form name="up-regist" method="post" action="/upper/insert">
+<form name="up-regist" method="post" action="/upper/insert" id="myform">
+<input type="hidden" id="user_name" name="user_name" value="${principal.username}">
 <div class="container">
-	<h1>어퍼 등록하기</h1>
+	<h1>어퍼 등록하기${principal.username}</h1>
 	<button type="submit" class="btn-upregist">등록</button>
 	<div class="upper-making">
 		<div class="upper-info">
@@ -33,42 +34,23 @@
 				<tr>
 					<th>제목 입력</th>
 					<td>
-						<input type="text" class="uppermaking-title" name="upper_title" placeholder="어퍼 플리 이름을 만들어주세요">
+						<input type="text" class="upper-title" name="upper_title" placeholder="어퍼 플리 이름을 만들어주세요">
 					</td>
 				</tr>
 				<tr>
 					<th>코멘트</th>
 					<td>
-						<input type="text" class="uppermaking-comment" name="upper_comment" placeholder="코멘트를 한 마디 남겨주세요">
+						<input type="text" class="upper-comment" name="upper_comment" placeholder="코멘트를 한 마디 남겨주세요">
 					</td>
 				</tr>
+
 				<tr>
 					<th>태그</th>
 					<td class="upmaking-choice">
-						<span>태그1</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="1">
-						<span>태그2</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="2">
-						<span>태그3</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="3">
-						<span>태그4</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="4">
-						<span>태그5</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="5">
-						<span>태그6</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="6">
-						<span>태그7</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="7">
-						<span>태그8</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="8">
-						<span>태그9</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="9">
-						<span>태그10</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="10">
-						<span>태그11</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="11">
-						<span>태그12</span>
-						<input type="checkbox" class="uppermaking-tags" name="uppertag-tagno" value="12">
+						<c:forEach var="taglist" items="${taglist}" varStatus="status">
+							<span>${taglist.tag_name }</span>
+							<input type="checkbox" class="uppertag-tagno" id="uppertag-tagno${status.count }" name="uppertag-tagno" value="${taglist.tag_no }" onChange="checkedvalues()">
+						</c:forEach>
 					</td>
 				</tr>
 				<tr>
@@ -78,25 +60,25 @@
 					</td>
 				</tr>
 			</table>
-		
 		</div>
-		
+	
 		<div class="uppermaking-preview">
 			<img src="/resources/images/logo2.png" alt="..." class="img-circle">
 		</div>
 	</div>
 	
 </div>
-
+</form>	
 
 <div class="container-fluid">
 	<div class="col-lg-1"></div>
 	<div class="col-lg-6 container">
 		<h2>곡 리스트</h2>
-		<div class="allbox">
+		<div class="allbox" id="allbox">
+			<input type="hidden" id="newlist" name="newlist" value="">
 			<c:forEach var="list" items="${list}" varStatus="status">
-				<input type="hidden" name="index_num" value="${list.index_num }">
-				<div class="song-box">
+				<div class="song-box" data-unit="${status.count}">
+					
 					<div class="check-song">
 						<span class="glyphicon glyphicon-align-justify" class="ico-drag" id="check-uppersong"></span>
 					</div>
@@ -234,7 +216,7 @@
 	</div>
 	<div class="col-lg-1"></div>
 </div>
-</form>
+
 
 <script>
    /**
@@ -244,7 +226,7 @@
     * [x] dragover 이벤트가 발생하는 동안 마우스 드래그하고 마지막 위치해놓은 Element를 리턴하는 함수를 만듭니다.
     */
 
-	(() => {
+	/* (() => {
       const $ = (select) => document.querySelectorAll(select);
       const draggables = $('.song-box');
       const containers = $('.allbox');
@@ -283,47 +265,40 @@
          })
       });
    })();
-   
-   (() => {
-	      const $ = (select) => document.querySelectorAll(select);
-	      const draggables = $('.song-box');
-	      const containers = $('.container');
-
-	      draggables.forEach(el => {
-	         el.addEventListener('dragstart', () => {
-	            el.classList.add('dragging');
-	         });
-
-	         el.addEventListener('dragend', () => {
-	            el.classList.remove('dragging')
-	         });
-	      });
-
-	      function getDragAfterElement(container, y) {
-	         const draggableElements = [...container.querySelectorAll('.song-box:not(.dragging)')]
-
-	         return draggableElements.reduce((closest, child) => {
-	            const box = child.getBoundingClientRect() //해당 엘리먼트에 top값, height값 담겨져 있는 메소드를 호출해 box변수에 할당
-	            const offset = y - box.top - box.height / 2 //수직 좌표 - top값 - height값 / 2의 연산을 통해서 offset변수에 할당
-	            if (offset < 0 && offset > closest.offset) { // (예외 처리) 0 이하 와, 음의 무한대 사이에 조건
-	               return { offset: offset, element: child } // Element를 리턴
-	            } else {
-	               return closest
-	            }
-	         }, { offset: Number.NEGATIVE_INFINITY }).element
-	      };
-
-	      containers.forEach(container => {
-	         container.addEventListener('dragover', e => {
-	            e.preventDefault()
-	            const afterElement = getDragAfterElement(container, e.clientY);
-	            const draggable = document.querySelector('.dragging')
-	            // container.appendChild(draggable)
-	            container.insertBefore(draggable, afterElement)
-	         })
-	      });
-	   })();
 	   
+ // 각 div 요소에 data-unit 속성에 순서를 저장합니다.
+	var divContainer = document.getElementById('allbox');
+  	var divs = divContainer.querySelectorAll('[data-unit]');
+
+
+   divs.forEach(function(div, index) {
+	 index = ${status.count};
+     div.dataset.unit = index + 1;
+   });
+   
+// form이 제출될 때 순서를 출력합니다.
+   var form = document.getElementById('myform');
+   form.addEventListener('submit', function(event) {
+     divs.forEach(function(div) {
+       console.log("div 순서:", div.dataset.unit);
+     });
+   });
+   
+   function checkedvalues() {
+	   $('.uppertag_tagno').change(function() {
+		   if ($(this).prop('checked')) {
+	            $(this).addClass('checked');
+	        } else {
+	            $(this).removeClass('checked');
+	        }
+	   })
+   } */
+   
+
+
+
+
+
 
 </script>
 

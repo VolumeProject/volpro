@@ -26,8 +26,8 @@ public class SecurityConfig {
 		
 		// 여기부터 시작
 		http
-//		.csrf((csrf) -> csrf 
-//		.disable()) // 사용하지 않겠다는 뜻 - 쓰려면 여기 두문장 제거
+		.csrf((csrf) -> csrf 
+		.disable()) // 사용하지 않겠다는 뜻 - 쓰려면 여기 두문장 제거
 				// csrf는 웹 보안 조작된 정보로 웹사이트가 실행되도록 속이는 공격기술
 				// 스프링 시큐리티는 이러한 공격을 방지하기 위해 CSRF토큰을 발행하여 폼 전송시에 해당 토큰을 함께 전송해야 한다
 				// post방식에서 사용하려면 <input type="hidden" name="${_csrf.parameterName}"

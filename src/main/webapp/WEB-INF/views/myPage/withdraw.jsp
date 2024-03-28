@@ -10,14 +10,18 @@
 		</div>
 		<div class="survey">
 			<p>Volumeの発展のためアンケートにご協力ください</p>
-			<input type="button" class="survey-btn" value="アンケート">
+			<!-- <input type="button" class="survey-btn" value="アンケート"> -->
 		</div>
 		<div class="main">
-			<input type="button" class="main-btn" value="メイン画面に戻る">
+			<input type="button" class="main-btn" value="メインに戻る" onclick="window.location.href='/user/logout'">
 		</div>
 	</div>
 
-
+<script>
+	
+	
+	
+</script>
 
 
 <%@ include file="../footer.jsp" %>

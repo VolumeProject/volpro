@@ -6,7 +6,7 @@
 	<div class="container">
 		<div class="mp-title">
 			<h1>MY PAGE</h1>
-			<h2>個人情報修正</h2>
+			<h2>会員退会</h2>
 		</div>
 		<div class="mp-content">
 			<div class="info-sidebar col-lg-3">
@@ -18,23 +18,23 @@
 				<ul class="nav nav-pills nav-stacked">
 					<li role="presentation"><p class="pf-title2">個人情報</p></li>
 					<li role="presentation"><a href="/mypage/personal?users_id=${principal.username}" class="pf-view">個人情報閲覧</a></li>
-					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit" style=" font-size:20px; color: #FFE716;">個人情報修正</a></li>
-					<li role="presentation"><a href="/mypage/wdPwCheck" class="pf-wd">会員退会</a></li>
+					<li role="presentation"><a href="/mypage/pwcheck" class="pf-edit">個人情報修正</a></li>
+					<li role="presentation"><a href="/mypage/wdPwCheck" class="pf-wd" style=" font-size:20px; color: #FFE716;">会員退会</a></li>
 				</ul>
 			</div>
 			<div class="pro-info col-lg-9">
 				<h1>現在のパスワード確認</h1>
 				<div class="edit-form">
-					<form name="pwCheck" method="post" action="/mypage/changePw">
-					<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
-					<input type="hidden" name="users_id" id="users_id" value="${principal.username}" />
+					<form name="pwCheck" method="post" action="/mypage/withdraw">
+						<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
+						<input type="hidden" name="users_id" id="users_id" value="${principal.username}" />
 						<div class="pwcheck">
-							<label for="users_pw" style="margin-right: 40px;">現在のパスワード</label>
+							<label for="users_pw" style="margin-right:30px;">現在のパスワード</label>
 							<input type="password" name="users_pw" class="pwck" id="users_pw">
 						</div>
 					</form>
 					<div class="check-btn">
-						<button name="ck" id="ck" class="btn-ok">次へ</button>&nbsp;&nbsp;
+						<button name="ck" id="ck" class="btn-ok" style="width:150px;">会員退会</button>&nbsp;&nbsp;
 					</div>
 				</div>
 			</div>
@@ -42,8 +42,6 @@
 	</div>
 
 <script>
-
-	var checkIdPw = "";
 	
 	var token = $("meta[name='_csrf']").attr("content"); //메타 태그중에 이름이 _csrf인것 중 속성이 content인것
 	var header = $("meta[name='_csrf_header']").attr("content"); //메타 태그중에 이름이 _csrf_header인것
@@ -66,11 +64,14 @@
 	            url:'/mypage/pwcheckCount', // 서버에게 보내는 url 주소
 	            data: formData,
 		        beforeSend: function(xhr) { // csrf 사용시 헤더에 토큰불러와서 같이보냄
-           			xhr.setRequestHeader(header, token);
-           		},
+	       			xhr.setRequestHeader(header, token);
+	       		},
 	            success:function(data) {  // 비동기식 데이터 처리가 성공했을때
 	               if(data > 0){
-	            	  $("form[name='pwCheck']").submit(); 
+	            	   if (confirm("本当に退会しますか。")) {
+	            		   $("form[name='pwCheck']").submit(); 
+	                   }
+	            	   return false;
 	               }else{
 	                  alert("パスワードが一致しません。");
 	                  return false;
@@ -82,8 +83,8 @@
 			
 		}); // onclick end
 		
-	});		
-
+	});			
+	
 </script>
 
 

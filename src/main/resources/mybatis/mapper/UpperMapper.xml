@@ -3,14 +3,17 @@
 <mapper namespace="com.volume.mapper.UpperMapper">
 
 	<insert id="insert">
-		insert into upper (upper_no,upper_title,upper_comment,upper_picture) values (upper_seq.nextval,#{upper_title},#{upper_comment},#{upper_picture})
+		insert into upper (upper_no,upper_title,upper_comment) values (upper_seq.nextval,#{upper_title},#{upper_comment})
 	</insert>
 	
 	<insert id="inserttag">
-		insert into uppertag (uppertag_tagno) values (#{uppertag_tags})
+		<selectKey keyProperty="bno" order="BEFORE" resultType="int">
+			select users_no from users where users_id = #{name}
+		</selectKey>
+		insert into uppertag (uppertag_no,uppertag_upperno,uppertag_tagno) values (uppertag_seq.nextval,#{bno},#{tagno})
 	</insert>
 
-	<insert id="insertlist">
-		insert into upperlist ()
-	</insert>
+	<!-- <insert id="insertlist">
+		insert into upperlist (upperlist_musicno,upperlist_index) values (#{upperlist_musicno},uppertag_seq.nextval * 1024)
+	</insert> -->
 </mapper>

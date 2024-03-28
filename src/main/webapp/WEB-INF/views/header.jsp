@@ -125,9 +125,9 @@
 									</sec:authorize>
 									<sec:authorize access="isAuthenticated()">
 										<sec:authentication property="principal" var="principal"/>
-										<span style="padding:40px 30px; color:#FFE716; font-size:15px; font-weight:bold; display:inline-block; border:1px solid #FFE716;">${principal.username}님</span>
+										<span style="padding:10px; text-align:center; width: 100%; color:#FFE716; font-size:15px; font-weight:bold; display:inline-block; border:1px solid #FFE716;">${principal.username}님</span>
 										<li><a href="/user/logout" style="padding:40px 30px;">로그아웃</a></li>
-										<li><a href="mypage.do" style="padding:40px 30px;">마이페이지</a></li>
+										<li><a href="/mypage/mypage?users_id=${principal.username}" style="padding:40px 30px;">마이페이지</a></li>
 										<li><a href="/" style="padding:40px 30px;">문의요청</a></li>
 									</sec:authorize>
 								</ul>
